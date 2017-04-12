@@ -1,9 +1,9 @@
 
 //compute data de matlab comme un Cordic !! et sortie dans un fichier;
-
+//compile "gcc -g Cordic_Mat.c -o Cordic_Mat -lm"
 #include <stdio.h>
 #include <math.h>
-
+#include <stdlib.h>
 
 #define N 6
 //#define B 6
@@ -18,12 +18,21 @@ int x,y,z,i,teta,res, nb_tst, err, err_1, b;
 double rad,a_x,a_y;
 int tan0[] ={45,26,14,7,3,1};
 
+FILE* fichier_I=NULL;
+FILE* fichier_Q=NULL;
+
+fichier_I=fopen("./../Matlab/Iout.txt","r");
+fichier_Q=fopen("./../Matlab/Qout.txt","r");
+
+
+
 for (b=4;b<16;b++){
-//init des variables
-res=0;
-err=0;
-err_1=0;
-nb_tst=0;
+
+	//init des variables
+	res=0;
+	err=0;
+	err_1=0;
+	nb_tst=0;
   
   for (teta = -90; teta< 90; teta +=2){
 	z=0;
