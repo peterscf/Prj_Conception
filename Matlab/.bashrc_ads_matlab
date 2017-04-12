@@ -1,0 +1,30 @@
+#
+# setting up ADS 2014.01 environment in <bash> shell
+                                                                         
+############################################################
+#ADS version 2014.01 SETUP
+                                                                         
+export HPEESOF_DIR=/softslin/ads2014_01
+export AGILEESOFD_LICENSE_FILE=27001@cimeldap
+# export AGILEESOFD_LICENSE_FILE=${HPEESOF_DIR}/licensing/licenses/license.lic
+export LM_LICENSE_FILE=${AGILEESOFD_LICENSE_FILE}
+export ADS_LICENSE_FILE=${LM_LICENSE_FILE}
+export PATH="${PATH}:${HPEESOF_DIR}/bin:${HPEESOF_DIR}/EEsof_License_Tools/linux_x86"
+# export LD_LIBRARY_PATH="/softslin/lenny-amd64/usr/lib:/softslin/lenny-amd64/lib:${HPEESOF_DIR}/lib/linux_x86_64"
+# export LD_LIBRARY_PATH="/usr/lib:/lib:${HPEESOF_DIR}/lib/linux_x86_64"
+export LD_LIBRARY_PATH="/usr/lib32:/lib32:${HPEESOF_DIR}/lib/linux_x86"
+                                                 
+#END ADS version 2014.01 SETUP
+############################################################
+
+#!/bin/bash
+
+#
+# Setting up MATLAB 2014b environment 64 bits
+#
+
+export MATLAB=/softslin/matlab2014b_64b
+export LM_LICENSE_FILE="${LM_LICENSE_FILE}:27000@cimeldap"
+export PATH="${PATH}:${MATLAB}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${MATLAB}/bin/matlab"
+
