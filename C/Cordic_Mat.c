@@ -1,4 +1,4 @@
-//version 04/05/2017
+//version 11/05/2017
 //compute data de matlab comme un Cordic !! et sortie dans un fichier;
 //compile "gcc -g Cordic_Mat.c -o Cordic_Mat -lm"
 #include <stdio.h>
@@ -7,8 +7,8 @@
 #include <string.h>
 
 
-#define TAILLE_MAX 100
-#define TAILLE_MAX_FILE 10000
+#define TAILLE_MAX 50
+#define TAILLE_MAX_FILE 3000
 #define N 6
 //#define B 6
 
@@ -18,10 +18,11 @@ void cellule(int* x, int* y, int* z, int tani, int i);
 
 int main(void){
  
-int x,y,z,i,j,teta,res, nb_tst, err, err_1, b,end;
+int x,y,z,i,j,k,teta,res, nb_tst, err, err_1, b,end;
 double rad,a_x,a_y;
 int tan0[] ={45,26,14,7,3,1};
-char str [TAILLE_MAX], file_name[TAILLE_MAX];
+char str [TAILLE_MAX], file_name[TAILLE_MAX],write_str[TAILLE_MAX]; 
+char time[TAILLE_MAX_FILE][10];
 double I[TAILLE_MAX_FILE];
 double Q[TAILLE_MAX_FILE];
 
@@ -36,7 +37,6 @@ FILE* out_file=NULL;
 fichier_I=fopen("./../Matlab/Iout.txt","r");
 fichier_Q=fopen("./../Matlab/Qout.txt","r");
 
-
 if (fichier_I != NULL && fichier_Q !=NULL){
     //recuperation des donne des fichiers
     i=0;
@@ -46,7 +46,7 @@ if (fichier_I != NULL && fichier_Q !=NULL){
         if (errCheck == p_virg+1){
             printf("Converssion Error:%s\ni=%d\n",p_virg+1,i);
         }
-        printf("conversion p_vir= %sI[%d]=%lf\n\n",p_virg+1,i,I[i]);
+        //printf("conversion p_vir= %sI[%d]=%lf\n\n",p_virg+1,i,I[i]);
         i++;
     }
     fclose(fichier_I);
@@ -54,16 +54,19 @@ if (fichier_I != NULL && fichier_Q !=NULL){
     while(fgets(str, TAILLE_MAX, fichier_Q)!=NULL){
         char* p_virg=strchr(str,',');
         Q[i]= strtold((p_virg+1),&errCheck);
+        *p_virg='\0';
+        //récuperation de la chaine de caract
+         strcpy(time[i],str) ;
         if (errCheck == p_virg+1){
             printf("Converssion Error:%s\ni=%d\n",p_virg+1,i);
         } 
-        printf("conversion p_vir= %s Q[%d]=%lf\n\n",p_virg+1,i,Q[i]);
+        //printf("conversion p_vir= %s Q[%d]=%lf\n\n",p_virg+1,i,Q[i]);
         i++;
     }
     fclose(fichier_Q);
     end=i;
     printf("fin fichier I et Q debut cordic\n");
-
+    
     for (b=16;b>1;b--){
         printf("lancement du test B=%d\n",b);
     	//init des variables
@@ -78,7 +81,6 @@ if (fichier_I != NULL && fichier_Q !=NULL){
             printf("erreur impossible de cree %s \n",file_name);
         }
         else{
-            //z=0;
             for (j=0;j<end;j++){
                 z=0;
                 a_x = I[j];
@@ -94,7 +96,7 @@ if (fichier_I != NULL && fichier_Q !=NULL){
                 }
                 //printf("\nvaleur a_x=%lf\ta_y=%lf \n valeur z= %d",a_x,a_y,z);
                 //printf("\nvaleur x=%d\ty=%d \n valeur z=%d",x,y,z);
-                fprintf(out_file,"%d\n",z);
+                fprintf(out_file,"%s,%d\n",time[j],z);
             }
             fclose(out_file);
         }
