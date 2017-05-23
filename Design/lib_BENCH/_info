@@ -1,0 +1,93 @@
+m255
+K4
+z2
+13
+cModel Technology
+dC:/Users/flori/OneDrive/Documents/INP PHELMA/Projet Conception/Prj_Conception-master/Design
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+Ecell
+Z0 w1494704934
+Z1 DPx4 ieee 11 numeric_std 0 22 WES[o8HS0jHV[MIXQk2Ha1
+Z2 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z4 d/tp/xph2app/xph2app003/Prj_Conception/Design
+Z5 8./Cell.vhd
+Z6 F./Cell.vhd
+l0
+L11
+VKEQ>BU_>Um2e6lK8R0Llh2
+Z7 OL;C;10.2c;57
+32
+Z8 !s110 1495552087
+Z9 !s108 1495552087.244196
+Z10 !s90 +acc|-work|lib_BENCH|./Cell.vhd|
+Z11 !s107 ./Cell.vhd|
+Z12 o+acc -work lib_BENCH
+Z13 tExplicit 1
+Z14 !s100 7YTgTfQf1E=Xil7cVi]nj2
+!i10b 1
+!i111 0
+Aa
+R1
+R2
+R3
+DEx4 work 4 cell 0 22 KEQ>BU_>Um2e6lK8R0Llh2
+l33
+L24
+VnR@O6AO;RFiUTU:?[<L4R3
+R7
+32
+R8
+R9
+R10
+R11
+R12
+R13
+Z15 !s100 XFb;NAYLCWUKm=75jL>A:3
+!i10b 1
+!i111 0
+Etest_cell
+Z16 w1495552425
+DEx7 lib_vhd 4 cell 0 22 4<d8=aUUOE7k:X=oO4XNH0
+R1
+R2
+R3
+R4
+Z17 8./bench/bench_cell.vhd
+Z18 F./bench/bench_cell.vhd
+l0
+L10
+V:3LOS`ON9[5UHDU?XIo4a1
+!s100 BhGXjVniSdFi84K5hE5l<2
+R7
+32
+!s110 1495552426
+!i10b 1
+!s108 1495552426.625558
+Z19 !s90 +acc|-work|lib_BENCH|./bench/bench_cell.vhd|
+!s107 ./bench/bench_cell.vhd|
+!i111 0
+R12
+R13
+Atest1
+R1
+R2
+R3
+DEx4 work 9 test_cell 0 22 :3LOS`ON9[5UHDU?XIo4a1
+l37
+L12
+VVd:[zH=ljFDB1jefEoRW=2
+R7
+32
+R19
+R12
+R13
+!s110 1495552320
+!s108 1495552320.844708
+!s107 ./bench/bench_cell.vhd|
+!s100 @`;OHRL>I5ElJ0aWV0eJ<3
+!i10b 1
+!i111 0

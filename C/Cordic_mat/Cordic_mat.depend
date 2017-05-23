@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1494701720 source:c:\users\flori\onedrive\documents\inp phelma\projet conception\prj_conception-master\c\cordic_mat\cordic_mat.c
+	<stdio.h>
+	<math.h>
+	<stdlib.h>
+	<string.h>
+
