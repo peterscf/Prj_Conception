@@ -4,26 +4,26 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity CORDIC is
-	port( clk  : in std_logic;
-		  reset_n  : in std_logic;
-	  	  X  : in  std_logic_vector(7 downto 0);
-		  Y  : in  std_logic_vector(7 downto 0);
-		  Z  : out std_logic_vector(7 downto 0));
+	port( 	clk  : in std_logic;
+		reset_n  : in std_logic;
+	  	X  : in  std_logic_vector(7 downto 0);
+		Y  : in  std_logic_vector(7 downto 0);
+		Z  : out std_logic_vector(7 downto 0));
 end CORDIC;
 
 architecture A of CORDIC is
 
   component CELL
-    port( 	clk: in std_logic;
-            reset_n : in std_logic;
-            x_in: in std_logic_vector(7 downto 0);
-            y_in: in std_logic_vector(7 downto 0);
-            z_in: in std_logic_vector(7 downto 0);
-            tan_i: in std_logic_vector(5 downto 0);
-            shift: in std_logic_vector(2 downto 0);
-            x_out: out std_logic_vector(7 downto 0);         
-            y_out: out std_logic_vector(7 downto 0);
-            z_out: out std_logic_vector(7 downto 0));
+    port( clk: in std_logic;
+          reset_n : in std_logic;
+          x_in: in std_logic_vector(7 downto 0);
+          y_in: in std_logic_vector(7 downto 0);
+          z_in: in std_logic_vector(7 downto 0);
+          tan_i: in std_logic_vector(5 downto 0);
+          shift: in std_logic_vector(2 downto 0);
+          x_out: out std_logic_vector(7 downto 0);         
+          y_out: out std_logic_vector(7 downto 0);
+          z_out: out std_logic_vector(7 downto 0));
   end CELL;
 
  
@@ -49,7 +49,6 @@ architecture A of CORDIC is
 
   signal Xk6 	: std_logic_vector(7 downto 0);
   signal Yk6	: std_logic_vector(7 downto 0);
-  signal Zk6	: std_logic_vector(7 downto 0);
 
 
 begin
@@ -60,76 +59,70 @@ begin
     	X,
    	Y,
     	Z,
-    	"", --45
+    	"101101", --45
     	"000",
     	Xk1,
     	Yk1,
     	Zk1);
     
-  U3 : CELL port map (
+  cell2 : CELL port map (
   	clk,
-    reset_n,
-    X,
-    Y,
-    Z,
-    "", -- 26
-    Xk2,
-    Yk2,
-    Zk2
-    );
+    	reset_n,
+   	Xk1,
+    	Yk1,
+    	Zk1,
+    	"011010", -- 26
+	"001",
+    	Xk2,
+    	Yk2,
+    	Zk2);
     
-  U4 : CELL port map (
+  cell3 : CELL port map (
   	clk
-    reset_n
-    X
-    Y
-    Z
-    Rom_out(Rom_Address("010"))
-    "010"
-    Xk
-    Yk
-    Zk
-    );
+    	reset_n
+   	Xk2
+    	Yk2
+    	Zk2
+    	"001110", -- 14
+    	"010"
+    	Xk3
+    	Yk3
+    	Zk3);
     
-  U5 : CELL port map (
+  cell4 : CELL port map (
   	clk
-    reset_n
-    X
-    Y
-    Z
-    Rom_out(Rom_Address("011"))
-    "011"
-    Xk
-    Yk
-    Zk
-    );
+    	reset_n
+    	Xk3
+    	Yk3
+    	Zk3
+    	"000111", -- 7
+    	"011"
+    	Xk4
+    	Yk4
+    	Zk4);
     
-  U6 : CELL port map (
+  cell5 : CELL port map (
   	clk
-    reset_n
-    X
-    Y
-    Z
-    Rom_out(Rom_Address("100"))
-    "100"
-    Xk
-    Yk
-    Zk
-    );
+    	reset_n
+    	Xk4
+    	Yk4
+    	Zk4
+    	"000011", -- 3
+    	"100"
+    	Xk5
+    	Yk5
+    	Zk5);
     
-  U7 : CELL port map (
+  cell6 : CELL port map (
   	clk
-    reset_n
-    X
-    Y
-    Z
-    Rom_out(Rom_Address("101"))
-    "101"
-    Xk
-    Yk
-    Zk
-    );
-    
-
+    	reset_n
+    	Xk5
+    	Yk5
+   	Zk5
+    	"000001", -- 1
+    	"101"
+    	Xk6
+    	Yk6
+    	Z);
 end A;
 
