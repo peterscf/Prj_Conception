@@ -27,28 +27,28 @@ architecture A of CORDIC is
   end CELL;
 
  
-  signal Xk1 	: std_logic_vector(7 downto 0);
-  signal Yk1	: std_logic_vector(7 downto 0);
-  signal Zk1	: std_logic_vector(7 downto 0);
+  signal X1 	: std_logic_vector(7 downto 0);
+  signal Y1	: std_logic_vector(7 downto 0);
+  signal Z1	: std_logic_vector(7 downto 0);
  
-  signal Xk2 	: std_logic_vector(7 downto 0);
-  signal Yk2	: std_logic_vector(7 downto 0);
-  signal Zk2	: std_logic_vector(7 downto 0);
+  signal X2 	: std_logic_vector(7 downto 0);
+  signal Y2	: std_logic_vector(7 downto 0);
+  signal Z2	: std_logic_vector(7 downto 0);
 
-  signal Xk3 	: std_logic_vector(7 downto 0);
-  signal Yk3	: std_logic_vector(7 downto 0);
-  signal Zk3	: std_logic_vector(7 downto 0);
+  signal X3 	: std_logic_vector(7 downto 0);
+  signal Y3	: std_logic_vector(7 downto 0);
+  signal Z3	: std_logic_vector(7 downto 0);
 
-  signal Xk4 	: std_logic_vector(7 downto 0);
-  signal Yk4	: std_logic_vector(7 downto 0);
-  signal Zk4	: std_logic_vector(7 downto 0);
+  signal X4 	: std_logic_vector(7 downto 0);
+  signal Y4	: std_logic_vector(7 downto 0);
+  signal Z4	: std_logic_vector(7 downto 0);
 
-  signal Xk5 	: std_logic_vector(7 downto 0);
-  signal Yk5	: std_logic_vector(7 downto 0);
-  signal Zk5	: std_logic_vector(7 downto 0);
+  signal X5 	: std_logic_vector(7 downto 0);
+  signal Y5	: std_logic_vector(7 downto 0);
+  signal Z5	: std_logic_vector(7 downto 0);
 
-  signal Xk6 	: std_logic_vector(7 downto 0);
-  signal Yk6	: std_logic_vector(7 downto 0);
+  signal X6 	: std_logic_vector(7 downto 0);
+  signal Y6	: std_logic_vector(7 downto 0);
 
 
 begin
@@ -59,70 +59,70 @@ begin
     	X,
    	Y,
     	Z,
-    	"101101", --45
-    	"000",
-    	Xk1,
-    	Yk1,
-    	Zk1);
+    	"101101", -- 45
+    	"000", 	  -- 0
+    	X1,
+    	Y1,
+    	Z1);
     
   cell2 : CELL port map (
   	clk,
     	reset_n,
-   	Xk1,
-    	Yk1,
-    	Zk1,
+   	X1,
+    	Y1,
+    	Z1,
     	"011010", -- 26
-	"001",
-    	Xk2,
-    	Yk2,
-    	Zk2);
+	"001",	  -- 1
+    	X2,
+    	Y2,
+    	Z2);
     
   cell3 : CELL port map (
-  	clk
-    	reset_n
-   	Xk2
-    	Yk2
-    	Zk2
+  	clk,
+    	reset_n,
+   	X2,
+    	Y2,
+    	Z2,
     	"001110", -- 14
-    	"010"
-    	Xk3
-    	Yk3
-    	Zk3);
+    	"010", 	  -- 2
+    	X3,
+    	Y3,
+    	Z3);
     
   cell4 : CELL port map (
-  	clk
-    	reset_n
-    	Xk3
-    	Yk3
-    	Zk3
+  	clk,
+    	reset_n,
+    	X3,
+    	Y3,
+    	Z3,
     	"000111", -- 7
-    	"011"
-    	Xk4
-    	Yk4
-    	Zk4);
+    	"011",	  -- 3
+    	X4,
+    	Y4,
+    	Z4);
     
   cell5 : CELL port map (
-  	clk
-    	reset_n
-    	Xk4
-    	Yk4
-    	Zk4
+  	clk,
+    	reset_n,
+    	X4,
+    	Y4,
+    	Z4,
     	"000011", -- 3
-    	"100"
-    	Xk5
-    	Yk5
-    	Zk5);
+    	"100",	  -- 4
+    	X5,
+    	Y5,
+    	Z5);
     
   cell6 : CELL port map (
-  	clk
-    	reset_n
-    	Xk5
-    	Yk5
-   	Zk5
+  	clk,
+    	reset_n,
+    	X5,
+    	Y5,
+   	Z5,
     	"000001", -- 1
-    	"101"
-    	Xk6
-    	Yk6
+    	"101",	  -- 5
+    	X6,
+    	Y6,
     	Z);
 end A;
 
