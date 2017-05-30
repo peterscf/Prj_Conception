@@ -1,7 +1,10 @@
 --https://www.hdlworks.com/hdl_corner/vhdl_ref/VHDLContents/TEXTIOPackage.htm
 library IEEE ;
 use IEEE.std_logic_1164.ALL ;
+--use ieee.std_logic_signed.all;
+use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
+use ieee.math_real.all;
 use std.textio.all;
 library lib_VHD ;
 use lib_VHD.CELL;
@@ -34,6 +37,8 @@ signal sig_shift:  std_logic_vector(2 downto 0);
 signal sig_x_out:  std_logic_vector(7 downto 0);         
 signal sig_y_out:  std_logic_vector(7 downto 0);
 signal sig_z_out:  std_logic_vector(7 downto 0);
+signal sig_val: bit_vector(7 downto 0);
+
 --signal period: natural;
 begin
 	C1: Cell port map(sig_clk,sig_resetn,sig_x_in,sig_y_in,sig_z_in,sig_tan_i,sig_shift,sig_x_out,sig_y_out,sig_z_out);
@@ -43,63 +48,75 @@ begin
 	sig_resetn <= '1' after 60 ns; 
 	process 
    	begin
-		sig_x_in <= "00000000"; --60 deg
-		sig_y_in <= "00000000"; 
-		sig_z_in <= "00000000"; --0
-		sig_tan_i <= "000000"; --45
-		sig_shift <= "000";
 
-		wait for 60 ns;
-		sig_x_in <= "01000000"; --60 deg
-		sig_y_in <= "01101110"; 
+		wait for  ns;
+		sig_x_in <= sig_val; --std_logic_vector(conv_signed(integer(COS(real(45))),8)); --60 deg
+		sig_y_in <= "10000000"; --std_logic_vector(conv_signed(integer(SIN(real(45))),8)); --60 deg
 		sig_z_in <= "00000000"; --0
 		sig_tan_i <= "101101"; --45
 		sig_shift <= "000";
-		wait for 20 ns ;		
+		wait for 80 ns ;		
 
-		sig_x_in <= sig_x_out;
-		sig_y_in <= sig_y_out;
-		sig_z_in <= sig_z_out;
-		sig_tan_i <= "011010"; --26
-		sig_shift <= "001"; --1
-		wait for 20 ns;
-		sig_x_in <= sig_x_out;
-		sig_y_in <= sig_y_out;
-		sig_z_in <= sig_z_out;
-		sig_tan_i <= "001110"; --14
-		sig_shift <= "010"; --2
-		wait for 20 ns;
-		sig_x_in <= sig_x_out;
-		sig_y_in <= sig_y_out;
-		sig_z_in <= sig_z_out;
-		sig_tan_i <= "000111"; --7
-		sig_shift <= "011"; --3
-		wait for 20 ns;
-		sig_x_in <= sig_x_out;
-		sig_y_in <= sig_y_out;
-		sig_z_in <= sig_z_out;
-		sig_tan_i <= "000011"; --3
-		sig_shift <= "100"; --4
-		wait for 20 ns;
-		sig_x_in <= sig_x_out;
-		sig_y_in <= sig_y_out;
-		sig_z_in <= sig_z_out;
-		sig_tan_i <= "000001"; --1
-		sig_shift <= "101"; --5
-		wait for 100 ns;
+--		sig_x_in <= sig_x_out;
+--		sig_y_in <= sig_y_out;
+--		sig_z_in <= sig_z_out;
+--		sig_tan_i <= "011010"; --26
+--		sig_shift <= "001"; --1
+--		wait for 20 ns;
+--		sig_x_in <= sig_x_out;
+--		sig_y_in <= sig_y_out;
+--		sig_z_in <= sig_z_out;
+--		sig_tan_i <= "001110"; --14
+--		sig_shift <= "010"; --2
+--		wait for 20 ns;
+--		sig_x_in <= sig_x_out;
+--		sig_y_in <= sig_y_out;
+--		sig_z_in <= sig_z_out;
+--		sig_tan_i <= "000111"; --7
+--		sig_shift <= "011"; --3
+--		wait for 20 ns;
+--		sig_x_in <= sig_x_out;
+--		sig_y_in <= sig_y_out;
+--		sig_z_in <= sig_z_out;
+--		sig_tan_i <= "000011"; --3
+--		sig_shift <= "100"; --4
+--		wait for 20 ns;
+--		sig_x_in <= sig_x_out;
+--		sig_y_in <= sig_y_out;
+--		sig_z_in <= sig_z_out;
+--		sig_tan_i <= "000001"; --1
+--		sig_shift <= "101"; --5
+--		wait for 100 ns;
 
 
 
 	end process;
-	
--- LECTURE: process
+
+read_x_file :process 
+	variable inline: line;
+	variable val: bit_vector;
+	variable end_of_line: boolean ;
+	file myfile: text is "/home/floriant/Documents/Prj_conception/Design/bench/simu_in_x.dat";
+begin 
+	while not endfile(myfile ) loop 
+	readline(myfile,inline);
+	read(inline,val,end_of_line);
+		sig_val<=val;								
+		while end_of_line loop
+		read(inline,val,end_of_line);
+		sig_val<=val;						   
+	end loop;
+end loop;
+wait;       -- ne rien faire lorsque c'est fini
 --	 variable L: line;
 --	file ENTREES : text open write_mode is "echantillon_sinus.dat";
 -- 
 --  begin
 --     while(true) loop
 --	--lecture des simuli a envoyer sur x et y du DUT
+
 --     end loop; --while
 --  end process LECTURE;
+end process read_x_file;
   
 end test1;

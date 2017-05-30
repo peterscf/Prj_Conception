@@ -1,0 +1,97 @@
+ Coeff n° 1 
+ Thérique 0.8284 
+ Obtenu   0.828125 
+ Erreur   0.0 %
+ Binaire  0110101000 
+
+ Coeff n° 2 
+ Thérique 0.3539 
+ Obtenu   0.353515 
+ Erreur   0.1 %
+ Binaire  0010110101 
+
+ Coeff n° 3 
+ Thérique 0.41390000000000005 
+ Obtenu   0.412109 
+ Erreur   0.4 %
+ Binaire  0011010011 
+
+ Coeff n° 4 
+ Thérique 0.47030000000000005 
+ Obtenu   0.46875 
+ Erreur   0.3 %
+ Binaire  0011110000 
+
+ Coeff n° 5 
+ Thérique 0.5192 
+ Obtenu   0.517578 
+ Erreur   0.3 %
+ Binaire  0100001001 
+
+ Coeff n° 6 
+ Thérique 0.5565 
+ Obtenu   0.554687 
+ Erreur   0.3 %
+ Binaire  0100011100 
+
+ Coeff n° 7 
+ Thérique 0.5833 
+ Obtenu   0.582031 
+ Erreur   0.2 %
+ Binaire  0100101010 
+
+ Coeff n° 8 
+ Thérique 0.598 
+ Obtenu   0.597656 
+ Erreur   0.0 %
+ Binaire  0100110010 
+
+ Coeff n° 9 
+ Thérique 0.598 
+ Obtenu   0.597656 
+ Erreur   0.0 %
+ Binaire  0100110010 
+
+ Coeff n° 10 
+ Thérique 0.5833 
+ Obtenu   0.582031 
+ Erreur   0.2 %
+ Binaire  0100101010 
+
+ Coeff n° 11 
+ Thérique 0.5565 
+ Obtenu   0.554687 
+ Erreur   0.3 %
+ Binaire  0100011100 
+
+ Coeff n° 12 
+ Thérique 0.5192 
+ Obtenu   0.517578 
+ Erreur   0.3 %
+ Binaire  0100001001 
+
+ Coeff n° 13 
+ Thérique 0.47030000000000005 
+ Obtenu   0.46875 
+ Erreur   0.3 %
+ Binaire  0011110000 
+
+ Coeff n° 14 
+ Thérique 0.41390000000000005 
+ Obtenu   0.412109 
+ Erreur   0.4 %
+ Binaire  0011010011 
+
+ Coeff n° 15 
+ Thérique 0.3539 
+ Obtenu   0.353515 
+ Erreur   0.1 %
+ Binaire  0010110101 
+
+ Coeff n° 16 
+ Thérique 0.8284 
+ Obtenu   0.828125 
+ Erreur   0.0 %
+ Binaire  0110101000 
+
+['0110101000', '0010110101', '0011010011', '0011110000', '0100001001', '0100011100', '0100101010', '0100110010', '0100110010', '0100101010', '0100011100', '0100001001', '0011110000', '0011010011', '0010110101', '0110101000']

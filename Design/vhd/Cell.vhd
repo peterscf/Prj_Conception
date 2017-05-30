@@ -22,10 +22,7 @@ entity CELL is
 end CELL;
 
 architecture A of CELL is
---    signal sig_z: signed (7 downto 0);
---    signal sig_x: signed (7 downto 0);
---    signal sig_y: signed (7 downto 0);
-    signal sig_shift: signed (2 downto 0);
+    --signal sig_shift: signed (2 downto 0);
     signal sig_z_out: signed (7 downto 0);
     signal sig_x_out: signed (7 downto 0);
     signal sig_y_out: signed (7 downto 0);
@@ -33,6 +30,7 @@ architecture A of CELL is
     signal sig_int_x_out: std_logic_vector (7 downto 0);
     signal sig_int_y_out:std_logic_vector(7 downto 0);
 begin
+
 synchro: process (clk,reset_n)
  
  begin
@@ -54,25 +52,17 @@ end process synchro;
 
 compute:process(x_in,y_in,z_in,tan_i,shift)
 	variable var_y_shift:signed(7 downto 0);
-	variable var_x: signed (7 downto 0);
-	variable var_y: signed (7 downto 0);
-	variable var_z: signed (7 downto 0);
-
 begin
-	var_x:=signed(x_in);  
-	var_y:=signed(y_in);
-	var_z:=signed(z_in);
-	--sig_shift<=signed(shift);
-	var_y_shift:=shift_right(signed(y_in),to_integer(signed(shift)));
+	var_y_shift:=shift_right(signed(y_in),to_integer(signed(shift))); --calcul du shift 
 	
         case y_in(7) is
-            when '0' =>     sig_z_out<=var_z + signed(tan_i); --probleme avec le signed !!!!!
-                            sig_x_out<=var_x + var_y_shift;
-                            sig_y_out<=var_y - var_y_shift;
+            when '0' =>     sig_z_out<=signed(z_in) + signed('0'&tan_i); --concatenation pour signed
+                            sig_x_out<=signed(x_in) + var_y_shift;
+                            sig_y_out<=signed(y_in) - var_y_shift;
 
-            when '1' =>     sig_z_out<=var_z - signed(tan_i);
-                            sig_x_out<=var_x - var_y_shift;
-                            sig_y_out<=var_y + var_y_shift;
+            when '1' =>     sig_z_out<=signed(z_in) - signed('0'&tan_i); --concatenation pour signed
+                            sig_x_out<=signed(x_in) - var_y_shift;
+                            sig_y_out<=signed(y_in) + var_y_shift;
             
             when others =>  sig_z_out<="11111111";
                             sig_x_out<="11111111";
