@@ -1037,3 +1037,42 @@ restart
 run
 # ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
 #    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 12:02:43 on May 30,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 12:02:43 on May 30,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading lib_vhd.cell(a)
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
+restart
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 12:07:25 on May 30,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 12:07:25 on May 30,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading lib_vhd.cell(a)
+# Warning in wave window restart: (vish-4014) No objects found matching '/test_cell/C1/sig_x'. 
+run
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
