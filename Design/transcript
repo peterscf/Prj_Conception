@@ -1,1998 +1,400 @@
-vsim lib_BENCH.test_cell(test1)
-# vsim lib_BENCH.test_cell(test1) 
-# Start time: 14:09:46 on May 29,2017
+vsim lib_BENCH.test_top
+# vsim lib_BENCH.test_top 
+# Start time: 17:07:52 on May 31,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
 # Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
+# Loading ieee.math_real(body)
+# Loading lib_BENCH.test_top(test1)
+# Loading lib_vhd.cordic(a)
 # Loading lib_vhd.cell(a)
 add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out \
-sim:/test_cell/C1/sig_z \
-sim:/test_cell/C1/sig_x \
-sim:/test_cell/C1/sig_y \
-sim:/test_cell/C1/sig_shift \
-sim:/test_cell/C1/sig_z_out \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_y_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-run
-run
-run
-run
-run
+sim:/test_top/C1/clk \
+sim:/test_top/C1/reset_n \
+sim:/test_top/C1/X \
+sim:/test_top/C1/Y \
+sim:/test_top/C1/Z
+add wave -position insertpoint  \
+sim:/test_top/C1/Z0 \
+sim:/test_top/C1/Z1 \
+sim:/test_top/C1/Z2 \
+sim:/test_top/C1/Z3 \
+sim:/test_top/C1/Z4 \
+sim:/test_top/C1/Z5 \
+sim:/test_top/C1/Z6
 run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 20 ns  Iteration: 0  Instance: /test_cell/C1
-run -all
-vlog -work /home/floriant/Documents/Prj_conception/Design/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:20:21 on May 29,2017
-# vlog -reportprogress 300 -work /home/floriant/Documents/Prj_conception/Design/libs/lib_BENCH -refresh -force_refresh 
-# -- Skipping entity cell
-# -- Skipping entity test_cell
-# End time: 14:20:21 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work /home/floriant/Documents/Prj_conception/Design/libs/lib_BENCH -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:20:22 on May 29,2017
-# vcom -reportprogress 300 -work /home/floriant/Documents/Prj_conception/Design/libs/lib_BENCH -refresh -force_refresh 
-# ** Warning: Unidentified argument +acc, Skipping further processing.
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# ** Warning: Unidentified argument +acc, Skipping further processing.
-# -- Compiling architecture A of CELL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:20:22 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 2
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:20:24 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:20:24 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
 vsim lib_BENCH.test_cell
-# End time: 14:21:26 on May 29,2017, Elapsed time: 0:11:40
-# Errors: 0, Warnings: 4
+# End time: 17:16:49 on May 31,2017, Elapsed time: 0:08:57
+# Errors: 0, Warnings: 0
 # vsim lib_BENCH.test_cell 
-# Start time: 14:21:26 on May 29,2017
+# Start time: 17:16:49 on May 31,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
 # Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 20 ns  Iteration: 0  Instance: /test_cell/C1
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out \
-sim:/test_cell/C1/sig_z \
-sim:/test_cell/C1/sig_x \
-sim:/test_cell/C1/sig_y \
-sim:/test_cell/C1/sig_shift \
-sim:/test_cell/C1/sig_z_out \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_y_out
-run
-run
-# Break key hit
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 20 ns  Iteration: 0  Instance: /test_cell/C1
-# Error opening /home/floriant/Documents/Prj_conception/Design/Cell.vhd
-# Path name '/home/floriant/Documents/Prj_conception/Design/Cell.vhd' doesn't exist.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:08:18 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/Cell.vhd 
-# ** Error: (vcom-7) Failed to open design unit file "/home/floriant/Documents/Prj_conception/Design/Cell.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 15:08:18 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vlog -work /home/floriant/Documents/Prj_conception/Design/libs/lib_VHD -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:08:36 on May 29,2017
-# vlog -reportprogress 300 -work /home/floriant/Documents/Prj_conception/Design/libs/lib_VHD -refresh -force_refresh 
-# -- Skipping entity cell
-# End time: 15:08:36 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work /home/floriant/Documents/Prj_conception/Design/libs/lib_VHD -refresh -force_refresh
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:08:36 on May 29,2017
-# vcom -reportprogress 300 -work /home/floriant/Documents/Prj_conception/Design/libs/lib_VHD -refresh -force_refresh 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 15:08:37 on May 29,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:08:39 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/Cell.vhd 
-# ** Error: (vcom-7) Failed to open design unit file "/home/floriant/Documents/Prj_conception/Design/Cell.vhd" in read mode.
-# No such file or directory. (errno = ENOENT)
-# End time: 15:08:39 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-# Error opening /home/floriant/Documents/Prj_conception/Design/Cell.vhd
-# Path name '/home/floriant/Documents/Prj_conception/Design/Cell.vhd' doesn't exist.
-vcom -work lib_VHD vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:13:06 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: vhd/Cell.vhd(47): near "process": (vcom-1576) expecting IF.
-# ** Error: vhd/Cell.vhd(50): Illegal sequential statement.
-# ** Error: vhd/Cell.vhd(72): near "if": (vcom-1576) expecting PROCESS.
-# ** Error: vhd/Cell.vhd(78): VHDL Compiler exiting
-# End time: 15:13:06 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:20:43 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(74): near "if": (vcom-1576) expecting PROCESS.
-# End time: 15:20:43 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:21:08 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 15:21:08 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-vcom +acc -work lib_BENCH /tp/xph2app/xph2app003/Prj_Conception/Design/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# ** Error (suppressible): (vcom-1902) Option "+acc" is either unknown, requires an argument, or was given with a bad argument.
-# Use the -help option for complete vcom usage.
-# Errors: 1, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:25:32 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:25:32 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:25:51 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:25:51 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 15:25:54 on May 29,2017, Elapsed time: 1:04:28
-# Errors: 14, Warnings: 6
-# vsim lib_BENCH.test_cell 
-# Start time: 15:25:54 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/sig_clk \
-sim:/test_cell/sig_resetn
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position insertpoint  \
-sim:/test_cell/C1/sig_z_out \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_y_out
-run
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:37:17 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 15:37:17 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in
-add wave -position insertpoint  \
-sim:/test_cell/C1/sig_x
-add wave -position insertpoint  \
-sim:/test_cell/C1/sig_x_out
-add wave -position insertpoint  \
-sim:/test_cell/C1/sig_int_x_out
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_out
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-restart
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:44:54 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 15:44:54 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:44:58 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(47): near "sig_x_in": (vcom-1576) expecting ';'.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(98): VHDL Compiler exiting
-# End time: 15:44:58 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:45:16 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(47): near "sig_x_in": (vcom-1576) expecting ';'.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(98): VHDL Compiler exiting
-# End time: 15:45:16 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:45:32 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:45:32 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 15:45:36 on May 29,2017, Elapsed time: 0:19:42
-# Errors: 6, Warnings: 10
-# vsim lib_BENCH.test_cell 
-# Start time: 15:45:36 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/sig_x \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_int_x_out
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_out
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 60 ns  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:53:15 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(53): String literal has a character 's' not in the enumeration type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(54): String literal has a character 's' not in the enumeration type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): String literal has a character 's' not in the enumeration type ieee.std_logic_1164.STD_LOGIC.
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(53): (vcom-1272) Length of expected is 8; length of actual is 9.
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(54): (vcom-1272) Length of expected is 8; length of actual is 9.
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): (vcom-1272) Length of expected is 8; length of actual is 9.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(105): VHDL Compiler exiting
-# End time: 15:53:16 on May 29,2017, Elapsed time: 0:00:01
-# Errors: 7, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:58:09 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(53): String literal has a character 's' not in the enumeration type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(54): String literal has a character 's' not in the enumeration type ieee.std_logic_1164.STD_LOGIC.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): String literal has a character 's' not in the enumeration type ieee.std_logic_1164.STD_LOGIC.
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(53): (vcom-1272) Length of expected is 8; length of actual is 9.
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(54): (vcom-1272) Length of expected is 8; length of actual is 9.
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): (vcom-1272) Length of expected is 8; length of actual is 9.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(105): VHDL Compiler exiting
-# End time: 15:58:09 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 7, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:59:03 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:59:03 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 15:59:40 on May 29,2017, Elapsed time: 0:14:04
-# Errors: 10, Warnings: 2
-# vsim lib_BENCH.test_cell 
-# Start time: 15:59:40 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/sig_clk \
-sim:/test_cell/sig_resetn \
-sim:/test_cell/sig_x_in \
-sim:/test_cell/sig_y_in \
-sim:/test_cell/sig_z_in
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 60 ns  Iteration: 1  Instance: /test_cell/C1
-run -continue
-run -continue
-run -continue
-run -continue
-restart
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 60 ns  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:01:41 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 16:01:41 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:01:44 on May 29,2017, Elapsed time: 0:02:04
-# Errors: 0, Warnings: 4
-# vsim lib_BENCH.test_cell 
-# Start time: 16:01:44 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/x_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 60 ns  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:03:31 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(49): (vcom-1272) Length of expected is 6; length of actual is 5.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(105): VHDL Compiler exiting
-# End time: 16:03:31 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vsim lib_BENCH.test_cell
-# End time: 16:03:33 on May 29,2017, Elapsed time: 0:01:49
-# Errors: 2, Warnings: 2
-# vsim lib_BENCH.test_cell 
-# Start time: 16:03:33 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 60 ns  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:04:40 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(49): (vcom-1272) Length of expected is 6; length of actual is 5.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(105): VHDL Compiler exiting
-# End time: 16:04:40 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:05:26 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 16:05:26 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:05:29 on May 29,2017, Elapsed time: 0:01:56
-# Errors: 2, Warnings: 2
-# vsim lib_BENCH.test_cell 
-# Start time: 16:05:29 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
+# Loading ieee.math_real(body)
 # Loading lib_BENCH.test_cell(test1)
 # Loading lib_vhd.cell(a)
 add wave -position insertpoint sim:/test_cell/C1/*
 run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:07:21 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:07:21 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
 run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
+# ** Fatal: (vsim-3734) Index value 180 is out of range 0 to 179.
+#    Time: 3620 ns  Iteration: 0  Process: /test_cell/line__57 File: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
+# Fatal error in Process line__57 at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd line 60
+# 
+# HDL call sequence:
+# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 60 Process line__57
+# 
+ls
+# bench
+# config
+# escou_compile_bench.sh
+# Example
+# libs
+# modelsim.ini
+# transcript
+# vhd
+# vsim.wlf
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:09:53 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
+# Start time: 08:30:27 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading entity CORDIC
+# -- Compiling entity test_TOP
+# -- Compiling architecture test1 of test_TOP
+# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(19): near "port": (vcom-1576) expecting ';'.
+# End time: 08:30:28 on Jun 01,2017, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:30:45 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 08:30:45 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:30:48 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(10): near "port": (vcom-1576) expecting ';'.
+# End time: 08:30:48 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:31:14 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# -- Compiling architecture A of CORDIC_top
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(20): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(20): Bad resolution function (INTEGER) for type (error).
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(20): near ":": (vcom-1576) expecting ';' or ')'.
+# End time: 08:31:14 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:31:24 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 08:31:24 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:32:24 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 08:32:24 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:32:26 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# -- Compiling architecture A of CORDIC_top
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(66): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(66): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(78): Statement cannot be labeled.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(79): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(79): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(91): Statement cannot be labeled.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(92): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(92): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(104): Statement cannot be labeled.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(105): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(105): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(117): Statement cannot be labeled.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(118): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(118): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(130): Statement cannot be labeled.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(131): (vcom-1136) Unknown identifier "tan_i".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(131): near "=>": (vcom-1576) expecting ',' or ')'.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd(142): VHDL Compiler exiting
+# End time: 08:32:27 on Jun 01,2017, Elapsed time: 0:00:01
+# Errors: 18, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:36:12 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# -- Compiling architecture A of CORDIC_top
+# End time: 08:36:12 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:36:16 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 08:36:16 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:36:20 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading entity CORDIC
+# -- Compiling entity test_TOP
+# -- Compiling architecture test1 of test_TOP
+# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(43): near "(": (vcom-1576) expecting MAP.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(59): VHDL Compiler exiting
+# End time: 08:36:20 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:37:19 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading entity CORDIC
+# -- Compiling entity test_TOP
+# -- Compiling architecture test1 of test_TOP
+# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(42): (vcom-1141) Identifier "CORDIC" does not identify a component declaration.
+# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(59): VHDL Compiler exiting
+# End time: 08:37:19 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:37:46 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading entity CORDIC
+# -- Compiling entity test_TOP
+# -- Compiling architecture test1 of test_TOP
+# End time: 08:37:46 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:37:58 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading entity CORDIC
+# -- Compiling entity test_TOP
+# -- Compiling architecture test1 of test_TOP
+# End time: 08:37:58 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:01 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
 # -- Loading entity CELL
 # -- Compiling entity test_Cell
 # -- Compiling architecture test1 of test_Cell
-# End time: 16:09:53 on May 29,2017, Elapsed time: 0:00:00
+# End time: 08:38:01 on Jun 01,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:09:56 on May 29,2017, Elapsed time: 0:04:27
-# Errors: 0, Warnings: 4
-# vsim lib_BENCH.test_cell 
-# Start time: 16:09:56 on May 29,2017
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:07 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# -- Compiling architecture A of CORDIC_top
+# End time: 08:38:07 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:10 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# -- Compiling architecture A of CORDIC_top
+# End time: 08:38:10 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:28 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CORDIC_top
+# -- Compiling architecture A of CORDIC_top
+# End time: 08:38:28 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:30 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity CELL
+# -- Compiling architecture A of CELL
+# End time: 08:38:30 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:33 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# ** Error: (vcom-11) Could not find lib_vhd.cordic.
+# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(10): (vcom-1195) Cannot find expanded name "lib_vhd.CORDIC".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(13): VHDL Compiler exiting
+# End time: 08:38:33 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:38:38 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# ** Error: (vcom-11) Could not find lib_vhd.cordic.
+# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(10): (vcom-1195) Cannot find expanded name "lib_vhd.CORDIC".
+# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd(13): VHDL Compiler exiting
+# End time: 08:38:38 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
+vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+# Start time: 08:39:04 on Jun 01,2017
+# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
+# -- Loading entity CORDIC_top
+# -- Compiling entity test_TOP
+# -- Compiling architecture test1 of test_TOP
+# End time: 08:39:04 on Jun 01,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+restart
+# Loading lib_BENCH.test_cell(test1)
+# Loading lib_vhd.cell(a)
+# ** Fatal: (vsim-3350) Generic "Nb" has not been given a value.
+#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1 File: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd Line: 13
+# FATAL ERROR while loading design
+vsim lib_BENCH.test_top
+# vsim lib_BENCH.test_top 
+# Start time: 17:16:49 on May 31,2017
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
 # Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
+# Loading ieee.math_real(body)
+# Loading lib_BENCH.test_top(test1)
+# Loading lib_vhd.cordic_top(a)
 # Loading lib_vhd.cell(a)
 add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/x_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
+sim:/test_top/C1/clk \
+sim:/test_top/C1/reset_n \
+sim:/test_top/C1/X \
+sim:/test_top/C1/Y \
+sim:/test_top/C1/Z
 run -all
-add wave -position 3  sim:/test_cell/C1/sig_x
-add wave -position 4  sim:/test_cell/C1/sig_x_out
-add wave -position 5  sim:/test_cell/C1/sig_int_x_out
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:14:18 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(52): near "synchro": (vcom-1576) expecting PROCESS.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(55): Illegal sequential statement.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(81): VHDL Compiler exiting
-# End time: 16:14:19 on May 29,2017, Elapsed time: 0:00:01
-# Errors: 3, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:14:36 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:14:36 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:15:31 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:15:31 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:17:32 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(49): Signal declaration 'sig_z' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(50): Signal declaration 'sig_x' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(51): Signal declaration 'sig_y' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(52): Signal declaration 'sig_shift' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(53): Signal declaration 'sig_z_out' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(54): Signal declaration 'sig_x_out' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(55): Signal declaration 'sig_y_out' not allowed in this region.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(82): VHDL Compiler exiting
-# End time: 16:17:32 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 8, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:17:48 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:17:48 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:20:31 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:20:31 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position insertpoint  \
-sim:/test_cell/sig_shift
-add wave -position insertpoint \
-/test_cell/C1/compute/var_y_shift 
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position end  sim:/test_cell/sig_z_out
-restart
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:29:55 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:29:55 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run -all
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position 3  sim:/test_cell/C1/y_in
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position 4  /test_cell/C1/compute/var_y_shift
-add wave -position 4  sim:/test_cell/C1/sig_shift
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:34:27 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(62): (vcom-1600) No feasible entries for subprogram "SHIFT_RIGHT".
-#    Visible subprograms are:
-#       (explicit) NUMERIC_STD.SHIFT_RIGHT[UNRESOLVED_UNSIGNED, NATURAL return UNRESOLVED_UNSIGNED] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1213)
-#       (explicit) NUMERIC_STD.SHIFT_RIGHT[UNRESOLVED_SIGNED, NATURAL return UNRESOLVED_SIGNED] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1231)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(81): VHDL Compiler exiting
-# End time: 16:34:27 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:34:54 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:34:54 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:39:21 on May 29,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 16:39:21 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:39:25 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:39:25 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:39:27 on May 29,2017, Elapsed time: 0:29:31
-# Errors: 16, Warnings: 20
-# vsim lib_BENCH.test_cell 
-# Start time: 16:39:27 on May 29,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position 3  sim:/test_cell/C1/sig_x
-add wave -position 4  sim:/test_cell/C1/sig_x_out
-add wave -position 5  sim:/test_cell/C1/sig_int_x_out
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:51:49 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 16:51:49 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position end  /test_cell/C1/compute/var_y_shift
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 1  Instance: /test_cell/C1
-add wave -position 4  sim:/test_cell/sig_y_in
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:26:27 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(62): (vcom-1600) No feasible entries for subprogram "SHIFT_RIGHT".
-#    Visible subprograms are:
-#       (explicit) NUMERIC_STD.SHIFT_RIGHT[UNRESOLVED_UNSIGNED, NATURAL return UNRESOLVED_UNSIGNED] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1213)
-#       (explicit) NUMERIC_STD.SHIFT_RIGHT[UNRESOLVED_SIGNED, NATURAL return UNRESOLVED_SIGNED] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1231)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(81): VHDL Compiler exiting
-# End time: 17:26:27 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:27:29 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(62): (vcom-1600) No feasible entries for subprogram "TO_INTEGER".
-#    Visible subprograms are:
-#       (explicit) NUMERIC_STD.TO_INTEGER[UNRESOLVED_UNSIGNED return NATURAL] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1446)
-#       (explicit) NUMERIC_STD.TO_INTEGER[UNRESOLVED_SIGNED return INTEGER] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1454)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(81): VHDL Compiler exiting
-# End time: 17:27:30 on May 29,2017, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:28:27 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(62): (vcom-1600) No feasible entries for subprogram "TO_INTEGER".
-#    Visible subprograms are:
-#       (explicit) NUMERIC_STD.TO_INTEGER[UNRESOLVED_UNSIGNED return NATURAL] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1446)
-#       (explicit) NUMERIC_STD.TO_INTEGER[UNRESOLVED_SIGNED return INTEGER] at $MODEL_TECH/../vhdl_src/ieee/mti_numeric_std.vhd(1454)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(81): VHDL Compiler exiting
-# End time: 17:28:27 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:30:54 on May 29,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 17:30:54 on May 29,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-run
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 12:02:43 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 12:02:43 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 12:07:25 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 12:07:25 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-# Warning in wave window restart: (vish-4014) No objects found matching '/test_cell/C1/sig_x'. 
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vsim lib_VHD.cell
-# End time: 13:42:24 on May 30,2017, Elapsed time: 21:02:57
-# Errors: 10, Warnings: 12
-# vsim lib_VHD.cell 
-# Start time: 13:42:24 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_VHD.cell(a)
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /cell
-run
-add wave -position insertpoint  \
-sim:/cell/x_in \
-sim:/cell/y_in \
-sim:/cell/z_in \
-sim:/cell/x_out \
-sim:/cell/y_out \
-sim:/cell/z_out
-run
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /cell
-vsim lib_BENCH.test_cell(test1)
-# End time: 13:47:15 on May 30,2017, Elapsed time: 0:04:51
-# Errors: 0, Warnings: 2
-# vsim lib_BENCH.test_cell(test1) 
-# Start time: 13:47:15 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.numeric_std(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 13:47:24 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(69): (vcom-1581) No feasible entries for infix operator '+'.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(69): Type error resolving infix expression "+" as type ieee.NUMERIC_STD.SIGNED.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(73): (vcom-1581) No feasible entries for infix operator '-'.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(73): Type error resolving infix expression "-" as type ieee.NUMERIC_STD.SIGNED.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd(85): VHDL Compiler exiting
-# End time: 13:47:24 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 13:51:02 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 13:51:02 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-restart
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:06:12 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 14:06:12 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:06:19 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(54): (vcom-1136) Unknown identifier "conv_signed".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): (vcom-1136) Unknown identifier "conv_signed".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(106): VHDL Compiler exiting
-# End time: 14:06:19 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:11:36 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_SIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): (vcom-1136) Unknown identifier "conv_signed".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1136) Unknown identifier "conv_signed".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(107): VHDL Compiler exiting
-# End time: 14:11:36 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:11:49 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_SIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(55): (vcom-1136) Unknown identifier "conv_signed".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1136) Unknown identifier "conv_signed".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(107): VHDL Compiler exiting
-# End time: 14:11:49 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:13:26 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_SIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(108): VHDL Compiler exiting
-# End time: 14:13:26 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:23:00 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package STD_LOGIC_SIGNED
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(108): VHDL Compiler exiting
-# End time: 14:23:00 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:23:17 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1394) Type conversion operand must be a single expression that is not a range.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): near ")": (vcom-1576) expecting ';'.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): (vcom-1394) Type conversion operand must be a single expression that is not a range.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): near ")": (vcom-1576) expecting ';'.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(108): VHDL Compiler exiting
-# End time: 14:23:17 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 9, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:24:53 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(56): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): (vcom-1600) No feasible entries for subprogram "CONV_SIGNED".
-#    Visible subprograms are:
-#       (explicit) std_logic_arith.CONV_SIGNED[INTEGER, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(553)
-#       (explicit) std_logic_arith.CONV_SIGNED[UNSIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(557)
-#       (explicit) std_logic_arith.CONV_SIGNED[SIGNED, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(561)
-#       (explicit) std_logic_arith.CONV_SIGNED[STD_ULOGIC, INTEGER return SIGNED] at $MODEL_TECH/../vhdl_src/synopsys/mti_std_logic_arith.vhd(565)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(57): ** Error: (vcom-1583) Illegal type converson from 'unknown' to 'ieee.std_logic_1164.STD_LOGIC_VECTOR' (operand type is not known).
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(108): VHDL Compiler exiting
-# End time: 14:24:53 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 5, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:25:41 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:25:41 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-vsim lib_BENCH.test_cell
-# End time: 14:25:56 on May 30,2017, Elapsed time: 0:38:41
-# Errors: 46, Warnings: 2
-# vsim lib_BENCH.test_cell 
-# Start time: 14:25:56 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:27:02 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:27:03 on May 30,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 14:27:05 on May 30,2017, Elapsed time: 0:01:09
-# Errors: 0, Warnings: 1
-# vsim lib_BENCH.test_cell 
-# Start time: 14:27:05 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/sig_x_in \
-sim:/test_cell/sig_y_in \
-sim:/test_cell/sig_z_in \
-sim:/test_cell/sig_x_out \
-sim:/test_cell/sig_y_out \
-sim:/test_cell/sig_z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:28:47 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:28:47 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-run
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:49:25 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:49:26 on May 30,2017, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:49:28 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 14:49:28 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 14:49:31 on May 30,2017, Elapsed time: 0:22:26
-# Errors: 0, Warnings: 1
-# vsim lib_BENCH.test_cell 
-# Start time: 14:49:31 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:51:34 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 14:51:34 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:51:36 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 14:51:36 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 14:51:39 on May 30,2017, Elapsed time: 0:02:08
-# Errors: 0, Warnings: 1
-# vsim lib_BENCH.test_cell 
-# Start time: 14:51:39 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-view -new wave
-# -new not supported on PE
-add wave -position insertpoint  \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-add dataflow \
-sim:/test_cell/C1/y_in 
-# WARNING: No extended dataflow license exists
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out \
-sim:/test_cell/C1/sig_shift \
-sim:/test_cell/C1/sig_z_out \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_y_out \
-sim:/test_cell/C1/sig_int_z_out \
-sim:/test_cell/C1/sig_int_x_out \
-sim:/test_cell/C1/sig_int_y_out
-run
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 14:58:05 on May 30,2017
-# vcom -reportprogress 300 -work lib_VHD /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity CELL
-# -- Compiling architecture A of CELL
-# End time: 14:58:05 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-restart
-# Loading lib_vhd.cell(a)
-# Warning in wave window restart: (vish-4014) No objects found matching '/test_cell/C1/sig_shift'. 
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out \
-sim:/test_cell/C1/sig_z_out \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_y_out \
-sim:/test_cell/C1/sig_int_z_out \
-sim:/test_cell/C1/sig_int_x_out \
-sim:/test_cell/C1/sig_int_y_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:01:30 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:01:30 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:02:10 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:02:10 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 15:02:12 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 15:02:12 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell(test1)
-# End time: 15:02:16 on May 30,2017, Elapsed time: 0:10:37
-# Errors: 2, Warnings: 4
-# vsim lib_BENCH.test_cell(test1) 
-# Start time: 15:02:16 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint  \
-sim:/test_cell/C1/clk \
-sim:/test_cell/C1/reset_n \
-sim:/test_cell/C1/x_in \
-sim:/test_cell/C1/y_in \
-sim:/test_cell/C1/z_in \
-sim:/test_cell/C1/tan_i \
-sim:/test_cell/C1/shift \
-sim:/test_cell/C1/x_out \
-sim:/test_cell/C1/y_out \
-sim:/test_cell/C1/z_out \
-sim:/test_cell/C1/sig_z_out \
-sim:/test_cell/C1/sig_x_out \
-sim:/test_cell/C1/sig_y_out \
-sim:/test_cell/C1/sig_int_z_out \
-sim:/test_cell/C1/sig_int_x_out \
-sim:/test_cell/C1/sig_int_y_out
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-add wave -position end  /test_cell/C1/compute/var_y_shift
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:42:00 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(101): (vcom-1136) Unknown identifier "character_variable".
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(104): (vcom-1136) Unknown identifier "hread".
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(51): (vcom-1272) Length of expected is 8; length of actual is 0.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(120): VHDL Compiler exiting
-# End time: 16:42:00 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:44:17 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error (suppressible): /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(51): (vcom-1272) Length of expected is 8; length of actual is 0.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(120): VHDL Compiler exiting
-# End time: 16:44:17 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:45:11 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 16:45:11 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:45:15 on May 30,2017, Elapsed time: 1:42:59
-# Errors: 6, Warnings: 2
-# vsim lib_BENCH.test_cell 
-# Start time: 16:45:15 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-# ** Warning: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell
-run
-# ** Fatal: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Process: /test_cell/read_x_file File: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Fatal error in Process read_x_file at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd line 99
-# 
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-add wave -position insertpoint \
-/test_cell/read_x_file/inline \
-/test_cell/read_x_file/character_var \
-/test_cell/read_x_file/end_of_line \
-/test_cell/read_x_file/myfile 
-# (vsim-4027) Logging is not supported for this item: /test_cell/myfile 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-restart
-# ** Warning: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell
-run
-# ** Fatal: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Process: /test_cell/read_x_file File: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Fatal error in Process read_x_file at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd line 99
-# 
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:48:39 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 16:48:39 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:48:41 on May 30,2017, Elapsed time: 0:03:26
-# Errors: 8, Warnings: 2
-# vsim lib_BENCH.test_cell 
-# Start time: 16:48:41 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-# ** Warning: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell
-run
-# ** Fatal: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Process: /test_cell/read_x_file File: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Fatal error in Process read_x_file at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd line 99
-# 
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-run
-# Cannot continue because of fatal error.
-# HDL call sequence:
-# Stopped at /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 99 Process read_x_file
-# 
-vsim lib_BENCH.test_cell
-# End time: 16:51:28 on May 30,2017, Elapsed time: 0:02:47
-# Errors: 3, Warnings: 1
-# vsim lib_BENCH.test_cell 
-# Start time: 16:51:28 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-# ** Warning: (vsim-7) Failed to open VHDL file "simu_in_x.dat" in r mode.
-# No such file or directory. (errno = ENOENT)
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 16:52:26 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# End time: 16:52:26 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim lib_BENCH.test_cell
-# End time: 16:52:29 on May 30,2017, Elapsed time: 0:01:01
-# Errors: 0, Warnings: 1
-# vsim lib_BENCH.test_cell 
-# Start time: 16:52:29 on May 30,2017
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading ieee.std_logic_arith(body)
-# Loading ieee.numeric_std(body)
-# Loading ieee.math_real(body)
-# Loading lib_BENCH.test_cell(test1)
-# Loading lib_vhd.cell(a)
-add wave -position insertpoint \
-/test_cell/read_x_file/inline \
-/test_cell/read_x_file/character_var \
-/test_cell/read_x_file/end_of_line \
-/test_cell/read_x_file/myfile 
-# (vsim-4027) Logging is not supported for this item: /test_cell/myfile 
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-run
-run
-run
-run
-run
-run
-restart
-run
-# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
-#    Time: 0 ps  Iteration: 0  Instance: /test_cell/C1
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:00:59 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(97): (vcom-1360) Array type of "val" does not have an index constraint.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(103): (vcom-1600) No feasible entries for subprogram "read".
-#    Visible subprograms are:
-#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(106): (vcom-1600) No feasible entries for subprogram "read".
-#    Visible subprograms are:
-#       (implicit) TEXTIO.read[std.TEXTIO.TEXT, std.STANDARD.STRING, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(15)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(64)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT] at $MODEL_TECH/../vhdl_src/std/textio.vhd(66)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(68)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BIT_VECTOR] at $MODEL_TECH/../vhdl_src/std/textio.vhd(70)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(72)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(74)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(76)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.CHARACTER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(78)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(80)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, INTEGER] at $MODEL_TECH/../vhdl_src/std/textio.vhd(82)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(84)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/std/textio.vhd(86)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(88)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.STRING] at $MODEL_TECH/../vhdl_src/std/textio.vhd(90)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME, BOOLEAN] at $MODEL_TECH/../vhdl_src/std/textio.vhd(92)
-#       (explicit) TEXTIO.READ[std.TEXTIO.LINE, std.STANDARD.TIME] at $MODEL_TECH/../vhdl_src/std/textio.vhd(94)
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(122): VHDL Compiler exiting
-# End time: 17:00:59 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 4, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-vcom -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-# Start time: 17:06:49 on May 30,2017
-# vcom -reportprogress 300 -work lib_BENCH /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CELL
-# -- Compiling entity test_Cell
-# -- Compiling architecture test1 of test_Cell
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(53): Signal "sig_val" is type std.STANDARD.BIT_VECTOR; expecting type ieee.std_logic_1164.STD_LOGIC_VECTOR.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(97): (vcom-1360) Array type of "val" does not have an index constraint.
-# ** Error: /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd(122): VHDL Compiler exiting
-# End time: 17:06:49 on May 30,2017, Elapsed time: 0:00:00
-# Errors: 3, Warnings: 0
-# /opt/intelFPGA_pro/17.0/modelsim_ase/linuxaloem/vcom failed.
-# End time: 19:26:01 on May 30,2017, Elapsed time: 2:33:32
-# Errors: 10, Warnings: 2
+# Break key hit
+# Break in Process synchro at /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd line 38

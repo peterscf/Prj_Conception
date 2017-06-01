@@ -3,30 +3,36 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
-entity CORDIC is
+entity CORDIC_top is
+	generic(Nb: integer);
+
 	port( 	clk  : in std_logic;
 		reset_n  : in std_logic;
 	  	X  : in  std_logic_vector(7 downto 0);
 		Y  : in  std_logic_vector(7 downto 0);
 		Z  : out std_logic_vector(7 downto 0));
-end CORDIC;
+end CORDIC_top;
 
-architecture A of CORDIC is
+architecture A of CORDIC_top is
 
   component CELL
-    port( clk: in std_logic;
-          reset_n : in std_logic;
-          x_in: in std_logic_vector(7 downto 0);
-          y_in: in std_logic_vector(7 downto 0);
-          z_in: in std_logic_vector(7 downto 0);
-          tan_i: in std_logic_vector(5 downto 0);
-          shift: in std_logic_vector(2 downto 0);
-          x_out: out std_logic_vector(7 downto 0);         
-          y_out: out std_logic_vector(7 downto 0);
-          z_out: out std_logic_vector(7 downto 0));
-  end CELL;
+	  generic( Nb:integer; --Nb bits du bus en entrée 
+	  tan_i: integer; --angle
+	  shift: integer --etage du pipe
+  	);
 
- 
+    port(   clk: in std_logic;
+            reset_n : in std_logic;
+            x_in: in std_logic_vector(7 downto 0);
+            y_in: in std_logic_vector(7 downto 0);
+            z_in: in std_logic_vector(7 downto 0);
+            x_out: out std_logic_vector(7 downto 0);         
+            y_out: out std_logic_vector(7 downto 0);
+            z_out: out std_logic_vector(7 downto 0));
+  end component;
+
+  signal Z0	: std_logic_vector(7 downto 0);
+
   signal X1 	: std_logic_vector(7 downto 0);
   signal Y1	: std_logic_vector(7 downto 0);
   signal Z1	: std_logic_vector(7 downto 0);
@@ -49,80 +55,89 @@ architecture A of CORDIC is
 
   signal X6 	: std_logic_vector(7 downto 0);
   signal Y6	: std_logic_vector(7 downto 0);
+  signal Z6	: std_logic_vector(7 downto 0);
 
 
 begin
 
-  cell1 : CELL port map (
+	Z <= Z6;
+	Z0<= "00000000";
+  cell1 : CELL generic map ( Nb => 8,
+		tan_i => 45,
+		shift => 0 )
+  port map (
   	clk,
     	reset_n,
     	X,
    	Y,
-    	Z,
-    	"101101", -- 45
-    	"000", 	  -- 0
-    	X1,
+	Z0,
+       	X1,
     	Y1,
     	Z1);
     
-  cell2 : CELL port map (
+  cell2 : CELL generic map ( Nb => 8,
+		 tan_i=> 26,
+		shift => 1)
+  port map (
   	clk,
     	reset_n,
    	X1,
     	Y1,
     	Z1,
-    	"011010", -- 26
-	"001",	  -- 1
-    	X2,
+	X2,
     	Y2,
     	Z2);
     
-  cell3 : CELL port map (
+  cell3 : CELL generic map ( Nb => 8,
+		tan_i=> 14,
+		shift => 2)
+  port map (
   	clk,
     	reset_n,
    	X2,
     	Y2,
     	Z2,
-    	"001110", -- 14
-    	"010", 	  -- 2
-    	X3,
+	X3,
     	Y3,
     	Z3);
     
-  cell4 : CELL port map (
+  cell4 : CELL generic map ( Nb => 8,
+		tan_i=> 7,
+		shift => 3)
+ port map (
   	clk,
     	reset_n,
     	X3,
     	Y3,
     	Z3,
-    	"000111", -- 7
-    	"011",	  -- 3
     	X4,
     	Y4,
     	Z4);
     
-  cell5 : CELL port map (
+  cell5 : CELL generic map ( Nb => 8,
+		tan_i=> 3,
+		shift => 4)
+  port map (
   	clk,
     	reset_n,
     	X4,
     	Y4,
     	Z4,
-    	"000011", -- 3
-    	"100",	  -- 4
     	X5,
     	Y5,
     	Z5);
     
-  cell6 : CELL port map (
+  cell6 : CELL generic map ( Nb => 8,
+		tan_i=> 1,
+		shift => 5)
+  port map (
   	clk,
     	reset_n,
     	X5,
     	Y5,
    	Z5,
-    	"000001", -- 1
-    	"101",	  -- 5
     	X6,
     	Y6,
-    	Z);
+    	Z6);
 end A;
 

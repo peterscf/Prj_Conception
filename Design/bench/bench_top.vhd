@@ -7,37 +7,30 @@ use ieee.numeric_std.all;
 use ieee.math_real.all;
 use std.textio.all;
 library lib_VHD ;
-use lib_VHD.CELL;
+use lib_VHD.CORDIC_top;
 
 
-entity test_Cell is end test_cell;
+entity test_TOP is end test_TOP;
 
-architecture test1 of test_Cell is
+architecture test1 of test_TOP is
 --Test fonctionel !!!
-	component Cell 
-	generic(  tan_i: integer; --angle
-	  shift: integer --etage du pipe
-  	);
-	 port(   clk: in std_logic;
-            reset_n : in std_logic;
-            x_in: in std_logic_vector(7 downto 0);
-            y_in: in std_logic_vector(7 downto 0);
-            z_in: in std_logic_vector(7 downto 0);
-            x_out: out std_logic_vector(7 downto 0);         
-            y_out: out std_logic_vector(7 downto 0);
-            z_out: out std_logic_vector(7 downto 0));
+	component CORDIC_top is
+	generic (Nb: integer);
+	port( 	clk  : in std_logic;
+		reset_n  : in std_logic;
+	  	X  : in  std_logic_vector(7 downto 0);
+		Y  : in  std_logic_vector(7 downto 0);
+		Z  : out std_logic_vector(7 downto 0));
 	end component;
+
 
 signal sig_clk : std_logic := '0';
 signal sig_resetn : std_logic := '0';
 signal sig_x_in: std_logic_vector(7 downto 0);
-signal sig_y_in:  std_logic_vector(7 downto 0);
-signal sig_z_in:  std_logic_vector(7 downto 0);
-signal sig_x_out:  std_logic_vector(7 downto 0);         
-signal sig_y_out:  std_logic_vector(7 downto 0);
+signal sig_y_in:  std_logic_vector(7 downto 0); 
 signal sig_z_out:  std_logic_vector(7 downto 0);
 signal i: integer := 0;
---signal sig_val: bit_vector(7 downto 0);
+
 type     tab_x is array (0 to 179) of std_logic_vector(7 downto 0);
 type     tab_y is array (0 to 179) of std_logic_vector(7 downto 0);
 constant in_x : tab_x := (0=>X"00",	1=>X"02",	2=>X"04",	3=>X"06",	4=>X"08",	5=>X"0B",	6=>X"0D",	7=>X"0F",	8=>X"11",	9=>X"14",	10=>X"16",	11=>X"18",	12=>X"1A",	13=>X"1C",	14=>X"1E",	15=>X"21",	16=>X"23",	17=>X"25",	18=>X"27",	19=>X"29",	20=>X"2B",	21=>X"2D",	22=>X"2F",	23=>X"32",	24=>X"34",	25=>X"36",	26=>X"38",	27=>X"3A",	28=>X"3C",	29=>X"3E",	30=>X"40",	31=>X"41",	32=>X"43",	33=>X"45",	34=>X"47",	35=>X"49",	36=>X"4B",	37=>X"4D",	38=>X"4E",	39=>X"50",	40=>X"52",	41=>X"53",	42=>X"55",	43=>X"57",	44=>X"58",	45=>X"5A",	46=>X"5C",	47=>X"5D",	48=>X"5F",	49=>X"60",	50=>X"62",	51=>X"63",	52=>X"64",	53=>X"66",	54=>X"67",	55=>X"68",	56=>X"6A",	57=>X"6B",	58=>X"6C",	59=>X"6D",	60=>X"6E",	61=>X"6F",	62=>X"71",	63=>X"72",	64=>X"73",	65=>X"74",	66=>X"74",	67=>X"75",	68=>X"76",	69=>X"77",	70=>X"78",	71=>X"79",	72=>X"79",	73=>X"7A",	74=>X"7B",	75=>X"7B",	76=>X"7C",	77=>X"7C",	78=>X"7D",	79=>X"7D",	80=>X"7E",	81=>X"7E",	82=>X"7E",	83=>X"7F",	84=>X"7F",	85=>X"7F",	86=>X"7F",	87=>X"7F",	88=>X"7F",	89=>X"7F",	90=>X"80",	91=>X"7F",	92=>X"7F",	93=>X"7F",	94=>X"7F",	95=>X"7F",	96=>X"7F",	97=>X"7F",	98=>X"7E",	99=>X"7E",	100=>X"7E",	101=>X"7D",	102=>X"7D",	103=>X"7C",	104=>X"7C",	105=>X"7B",	106=>X"7B",	107=>X"7A",	108=>X"79",	109=>X"79",	110=>X"78",	111=>X"77",	112=>X"76",	113=>X"75",	114=>X"74",	115=>X"74",	116=>X"73",	117=>X"72",	118=>X"71",	119=>X"6F",	120=>X"6E",	121=>X"6D",	122=>X"6C",	123=>X"6B",	124=>X"6A",	125=>X"68",	126=>X"67",	127=>X"66",	128=>X"64",	129=>X"63",	130=>X"62",	131=>X"60",	132=>X"5F",	133=>X"5D",	134=>X"5C",	135=>X"5A",	136=>X"58",	137=>X"57",	138=>X"55",	139=>X"53",	140=>X"52",	141=>X"50",	142=>X"4E",	143=>X"4D",	144=>X"4B",	145=>X"49",	146=>X"47",	147=>X"45",	148=>X"43",	149=>X"41",	150=>X"40",	151=>X"3E",	152=>X"3C",	153=>X"3A",	154=>X"38",	155=>X"36",	156=>X"34",	157=>X"32",	158=>X"2F",	159=>X"2D",	160=>X"2B",	161=>X"29",	162=>X"27",	163=>X"25",	164=>X"23",	165=>X"21",	166=>X"1E",	167=>X"1C",	168=>X"1A",	169=>X"18",	170=>X"16",	171=>X"14",	172=>X"11",	173=>X"0F",	174=>X"0D",	175=>X"0B",	176=>X"08",	177=>X"06",	178=>X"04",	179=>X"02");
@@ -46,22 +39,21 @@ constant in_y : tab_y := (0=>X"80",	1=>X"81",	2=>X"81",	3=>X"81",	4=>X"81",	5=>X
 
 --signal period: natural;
 begin
-	sig_z_in <= "00000000";
-	C1: Cell generic map (
-		shift => 0,
-		tan_i=> 45 )
-		port map(sig_clk,sig_resetn,sig_x_in,sig_y_in,sig_z_in,sig_x_out,sig_y_out,sig_z_out);
+	C1: CORDIC_top
+       	generic map(Nb=>8)	
+	port map(sig_clk,sig_resetn,sig_x_in,sig_y_in,sig_z_out);
 	sig_clk <= not(sig_clk) after  10 ns; --50Mhz
 	sig_resetn <= '1' after 60 ns; 
 	process 
-   	begin
+   	begin	
+		wait for 60 ns;
+		while i<179 loop
+			sig_x_in <= in_x(i);  
+			sig_y_in <= in_y(i);  
+			wait for 20 ns ;		
+			i<=i+1;
+		end loop;
+		wait for 80 ns;
 
-		wait for 20 ns;
-		sig_x_in <=  in_x(i);  -- deg
-		sig_y_in <= in_y(i);  -- deg
-		
-	i<=i+1;
-
-	end process;
-  
+	end process; 
 end test1;

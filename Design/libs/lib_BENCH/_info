@@ -9,8 +9,8 @@ dC:/Users/flori/OneDrive/Documents/INP PHELMA/Projet Conception/Prj_Conception-m
 !i10e 25
 !i10f 100
 Etest_cell
-Z0 w1496156780
-DEx7 lib_vhd 4 cell 0 22 NcKKCBbCWb<PRLX4[c;7z3
+Z0 w1496240434
+DEx7 lib_vhd 4 cell 0 22 Ch^[z^1BUz7J`Y1?SC0FT0
 Z1 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
 Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
@@ -25,14 +25,14 @@ V[7Mjk4lclH1n[WJYj`BC43
 !s100 zAQ@>9c<bZa^dQQXW]GQJ1
 Z9 OV;C;10.5c;63
 32
-!s110 1496156809
+Z10 !s110 1496299081
 !i10b 1
-!s108 1496156809.000000
-Z10 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd|
-!s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd|
+Z11 !s108 1496299081.000000
+Z12 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd|
+Z13 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd|
 !i113 1
-Z11 o-work lib_BENCH
-Z12 tExplicit 1 CvgOpt 0
+Z14 o-work lib_BENCH
+Z15 tExplicit 1 CvgOpt 0
 Atest1
 R1
 R2
@@ -40,17 +40,63 @@ R3
 R4
 R5
 DEx4 work 9 test_cell 0 22 [7Mjk4lclH1n[WJYj`BC43
-l41
+l48
 L15
-VWXDI8151H81FkX=km6;7_3
-!s100 @^W;b11ZCmEEKKVa8kn^z2
+VF@bR0b@iN[90N_=h1mR0`1
+!s100 2b=dV_LmfWmhdCbjM>f4I0
 R9
 32
-!s110 1496155946
-!i10b 1
-!s108 1496155946.000000
 R10
-!s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_cell.vhd|
-!i113 1
+!i10b 1
 R11
 R12
+R13
+!i113 1
+R14
+R15
+Etest_top
+Z16 w1496299132
+DEx7 lib_vhd 10 cordic_top 0 22 7Rk;AUOd8AH2UGE5JLJBh3
+R1
+R2
+R3
+R4
+R5
+R6
+Z17 8/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+Z18 F/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+l0
+L13
+VjnPnGbhT2KJoECXaM?ic12
+!s100 h=fXhKkbO2hH@`g022VXe0
+R9
+32
+Z19 !s110 1496299144
+!i10b 1
+Z20 !s108 1496299144.000000
+Z21 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd|
+Z22 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd|
+!i113 1
+R14
+R15
+Atest1
+R1
+R2
+R3
+R4
+R5
+DEx4 work 8 test_top 0 22 jnPnGbhT2KJoECXaM?ic12
+l41
+L15
+Z23 V?7HGe327j;Z7@8R]m>2mY1
+Z24 !s100 P4URgm3OU42kQYWNe9a2<1
+R9
+32
+R19
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R14
+R15

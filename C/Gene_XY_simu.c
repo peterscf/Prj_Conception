@@ -14,7 +14,7 @@
 
 int main(void){
  
-int x,y,z,teta;
+int x,y,z,i,teta;
 double rad,a_x,a_y;
 int tan0[] ={45,26,14,7,3,1};
 FILE* file_x;
@@ -23,7 +23,7 @@ FILE* file_y;
 	file_x=fopen("simu_in_x.dat","w+");
 	file_y=fopen("simu_in_y.dat","w+");
 if (file_x !=NULL && file_y !=NULL){
-
+i=0;
   for (teta = -90; teta< 90; teta++){
 	z=0;
 	rad = teta*PI/180;	
@@ -33,9 +33,9 @@ if (file_x !=NULL && file_y !=NULL){
  	y= (int)(a_y*(0x1<<B));
 	
 // ecriture dans fichier en formats 8bits signé 
-		fprintf(file_x,"%.2X\n",x);
-		fprintf(file_y,"%2.2X\n",y);
-	
+		fprintf(file_x,"%d=>X\"%.2X\",\t",i,x);
+		fprintf(file_y,"%d=>X\"%.2X\",\t",i,y);
+	i++;
 	}
 }
 else {

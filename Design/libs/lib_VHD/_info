@@ -9,7 +9,7 @@ d/tp/xph2app/xph2app003/Prj_Conception/Design
 !i10e 25
 !i10f 100
 Ecell
-Z0 w1496149051
+Z0 w1496298319
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
@@ -18,13 +18,13 @@ Z5 8/home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
 Z6 F/home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd
 l0
 L11
-VNcKKCBbCWb<PRLX4[c;7z3
-!s100 fJ0DUm<CDV7GZ@75Hg:Ad3
+VCh^[z^1BUz7J`Y1?SC0FT0
+!s100 92b2dmgAf1@NWz<J_FQ^V2
 Z7 OV;C;10.5c;63
 32
-Z8 !s110 1496149085
+Z8 !s110 1496299110
 !i10b 1
-Z9 !s108 1496149085.000000
+Z9 !s108 1496299110.000000
 Z10 !s90 -reportprogress|300|-work|lib_VHD|/home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd|
 Z11 !s107 /home/floriant/Documents/Prj_conception/Design/vhd/Cell.vhd|
 !i113 1
@@ -34,11 +34,11 @@ Aa
 R1
 R2
 R3
-Z14 DEx4 work 4 cell 0 22 NcKKCBbCWb<PRLX4[c;7z3
-l32
-L24
-Vl_o<Vh7hj]HH1NOfZeVKA0
-!s100 80k;L^BTHkd7B:56cNOXG1
+Z14 DEx4 work 4 cell 0 22 Ch^[z^1BUz7J`Y1?SC0FT0
+l36
+L28
+Z15 VWO]Tam8U>6g]7ZGYBTZ:51
+Z16 !s100 ^i;1blcL?<2DHiK5O[cjk0
 R7
 32
 R8
@@ -46,6 +46,47 @@ R8
 R9
 R10
 R11
+!i113 1
+R12
+R13
+Ecordic_top
+Z17 w1496298954
+R1
+R2
+R3
+R4
+Z18 8/home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+Z19 F/home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd
+l0
+L6
+V7Rk;AUOd8AH2UGE5JLJBh3
+!s100 bgG4Jm7[<;[ldYAC[2fFa3
+R7
+32
+Z20 !s110 1496299108
+!i10b 1
+Z21 !s108 1496299108.000000
+Z22 !s90 -reportprogress|300|-work|lib_VHD|/home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd|
+Z23 !s107 /home/floriant/Documents/Prj_conception/Design/vhd/cordic.vhd|
+!i113 1
+R12
+R13
+Aa
+R1
+R2
+R3
+DEx4 work 10 cordic_top 0 22 7Rk;AUOd8AH2UGE5JLJBh3
+l61
+L16
+VJM2mIX]dOA@@KKKGe9;=?3
+!s100 ;A@gVXoXRD?7GVzV0cZKh2
+R7
+32
+R20
+!i10b 1
+R21
+R22
+R23
 !i113 1
 R12
 R13
