@@ -1,8 +1,0 @@
-Enabled AND-Sync
-Enabled Sync-Enable
-Enabled Clock_Gate-Sync
-Enabled Mux-Select
-Enabled Recirculation
-RULE: Clock_info02 INFORMATION START
-RULE: Reset_info02 INFORMATION START
-RULE: Reset_info02 INFORMATION END

@@ -1,8 +1,0 @@
-Instance,Module,Total Register Count,Count of Registers having enable,Classification of Registers having enable,,,,,Registers With No Enables
-,,,,Non Clock-Gated Enabled Registers,Synthesis Inferred Clock Gated Registers,Registers Having Enables Due To Feedback Across Hierarchies,Instantiated Clock Gated Registers,Registers with cascade enable
-CORDIC_top.cell1,CELL.A,24,0,0,0,0,0,0,24
-CORDIC_top.cell2,CELL.A,24,0,0,0,0,0,0,24
-CORDIC_top.cell3,CELL.A,24,0,0,0,0,0,0,24
-CORDIC_top.cell4,CELL.A,24,0,0,0,0,0,0,24
-CORDIC_top.cell5,CELL.A,24,0,0,0,0,0,0,24
-CORDIC_top.cell6,CELL.A,24,0,0,0,0,0,0,24
