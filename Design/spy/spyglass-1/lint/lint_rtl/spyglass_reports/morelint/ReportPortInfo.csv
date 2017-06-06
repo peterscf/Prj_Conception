@@ -1,0 +1,6 @@
+Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
+CORDIC_top,Top_Level,clk,INPUT,1,-,port definition,- 
+CORDIC_top,Top_Level,reset_n,INPUT,1,-,port definition,- 
+CORDIC_top,Top_Level,X,INPUT,8,(7:0),port definition,- 
+CORDIC_top,Top_Level,Y,INPUT,8,(7:0),port definition,- 
+CORDIC_top,Top_Level,Z,OUTPUT,8,(7:0),port definition,- 

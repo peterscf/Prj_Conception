@@ -1,0 +1,12 @@
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "PECHECK04" 3
+"TEMPLATE"
+["power/power_audit"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["power_est/pe_sanity_check"]

@@ -1,0 +1,15 @@
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Soc_00" 2
+"TEMPLATE"
+["dft/dft_abstract"]
+"RULE_ORDER"
+[1]

@@ -1,0 +1,25 @@
+##args     : -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -mSpyGlass::Compatibility::v2_7_3 \
+             -I '/softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical' \
+             -nl \
+             -wdir './spyglass-1/power/power_fix_verify' \
+             -lib WORK ./spyglass-1/WORK \
+             -dbdir './spyglass-1/.SG_SaveRestoreDB' \
+             -mixed \
+             -batch \
+             -policy='power_est' \
+             --goal_info 'power/power_fix_verify@' \
+             -projectwdir './spyglass-1' \
+             -templatedir '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff' \
+             --template_info 'power/power_fix_verify' \
+             -sgsyn_opt_file '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/soc/rtl_handoff/power/red_opt.tcl' \
+             -classic_mode \
+             -enable_save_restore \
+             -disallow_view_delete \
+             -enable_save_restore_builtin 'true' \
+             -pe_auto_infer_rme=1 \
+             -pe_disable_goal_consolidation \
+             -pe_generate_equiv_sim_file \
+             -rme_active \
+             -64bit 

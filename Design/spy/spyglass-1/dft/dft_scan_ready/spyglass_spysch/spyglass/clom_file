@@ -1,0 +1,63 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--goal_info     dft/dft_scan_ready@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 39
+-I              /softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical CmdLine -                              -
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 29
+-lib            WORK=>./spyglass-1/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-overloadrules  Async_07+msgLabel=Async_07_M1+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 69
+                Clock_11+msgLabel=Clock_11_M1+severity=Error CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 74
+-policy         dft               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 51
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Async_07          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 68
+                Async_08          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 71
+                Clock_11          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 73
+                Clock_11_capture  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 76
+                Coverage_audit    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 78
+                Info_coverage     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 80
+                Diagnose_testmode CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 82
+                Diagnose_testclock CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 84
+                Info_forcedScan   CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 86
+                Info_inferredNoScan CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 88
+                Info_noScan       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 90
+                Info_path         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 92
+                Info_scanwrap     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 94
+                Info_testclock    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 96
+                Info_testmode     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/dft/dft_scan_ready.spq 98
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       dft/dft_scan_ready CmdLine -                              -
+-templatedir    /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-wdir           ./spyglass-1/dft/dft_scan_ready CmdLine -                              -
+<design_files>  ../vhd/cell.vhd   APICall -                              -
+                ../vhd/cordic.vhd APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        5.6.0           $SPYGLASS_HOME/policies/spyglass
+dft             5.6.0           $SPYGLASS_HOME/policies/dft
+
+

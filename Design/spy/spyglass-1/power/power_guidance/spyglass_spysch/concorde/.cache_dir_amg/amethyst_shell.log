@@ -1,0 +1,1117 @@
+
+[AMG-TCL] lib_load /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/gates/rtlc.prim.slf.lib  -lib -skip "RTL_OR3 RTL_OR4 RTL_NOR3 RTL_NOR4 RTL_XOR3 RTL_XOR4 RTL_XNOR3 RTL_XNOR4 RTL_AND3 RTL_AND4 RTL_NAND3 RTL_NAND4 RTL_BUFX RTL_BUFIX RTL_PRIM_CASE_EQ RTL_PRIM_CASE_NEQ " -scan
+Reading Library: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/libs/generic.lbf'
+Parsing Library and building datastructures
+
+Reading Liberty format library: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/gates/rtlc.prim.slf.lib'
+Parsing/Translating ...
+W047: Pin 'Z' on cell 'RTL_PULLUP' is unsupported 'inout'.  Ignoring this cell.
+W047: Pin 'Z' on cell 'RTL_PULLDOWN' is unsupported 'inout'.  Ignoring this cell.
+W048: Pin function (three_state) on cell 'RTL_BUFIZ' not unsupported.  Ignoring this cell.
+W057: Cell 'RTL_ICGC' contains unsupported group 'statetable' ... ignoring this cell.
+W058: Cell 'RTL_RET_FD_SR' contains functions and too many i/o pins ... ignoring it.
+W058: Cell 'RTL_RET_FD_SL' contains functions and too many i/o pins ... ignoring it.
+W058: Cell 'RTL_RET_LD_SR' contains functions and too many i/o pins ... ignoring it.
+Final translating to lbf ...
+W060: Linear model being approximated by Non-linear model
+Not all scale factors are supported.
+Reading Library: ''
+Parsing Library and building datastructures
+W011: Not all ports are specified in equations.
+	In mod 'RTL_RET_LD_SL'
+	At line 377 near:  )
+	Ignoring this module ('RTL_RET_LD_SL')
+
+W063: Buffer trees built without inverter input capacitance info.
+
+Building composites, optimized for area
+Reading Composites: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/libs/complib.sdl'
+W015: Composite 'addgen5_A' is not fully mapped
+W015: Composite 'fd5qq_A' is not fully mapped
+
+Building composites, optimized for speed
+Reading Composites: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/libs/complib.sdl'
+W015: Composite 'addgen5_D' is not fully mapped
+W015: Composite 'fd5qq_D' is not fully mapped
+
+Building composites, optimized for area-speed
+Reading Composites: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/libs/complib.sdl'
+W015: Composite 'addgen5_AD' is not fully mapped
+W015: Composite 'fd5qq_AD' is not fully mapped
+
+Searching for and Building Sequential Composites
+
+Loading Characterization Library
+Reading Char Lib: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/libs/charlib.sdl'
+[AMG-STAT] Memory consumed = 2809.55K, Time taken = 0.540s
+
+[AMG-TCL] set syn_no_feedthroughs on
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] set syn_merge_copy_ports 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 115.45K, Time taken = 0.010s
+
+[AMG-TCL] wire {B[0]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       27        9       27
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        9        9   27.0000   
+Merge port        0        9   27.0000   
+Gate Eater        1        8   24.5000   
+Area Btree        0        8   24.5000   
+     Merge        0        8   24.5000   
+ Logic Opt        3        8   20.5000   
+ Logic Opt        0        8   20.5000   
+      Area        0        8   20.5000   
+   Flatten        6       17   20.5000   
+Gate Eater        0       17   20.5000   
+Area Btree        0       17   20.5000   
+     Merge        0       17   20.5000   
+ Logic Opt        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+  Buf Tree        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+      Area        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+   Flatten        0       17   20.5000   
+   Flatten        0       17   20.5000   
+     Reset        0       17   20.5000   
+Completed
+[AMG-STAT] Memory consumed = 754.89K, Time taken = 0.120s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_0 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_0_area.v
+[AMG-STAT] Memory consumed = 0.38K, Time taken = 0.010s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = 137.08K, Time taken = 0.010s
+
+[AMG-TCL] wire {B[0]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     8       24        8       24
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   23.5000   
+Merge port        0        8   23.5000   
+Gate Eater        0        8   23.5000   
+Area Btree        0        8   23.5000   
+     Merge        0        8   23.5000   
+ Logic Opt        3        8   20.0000   
+ Logic Opt        0        8   20.0000   
+      Area        0        8   20.0000   
+   Flatten        6       17   20.0000   
+Gate Eater        0       17   20.0000   
+Area Btree        0       17   20.0000   
+     Merge        0       17   20.0000   
+ Logic Opt        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+  Buf Tree        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+      Area        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+   Flatten        0       17   20.0000   
+   Flatten        0       17   20.0000   
+     Reset        0       17   20.0000   
+Completed
+[AMG-STAT] Memory consumed = 12.12K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_0 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_0_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 1.12K, Time taken = 0.010s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+    17       65       17       65
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis       17       17   65.0000   
+Merge port        0       17   65.0000   
+Gate Eater        1       16   62.5000   
+Area Btree        0       16   62.5000   
+     Merge        0       16   62.5000   
+ Logic Opt        0       16   62.5000   
+    Bubble        6       16   56.5000   
+ Logic Opt        0       16   56.5000   
+      Area        0       16   56.5000   
+   Flatten        8       35   56.5000   
+Gate Eater        1       34   53.5000   
+Area Btree        0       34   53.5000   
+     Merge        0       34   53.5000   
+ Logic Opt        0       34   53.5000   
+    Bubble        3       34   54.0000   
+ Logic Opt        2       32   52.0000   
+    Bubble        7       32   52.0000   
+ Logic Opt        2       30   50.0000   
+    Bubble        5       30   49.5000   
+ Logic Opt        1       29   48.5000   
+    Bubble        5       29   48.0000   
+ Logic Opt        1       28   47.0000   
+    Bubble        5       28   46.5000   
+ Logic Opt        1       27   45.5000   
+    Bubble        5       27   45.0000   
+ Logic Opt        1       26   44.0000   
+    Bubble        2       26   42.5000   
+ Logic Opt        0       26   42.5000   
+  Area Inv        0       26   42.5000   
+   Area(r)        1       23   42.0000   
+   Area(r)        0       23   42.0000   
+  Buf Tree        0       23   42.0000   
+  Area Inv        0       23   42.0000   
+      Area        0       23   42.0000   
+   Area(r)        0       23   42.0000   
+   Flatten        0       23   42.0000   
+   Flatten        0       23   42.0000   
+     Reset        0       23   42.0000   
+Completed
+[AMG-STAT] Memory consumed = 0.25K, Time taken = 0.010s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_1 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_1_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = 15.58K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     8       59        8       59
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   59.0000   
+Merge port        0        8   59.0000   
+Gate Eater        0        8   59.0000   
+Area Btree        0        8   59.0000   
+     Merge        0        8   59.0000   
+ Logic Opt        0        8   59.0000   
+    Bubble        6        8   53.0000   
+ Logic Opt        0        8   53.0000   
+    Bubble        2        8   52.5000   
+ Logic Opt        0        8   52.5000   
+      Area        0        8   52.5000   
+   Flatten        8       23   52.5000   
+Gate Eater        1       22   49.5000   
+Area Btree        0       22   49.5000   
+     Merge        0       22   49.5000   
+ Logic Opt        0       22   49.5000   
+    Bubble       20       22   42.5000   
+ Logic Opt        0       22   42.5000   
+  Area Inv        0       22   42.5000   
+   Area(r)        0       22   42.5000   
+  Buf Tree        0       22   42.5000   
+  Area Inv        0       22   42.5000   
+      Area        0       22   42.5000   
+   Area(r)        0       22   42.5000   
+   Flatten        0       22   42.5000   
+   Flatten        0       22   42.5000   
+     Reset        0       22   42.5000   
+Completed
+[AMG-STAT] Memory consumed = 2.72K, Time taken = 0.010s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_1 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_1_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 80.17K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[0]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = -0.28K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       26        9       26
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        9        9   26.5000   
+Merge port        0        9   26.5000   
+Gate Eater        1        8   24.0000   
+Area Btree        0        8   24.0000   
+     Merge        0        8   24.0000   
+ Logic Opt        3        8   20.0000   
+ Logic Opt        0        8   20.0000   
+      Area        0        8   20.0000   
+   Flatten        6       17   20.0000   
+Gate Eater        0       17   20.0000   
+Area Btree        0       17   20.0000   
+     Merge        0       17   20.0000   
+ Logic Opt        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+  Buf Tree        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+      Area        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+   Flatten        0       17   20.0000   
+   Flatten        0       17   20.0000   
+     Reset        0       17   20.0000   
+Completed
+[AMG-STAT] Memory consumed = 3.12K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_2 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_2_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = 4.84K, Time taken = 0.010s
+
+[AMG-TCL] wire {B[0]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     8       24        8       24
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   24.5000   
+Merge port        0        8   24.5000   
+Gate Eater        0        8   24.5000   
+Area Btree        0        8   24.5000   
+     Merge        0        8   24.5000   
+ Logic Opt        3        8   20.5000   
+ Logic Opt        0        8   20.5000   
+      Area        0        8   20.5000   
+   Flatten        6       17   20.5000   
+Gate Eater        0       17   20.5000   
+Area Btree        0       17   20.5000   
+     Merge        0       17   20.5000   
+ Logic Opt        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+  Buf Tree        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+      Area        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+   Flatten        0       17   20.5000   
+   Flatten        0       17   20.5000   
+     Reset        0       17   20.5000   
+Completed
+[AMG-STAT] Memory consumed = 2.68K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_2 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_2_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 92.36K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[0]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       27        9       27
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        9        9   27.0000   
+Merge port        0        9   27.0000   
+Gate Eater        1        8   24.5000   
+Area Btree        0        8   24.5000   
+     Merge        0        8   24.5000   
+ Logic Opt        3        8   20.5000   
+ Logic Opt        0        8   20.5000   
+      Area        0        8   20.5000   
+   Flatten        6       17   20.5000   
+Gate Eater        0       17   20.5000   
+Area Btree        0       17   20.5000   
+     Merge        0       17   20.5000   
+ Logic Opt        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+  Buf Tree        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+      Area        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+   Flatten        0       17   20.5000   
+   Flatten        0       17   20.5000   
+     Reset        0       17   20.5000   
+Completed
+[AMG-STAT] Memory consumed = -6.62K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_3 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_3_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = -1.09K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[0]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     8       24        8       24
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   24.0000   
+Merge port        0        8   24.0000   
+Gate Eater        0        8   24.0000   
+Area Btree        0        8   24.0000   
+     Merge        0        8   24.0000   
+ Logic Opt        3        8   20.0000   
+ Logic Opt        0        8   20.0000   
+      Area        0        8   20.0000   
+   Flatten        6       17   20.0000   
+Gate Eater        0       17   20.0000   
+Area Btree        0       17   20.0000   
+     Merge        0       17   20.0000   
+ Logic Opt        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+  Buf Tree        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+      Area        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+   Flatten        0       17   20.0000   
+   Flatten        0       17   20.0000   
+     Reset        0       17   20.0000   
+Completed
+[AMG-STAT] Memory consumed = 5.38K, Time taken = 0.010s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_3 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_3_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 78.83K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[0]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       22        9       22
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   22.0000   
+Merge port        0        8   22.0000   
+Gate Eater        0        8   22.0000   
+Area Btree        0        8   22.0000   
+     Merge        0        8   22.0000   
+ Logic Opt        3        8   18.5000   
+ Logic Opt        0        8   18.5000   
+      Area        0        8   18.5000   
+   Flatten        5       16   18.5000   
+Gate Eater        0       16   18.5000   
+Area Btree        0       16   18.5000   
+     Merge        0       16   18.5000   
+ Logic Opt        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+  Buf Tree        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+      Area        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+   Flatten        0       16   18.5000   
+   Flatten        0       16   18.5000   
+     Reset        0       16   18.5000   
+Completed
+[AMG-STAT] Memory consumed = 2.75K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_4 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_4_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = 16.59K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[0]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       22        9       22
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        9        9   22.5000   
+Merge port        0        9   22.5000   
+Gate Eater        1        8   22.0000   
+Area Btree        0        8   22.0000   
+     Merge        0        8   22.0000   
+ Logic Opt        3        8   18.5000   
+ Logic Opt        0        8   18.5000   
+      Area        0        8   18.5000   
+   Flatten        5       16   18.5000   
+Gate Eater        0       16   18.5000   
+Area Btree        0       16   18.5000   
+     Merge        0       16   18.5000   
+ Logic Opt        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+  Buf Tree        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+      Area        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+   Flatten        0       16   18.5000   
+   Flatten        0       16   18.5000   
+     Reset        0       16   18.5000   
+Completed
+[AMG-STAT] Memory consumed = 3.12K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_4 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_4_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 80.12K, Time taken = 0.010s
+
+[AMG-TCL] wire {B[0]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       22        9       22
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   22.0000   
+Merge port        0        8   22.0000   
+Gate Eater        0        8   22.0000   
+Area Btree        0        8   22.0000   
+     Merge        0        8   22.0000   
+ Logic Opt        3        8   18.5000   
+ Logic Opt        0        8   18.5000   
+      Area        0        8   18.5000   
+   Flatten        5       16   18.5000   
+Gate Eater        0       16   18.5000   
+Area Btree        0       16   18.5000   
+     Merge        0       16   18.5000   
+ Logic Opt        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+  Buf Tree        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+      Area        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+   Flatten        0       16   18.5000   
+   Flatten        0       16   18.5000   
+     Reset        0       16   18.5000   
+Completed
+[AMG-STAT] Memory consumed = 5.38K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_5 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_5_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = 1.62K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[0]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       22        9       22
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        9        9   22.5000   
+Merge port        0        9   22.5000   
+Gate Eater        1        8   22.0000   
+Area Btree        0        8   22.0000   
+     Merge        0        8   22.0000   
+ Logic Opt        3        8   18.5000   
+ Logic Opt        0        8   18.5000   
+      Area        0        8   18.5000   
+   Flatten        5       16   18.5000   
+Gate Eater        0       16   18.5000   
+Area Btree        0       16   18.5000   
+     Merge        0       16   18.5000   
+ Logic Opt        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+  Buf Tree        0       16   18.5000   
+  Area Inv        0       16   18.5000   
+      Area        0       16   18.5000   
+   Area(r)        0       16   18.5000   
+   Flatten        0       16   18.5000   
+   Flatten        0       16   18.5000   
+     Reset        0       16   18.5000   
+Completed
+[AMG-STAT] Memory consumed = 4.25K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_5 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_5_area.v
+[AMG-STAT] Memory consumed = -0.47K, Time taken = 0.000s
+
+[AMG-TCL] dw_load sub width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'sub_8'
+[AMG-STAT] Memory consumed = 90.20K, Time taken = 0.010s
+
+[AMG-TCL] wire {B[0]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module sub_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     9       26        9       26
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        9        9   26.5000   
+Merge port        0        9   26.5000   
+Gate Eater        1        8   24.0000   
+Area Btree        0        8   24.0000   
+     Merge        0        8   24.0000   
+ Logic Opt        3        8   20.0000   
+ Logic Opt        0        8   20.0000   
+      Area        0        8   20.0000   
+   Flatten        6       17   20.0000   
+Gate Eater        0       17   20.0000   
+Area Btree        0       17   20.0000   
+     Merge        0       17   20.0000   
+ Logic Opt        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+  Buf Tree        0       17   20.0000   
+  Area Inv        0       17   20.0000   
+      Area        0       17   20.0000   
+   Area(r)        0       17   20.0000   
+   Flatten        0       17   20.0000   
+   Flatten        0       17   20.0000   
+     Reset        0       17   20.0000   
+Completed
+[AMG-STAT] Memory consumed = 5.38K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_sub_atrmacro_8_6 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_sub_atrmacro_8_6_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] dw_load add width=8
+Reading SDL: '/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/synthesis/export/amg/gui/dw.sdl'
+Parsing SDL and building datastructures
+Module 'add_8'
+[AMG-STAT] Memory consumed = -3.88K, Time taken = 0.010s
+
+[AMG-TCL] wire {B[0]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[2]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[3]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[5]} -const 1
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[1]} -const 0
+[AMG-STAT] Memory consumed = -0.31K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[4]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[6]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {B[7]} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CI} -const 0
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] wire {CO} -unused
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s
+
+[AMG-TCL] opt area
+[AMG-STAT] Memory consumed = -1.88K, Time taken = 0.000s
+
+[AMG-TCL] mod_build -all -noreloc --rule --topt -aopt
+Mode: ASIC
+Building Module add_8
+
+ Insts    Gates    Insts    Gates
+--------------------------------------------------------------------------------
+sum
+     8       24        8       24
+
+      Step    Delta    Insts     Gates     Slack    Delay   Crit Path
+--------------------------------------------------------------------------------
+ Synthesis        8        8   24.5000   
+Merge port        0        8   24.5000   
+Gate Eater        0        8   24.5000   
+Area Btree        0        8   24.5000   
+     Merge        0        8   24.5000   
+ Logic Opt        3        8   20.5000   
+ Logic Opt        0        8   20.5000   
+      Area        0        8   20.5000   
+   Flatten        6       17   20.5000   
+Gate Eater        0       17   20.5000   
+Area Btree        0       17   20.5000   
+     Merge        0       17   20.5000   
+ Logic Opt        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+  Buf Tree        0       17   20.5000   
+  Area Inv        0       17   20.5000   
+      Area        0       17   20.5000   
+   Area(r)        0       17   20.5000   
+   Flatten        0       17   20.5000   
+   Flatten        0       17   20.5000   
+     Reset        0       17   20.5000   
+Completed
+[AMG-STAT] Memory consumed = 5.38K, Time taken = 0.000s
+
+[AMG-TCL] mod_vrl -mn DW01_add_atrmacro_8_6 -f ./spyglass-1/power/power_guidance/spyglass_spysch/concorde/.cache_dir_amg/DW01_add_atrmacro_8_6_area.v
+[AMG-STAT] Memory consumed = 0.00K, Time taken = 0.000s

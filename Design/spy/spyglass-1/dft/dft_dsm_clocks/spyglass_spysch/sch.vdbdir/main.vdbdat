@@ -1,0 +1,628 @@
+#x HLBEGIN S.1
+#x {{COLOR=>2;}{COLOR=>1;}}
+#x 70 { @@s 0 t 5 0 p 0 a 0 @@d 5 { @@i 101 a 0 @@s 0 p 0 t 101 2 a 0 } }
+#x HLEND
+#x HLBEGIN S.2
+#x {{TEXT=>1;COLOR=>1;}{TEXT=>0;COLOR=>2;}{TEXT=>0;COLOR=>5;}{TEXT=>1;COLOR=>6;}
+#x }
+#x 70 { @@n 31 a 1 @@n 32 a 1 @@n 33 a 1 @@n 34 a 1 @@n 35 a 1 @@n 36 a 1
+#x @@n 37 a 1 @@n 38 a 1 @@n 29 a 2 @@d 0 { @@n 59 a 0 @@n 86 a 0 @@n 138 a 0
+#x @@n 140 a 0 @@n 141 a 0 @@n 143 a 0 @@n 147 a 0 @@n 148 a 0 @@n 151 a 0
+#x @@n 153 a 0 @@n 154 a 0 @@n 139 a 1 @@n 142 a 1 @@n 144 a 1 @@n 145 a 1
+#x @@n 149 a 1 @@n 150 a 1 @@n 152 a 1 @@n 56 a 2 @@n 57 a 3 } @@d 1 {
+#x @@n 56 a 2 @@n 57 a 3 } @@d 2 { @@n 56 a 2 @@n 57 a 3 } @@d 3 { @@n 56 a 2
+#x @@n 57 a 3 } @@d 4 { @@n 56 a 2 @@n 57 a 3 } @@d 5 { @@n 56 a 2 @@n 57 a 3 }
+#x }
+#x HLEND
+#x HLBEGIN S.3
+#x {{TEXT=>1;COLOR=>1;}{TEXT=>0;COLOR=>2;}{TEXT=>0;COLOR=>5;}{TEXT=>1;COLOR=>6;}
+#x }
+#x 70 { @@n 31 a 1 @@n 32 a 1 @@n 33 a 1 @@n 34 a 1 @@n 35 a 1 @@n 36 a 1
+#x @@n 37 a 1 @@n 38 a 1 @@n 29 a 2 @@d 0 { @@n 59 a 0 @@n 86 a 0 @@n 138 a 0
+#x @@n 140 a 0 @@n 141 a 0 @@n 143 a 0 @@n 147 a 0 @@n 148 a 0 @@n 151 a 0
+#x @@n 153 a 0 @@n 154 a 0 @@n 139 a 1 @@n 142 a 1 @@n 144 a 1 @@n 145 a 1
+#x @@n 149 a 1 @@n 150 a 1 @@n 152 a 1 @@n 56 a 2 @@n 57 a 3 } @@d 1 {
+#x @@n 56 a 2 @@n 57 a 3 } @@d 2 { @@n 56 a 2 @@n 57 a 3 } @@d 3 { @@n 56 a 2
+#x @@n 57 a 3 } @@d 4 { @@n 56 a 2 @@n 57 a 3 } @@d 5 { @@n 56 a 2 @@n 57 a 3 }
+#x }
+#x HLEND
+#x HLBEGIN S.4
+#x {{TEXT=>1;COLOR=>1;}{TEXT=>0;COLOR=>2;}{TEXT=>0;COLOR=>5;}{TEXT=>1;COLOR=>6;}
+#x }
+#x 70 { @@n 31 a 1 @@n 32 a 1 @@n 33 a 1 @@n 34 a 1 @@n 35 a 1 @@n 36 a 1
+#x @@n 37 a 1 @@n 38 a 1 @@n 29 a 2 @@d 0 { @@n 59 a 0 @@n 86 a 0 @@n 138 a 0
+#x @@n 140 a 0 @@n 141 a 0 @@n 143 a 0 @@n 147 a 0 @@n 148 a 0 @@n 151 a 0
+#x @@n 153 a 0 @@n 154 a 0 @@n 139 a 1 @@n 142 a 1 @@n 144 a 1 @@n 145 a 1
+#x @@n 149 a 1 @@n 150 a 1 @@n 152 a 1 @@n 56 a 2 @@n 57 a 3 } @@d 1 {
+#x @@n 56 a 2 @@n 57 a 3 } @@d 2 { @@n 56 a 2 @@n 57 a 3 } @@d 3 { @@n 56 a 2
+#x @@n 57 a 3 } @@d 4 { @@n 56 a 2 @@n 57 a 3 } @@d 5 { @@n 56 a 2 @@n 57 a 3 }
+#x }
+#x HLEND
+#x HLBEGIN S.5
+#x {{TEXT=>1;COLOR=>1;}{TEXT=>0;COLOR=>2;}{TEXT=>0;COLOR=>5;}{TEXT=>1;COLOR=>6;}
+#x }
+#x 70 { @@n 31 a 1 @@n 32 a 1 @@n 33 a 1 @@n 34 a 1 @@n 35 a 1 @@n 36 a 1
+#x @@n 37 a 1 @@n 38 a 1 @@n 29 a 2 @@d 0 { @@n 59 a 0 @@n 86 a 0 @@n 138 a 0
+#x @@n 140 a 0 @@n 141 a 0 @@n 143 a 0 @@n 147 a 0 @@n 148 a 0 @@n 151 a 0
+#x @@n 153 a 0 @@n 154 a 0 @@n 139 a 1 @@n 142 a 1 @@n 144 a 1 @@n 145 a 1
+#x @@n 149 a 1 @@n 150 a 1 @@n 152 a 1 @@n 56 a 2 @@n 57 a 3 } @@d 1 {
+#x @@n 56 a 2 @@n 57 a 3 } @@d 2 { @@n 56 a 2 @@n 57 a 3 } @@d 3 { @@n 56 a 2
+#x @@n 57 a 3 } @@d 4 { @@n 56 a 2 @@n 57 a 3 } @@d 5 { @@n 56 a 2 @@n 57 a 3 }
+#x }
+#x HLEND
+#x HLBEGIN S.6
+#x {}
+#x 70.0 { @@i 78 }
+#x HLEND
+#x HLBEGIN S.7
+#x {}
+#x 70.0 { @@i 79 }
+#x HLEND
+#x HLBEGIN S.8
+#x {}
+#x 70.0 { @@i 80 }
+#x HLEND
+#x HLBEGIN S.9
+#x {}
+#x 70.0 { @@i 81 }
+#x HLEND
+#x HLBEGIN S.10
+#x {}
+#x 70.0 { @@i 82 }
+#x HLEND
+#x HLBEGIN S.11
+#x {}
+#x 70.0 { @@i 83 }
+#x HLEND
+#x HLBEGIN S.12
+#x {}
+#x 70.0 { @@i 84 }
+#x HLEND
+#x HLBEGIN S.13
+#x {}
+#x 70.0 { @@i 85 }
+#x HLEND
+#x HLBEGIN S.14
+#x {}
+#x 70.0 { @@i 86 }
+#x HLEND
+#x HLBEGIN S.15
+#x {}
+#x 70.0 { @@i 87 }
+#x HLEND
+#x HLBEGIN S.16
+#x {}
+#x 70.0 { @@i 88 }
+#x HLEND
+#x HLBEGIN S.17
+#x {}
+#x 70.0 { @@i 89 }
+#x HLEND
+#x HLBEGIN S.18
+#x {}
+#x 70.0 { @@i 90 }
+#x HLEND
+#x HLBEGIN S.19
+#x {}
+#x 70.0 { @@i 91 }
+#x HLEND
+#x HLBEGIN S.20
+#x {}
+#x 70.0 { @@i 92 }
+#x HLEND
+#x HLBEGIN S.21
+#x {}
+#x 70.0 { @@i 93 }
+#x HLEND
+#x HLBEGIN S.22
+#x {}
+#x 70.0 { @@i 94 }
+#x HLEND
+#x HLBEGIN S.23
+#x {}
+#x 70.0 { @@i 95 }
+#x HLEND
+#x HLBEGIN S.24
+#x {}
+#x 70.0 { @@i 96 }
+#x HLEND
+#x HLBEGIN S.25
+#x {}
+#x 70.0 { @@i 97 }
+#x HLEND
+#x HLBEGIN S.26
+#x {}
+#x 70.0 { @@i 98 }
+#x HLEND
+#x HLBEGIN S.27
+#x {}
+#x 70.0 { @@i 99 }
+#x HLEND
+#x HLBEGIN S.28
+#x {}
+#x 70.0 { @@i 100 }
+#x HLEND
+#x HLBEGIN S.29
+#x {}
+#x 70.0 { @@i 101 }
+#x HLEND
+#x HLBEGIN S.30
+#x {}
+#x 70.1 { @@i 78 }
+#x HLEND
+#x HLBEGIN S.31
+#x {}
+#x 70.1 { @@i 79 }
+#x HLEND
+#x HLBEGIN S.32
+#x {}
+#x 70.1 { @@i 80 }
+#x HLEND
+#x HLBEGIN S.33
+#x {}
+#x 70.1 { @@i 81 }
+#x HLEND
+#x HLBEGIN S.34
+#x {}
+#x 70.1 { @@i 82 }
+#x HLEND
+#x HLBEGIN S.35
+#x {}
+#x 70.1 { @@i 83 }
+#x HLEND
+#x HLBEGIN S.36
+#x {}
+#x 70.1 { @@i 84 }
+#x HLEND
+#x HLBEGIN S.37
+#x {}
+#x 70.1 { @@i 85 }
+#x HLEND
+#x HLBEGIN S.38
+#x {}
+#x 70.1 { @@i 86 }
+#x HLEND
+#x HLBEGIN S.39
+#x {}
+#x 70.1 { @@i 87 }
+#x HLEND
+#x HLBEGIN S.40
+#x {}
+#x 70.1 { @@i 88 }
+#x HLEND
+#x HLBEGIN S.41
+#x {}
+#x 70.1 { @@i 89 }
+#x HLEND
+#x HLBEGIN S.42
+#x {}
+#x 70.1 { @@i 90 }
+#x HLEND
+#x HLBEGIN S.43
+#x {}
+#x 70.1 { @@i 91 }
+#x HLEND
+#x HLBEGIN S.44
+#x {}
+#x 70.1 { @@i 92 }
+#x HLEND
+#x HLBEGIN S.45
+#x {}
+#x 70.1 { @@i 93 }
+#x HLEND
+#x HLBEGIN S.46
+#x {}
+#x 70.1 { @@i 94 }
+#x HLEND
+#x HLBEGIN S.47
+#x {}
+#x 70.1 { @@i 95 }
+#x HLEND
+#x HLBEGIN S.48
+#x {}
+#x 70.1 { @@i 96 }
+#x HLEND
+#x HLBEGIN S.49
+#x {}
+#x 70.1 { @@i 97 }
+#x HLEND
+#x HLBEGIN S.50
+#x {}
+#x 70.1 { @@i 98 }
+#x HLEND
+#x HLBEGIN S.51
+#x {}
+#x 70.1 { @@i 99 }
+#x HLEND
+#x HLBEGIN S.52
+#x {}
+#x 70.1 { @@i 100 }
+#x HLEND
+#x HLBEGIN S.53
+#x {}
+#x 70.1 { @@i 101 }
+#x HLEND
+#x HLBEGIN S.54
+#x {}
+#x 70.2 { @@i 78 }
+#x HLEND
+#x HLBEGIN S.55
+#x {}
+#x 70.2 { @@i 79 }
+#x HLEND
+#x HLBEGIN S.56
+#x {}
+#x 70.2 { @@i 80 }
+#x HLEND
+#x HLBEGIN S.57
+#x {}
+#x 70.2 { @@i 81 }
+#x HLEND
+#x HLBEGIN S.58
+#x {}
+#x 70.2 { @@i 82 }
+#x HLEND
+#x HLBEGIN S.59
+#x {}
+#x 70.2 { @@i 83 }
+#x HLEND
+#x HLBEGIN S.60
+#x {}
+#x 70.2 { @@i 84 }
+#x HLEND
+#x HLBEGIN S.61
+#x {}
+#x 70.2 { @@i 85 }
+#x HLEND
+#x HLBEGIN S.62
+#x {}
+#x 70.2 { @@i 86 }
+#x HLEND
+#x HLBEGIN S.63
+#x {}
+#x 70.2 { @@i 87 }
+#x HLEND
+#x HLBEGIN S.64
+#x {}
+#x 70.2 { @@i 88 }
+#x HLEND
+#x HLBEGIN S.65
+#x {}
+#x 70.2 { @@i 89 }
+#x HLEND
+#x HLBEGIN S.66
+#x {}
+#x 70.2 { @@i 90 }
+#x HLEND
+#x HLBEGIN S.67
+#x {}
+#x 70.2 { @@i 91 }
+#x HLEND
+#x HLBEGIN S.68
+#x {}
+#x 70.2 { @@i 92 }
+#x HLEND
+#x HLBEGIN S.69
+#x {}
+#x 70.2 { @@i 93 }
+#x HLEND
+#x HLBEGIN S.70
+#x {}
+#x 70.2 { @@i 94 }
+#x HLEND
+#x HLBEGIN S.71
+#x {}
+#x 70.2 { @@i 95 }
+#x HLEND
+#x HLBEGIN S.72
+#x {}
+#x 70.2 { @@i 96 }
+#x HLEND
+#x HLBEGIN S.73
+#x {}
+#x 70.2 { @@i 97 }
+#x HLEND
+#x HLBEGIN S.74
+#x {}
+#x 70.2 { @@i 98 }
+#x HLEND
+#x HLBEGIN S.75
+#x {}
+#x 70.2 { @@i 99 }
+#x HLEND
+#x HLBEGIN S.76
+#x {}
+#x 70.2 { @@i 100 }
+#x HLEND
+#x HLBEGIN S.77
+#x {}
+#x 70.2 { @@i 101 }
+#x HLEND
+#x HLBEGIN S.78
+#x {}
+#x 70.3 { @@i 78 }
+#x HLEND
+#x HLBEGIN S.79
+#x {}
+#x 70.3 { @@i 79 }
+#x HLEND
+#x HLBEGIN S.80
+#x {}
+#x 70.3 { @@i 80 }
+#x HLEND
+#x HLBEGIN S.81
+#x {}
+#x 70.3 { @@i 81 }
+#x HLEND
+#x HLBEGIN S.82
+#x {}
+#x 70.3 { @@i 82 }
+#x HLEND
+#x HLBEGIN S.83
+#x {}
+#x 70.3 { @@i 83 }
+#x HLEND
+#x HLBEGIN S.84
+#x {}
+#x 70.3 { @@i 84 }
+#x HLEND
+#x HLBEGIN S.85
+#x {}
+#x 70.3 { @@i 85 }
+#x HLEND
+#x HLBEGIN S.86
+#x {}
+#x 70.3 { @@i 86 }
+#x HLEND
+#x HLBEGIN S.87
+#x {}
+#x 70.3 { @@i 87 }
+#x HLEND
+#x HLBEGIN S.88
+#x {}
+#x 70.3 { @@i 88 }
+#x HLEND
+#x HLBEGIN S.89
+#x {}
+#x 70.3 { @@i 89 }
+#x HLEND
+#x HLBEGIN S.90
+#x {}
+#x 70.3 { @@i 90 }
+#x HLEND
+#x HLBEGIN S.91
+#x {}
+#x 70.3 { @@i 91 }
+#x HLEND
+#x HLBEGIN S.92
+#x {}
+#x 70.3 { @@i 92 }
+#x HLEND
+#x HLBEGIN S.93
+#x {}
+#x 70.3 { @@i 93 }
+#x HLEND
+#x HLBEGIN S.94
+#x {}
+#x 70.3 { @@i 94 }
+#x HLEND
+#x HLBEGIN S.95
+#x {}
+#x 70.3 { @@i 95 }
+#x HLEND
+#x HLBEGIN S.96
+#x {}
+#x 70.3 { @@i 96 }
+#x HLEND
+#x HLBEGIN S.97
+#x {}
+#x 70.3 { @@i 97 }
+#x HLEND
+#x HLBEGIN S.98
+#x {}
+#x 70.3 { @@i 98 }
+#x HLEND
+#x HLBEGIN S.99
+#x {}
+#x 70.3 { @@i 99 }
+#x HLEND
+#x HLBEGIN S.100
+#x {}
+#x 70.3 { @@i 100 }
+#x HLEND
+#x HLBEGIN S.101
+#x {}
+#x 70.3 { @@i 101 }
+#x HLEND
+#x HLBEGIN S.102
+#x {}
+#x 70.4 { @@i 78 }
+#x HLEND
+#x HLBEGIN S.103
+#x {}
+#x 70.4 { @@i 79 }
+#x HLEND
+#x HLBEGIN S.104
+#x {}
+#x 70.4 { @@i 80 }
+#x HLEND
+#x HLBEGIN S.105
+#x {}
+#x 70.4 { @@i 81 }
+#x HLEND
+#x HLBEGIN S.106
+#x {}
+#x 70.4 { @@i 82 }
+#x HLEND
+#x HLBEGIN S.107
+#x {}
+#x 70.4 { @@i 83 }
+#x HLEND
+#x HLBEGIN S.108
+#x {}
+#x 70.4 { @@i 84 }
+#x HLEND
+#x HLBEGIN S.109
+#x {}
+#x 70.4 { @@i 85 }
+#x HLEND
+#x HLBEGIN S.110
+#x {}
+#x 70.4 { @@i 86 }
+#x HLEND
+#x HLBEGIN S.111
+#x {}
+#x 70.4 { @@i 87 }
+#x HLEND
+#x HLBEGIN S.112
+#x {}
+#x 70.4 { @@i 88 }
+#x HLEND
+#x HLBEGIN S.113
+#x {}
+#x 70.4 { @@i 89 }
+#x HLEND
+#x HLBEGIN S.114
+#x {}
+#x 70.4 { @@i 90 }
+#x HLEND
+#x HLBEGIN S.115
+#x {}
+#x 70.4 { @@i 91 }
+#x HLEND
+#x HLBEGIN S.116
+#x {}
+#x 70.4 { @@i 92 }
+#x HLEND
+#x HLBEGIN S.117
+#x {}
+#x 70.4 { @@i 93 }
+#x HLEND
+#x HLBEGIN S.118
+#x {}
+#x 70.4 { @@i 94 }
+#x HLEND
+#x HLBEGIN S.119
+#x {}
+#x 70.4 { @@i 95 }
+#x HLEND
+#x HLBEGIN S.120
+#x {}
+#x 70.4 { @@i 96 }
+#x HLEND
+#x HLBEGIN S.121
+#x {}
+#x 70.4 { @@i 97 }
+#x HLEND
+#x HLBEGIN S.122
+#x {}
+#x 70.4 { @@i 98 }
+#x HLEND
+#x HLBEGIN S.123
+#x {}
+#x 70.4 { @@i 99 }
+#x HLEND
+#x HLBEGIN S.124
+#x {}
+#x 70.4 { @@i 100 }
+#x HLEND
+#x HLBEGIN S.125
+#x {}
+#x 70.4 { @@i 101 }
+#x HLEND
+#x HLBEGIN S.126
+#x {}
+#x 70.5 { @@i 78 }
+#x HLEND
+#x HLBEGIN S.127
+#x {}
+#x 70.5 { @@i 79 }
+#x HLEND
+#x HLBEGIN S.128
+#x {}
+#x 70.5 { @@i 80 }
+#x HLEND
+#x HLBEGIN S.129
+#x {}
+#x 70.5 { @@i 81 }
+#x HLEND
+#x HLBEGIN S.130
+#x {}
+#x 70.5 { @@i 82 }
+#x HLEND
+#x HLBEGIN S.131
+#x {}
+#x 70.5 { @@i 83 }
+#x HLEND
+#x HLBEGIN S.132
+#x {}
+#x 70.5 { @@i 84 }
+#x HLEND
+#x HLBEGIN S.133
+#x {}
+#x 70.5 { @@i 85 }
+#x HLEND
+#x HLBEGIN S.134
+#x {}
+#x 70.5 { @@i 86 }
+#x HLEND
+#x HLBEGIN S.135
+#x {}
+#x 70.5 { @@i 87 }
+#x HLEND
+#x HLBEGIN S.136
+#x {}
+#x 70.5 { @@i 88 }
+#x HLEND
+#x HLBEGIN S.137
+#x {}
+#x 70.5 { @@i 89 }
+#x HLEND
+#x HLBEGIN S.138
+#x {}
+#x 70.5 { @@i 90 }
+#x HLEND
+#x HLBEGIN S.139
+#x {}
+#x 70.5 { @@i 91 }
+#x HLEND
+#x HLBEGIN S.140
+#x {}
+#x 70.5 { @@i 92 }
+#x HLEND
+#x HLBEGIN S.141
+#x {}
+#x 70.5 { @@i 93 }
+#x HLEND
+#x HLBEGIN S.142
+#x {}
+#x 70.5 { @@i 94 }
+#x HLEND
+#x HLBEGIN S.143
+#x {}
+#x 70.5 { @@i 95 }
+#x HLEND
+#x HLBEGIN S.144
+#x {}
+#x 70.5 { @@i 96 }
+#x HLEND
+#x HLBEGIN S.145
+#x {}
+#x 70.5 { @@i 97 }
+#x HLEND
+#x HLBEGIN S.146
+#x {}
+#x 70.5 { @@i 98 }
+#x HLEND
+#x HLBEGIN S.147
+#x {}
+#x 70.5 { @@i 99 }
+#x HLEND
+#x HLBEGIN S.148
+#x {}
+#x 70.5 { @@i 100 }
+#x HLEND
+#x HLBEGIN S.149
+#x {}
+#x 70.5 { @@i 101 }
+#x HLEND

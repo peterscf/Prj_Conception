@@ -1,0 +1,52 @@
+4 "Setup_quasi_static01" 1
+"Open_Sp_Sheet"
+["./spyglass-1/cdc/cdc_verify_struct/spyglass_reports/clock-reset/setup_quasi_static01_CORDIC_top.csv@@cross-probecol:1@@col-prop:2r"]
+-1 "Clock_info03a" 3
+"TEMPLATE"
+["cdc/cdc_verify_struct"]
+"RULE_ORDER"
+[4]
+"RULEGROUP"
+["clock-reset/INFORMATION/Clock_info03"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_Case_Analysis" 5
+"TEMPLATE"
+["cdc/cdc_verify_struct"]
+"RULE_ORDER"
+[51]
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+"SPG_RULETAG_SCH_INFO_RULE"
+"Show Info Case Analysis Data"
+-1 "Reset_check12" 3
+"TEMPLATE"
+["cdc/cdc_verify_struct"]
+"RULE_ORDER"
+[14]
+"RULEGROUP"
+["clock-reset/VERIFY"]
+-1 "Setup_clockreset01" 3
+"TEMPLATE"
+["cdc/cdc_verify_struct"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["clock-reset/INFORMATION"]
+-1 "Setup_quasi_static01" 3
+"TEMPLATE"
+["cdc/cdc_verify_struct"]
+"RULE_ORDER"
+[49]
+"RULEGROUP"
+["clock-reset/SETUP"]

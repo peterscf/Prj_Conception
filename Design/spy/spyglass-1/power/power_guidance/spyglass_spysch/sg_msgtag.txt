@@ -1,0 +1,17 @@
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "PESTR32" 3
+"TEMPLATE"
+["power/power_guidance"]
+"RULE_ORDER"
+[6]
+"RULEGROUP"
+["power_est"]

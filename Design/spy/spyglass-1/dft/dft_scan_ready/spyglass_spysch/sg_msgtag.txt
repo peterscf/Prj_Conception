@@ -1,0 +1,676 @@
+4 "Diagnose_testmode" 1
+"DFT_SCH_STATIC_AUXI_AUTOLOAD_MSG_TAG_LIST"
+["DFT_ATTR!!SIM_SHIFT"]
+5 "Diagnose_testmode" 1
+"DFT_SCH_STATIC_AUXI_AUTOLOAD_MSG_TAG_LIST"
+["DFT_ATTR!!SIM_CAPTURE"]
+7 "Info_path" 1
+"DFT_HPDB_MSG_TAG"
+["DFT_ATTR!!BP_SHIFT"]
+8 "Info_path" 1
+"DFT_HPDB_MSG_TAG"
+["DFT_ATTR!!BP_CAPTURE"]
+10 "Info_testmode" 1
+"DFT_HPDB_MSG_TAG"
+["DFT_ATTR!!SIM_SHIFT"]
+11 "Info_testmode" 1
+"DFT_HPDB_MSG_TAG"
+["DFT_ATTR!!SIM_CAPTURE"]
+18 "Clock_11" 1
+"Clock_11_CSV_TAG"
+1
+19 "Clock_11" 1
+"Clock_11_CSV_TAG"
+2
+20 "Clock_11" 1
+"Clock_11_CSV_TAG"
+3
+21 "Clock_11" 1
+"Clock_11_CSV_TAG"
+4
+22 "Clock_11" 1
+"Clock_11_CSV_TAG"
+5
+23 "Clock_11" 1
+"Clock_11_CSV_TAG"
+6
+24 "Clock_11" 1
+"Clock_11_CSV_TAG"
+7
+25 "Clock_11" 1
+"Clock_11_CSV_TAG"
+8
+26 "Clock_11" 1
+"Clock_11_CSV_TAG"
+9
+27 "Clock_11" 1
+"Clock_11_CSV_TAG"
+10
+28 "Clock_11" 1
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/Clock_11/000/Clock_11_violation_001.csv@@cross-probecol:2"]
+29 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+1
+30 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+2
+31 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+3
+32 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+4
+33 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+5
+34 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+6
+35 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+7
+36 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+8
+37 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+9
+38 "Clock_11_capture" 1
+"Clock_11_capture_CSV_TAG"
+10
+39 "Clock_11_capture" 1
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/Clock_11_capture/000/Clock_11_capture_violation_001.csv@@cross-probecol:2"]
+40 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/dft_data/dft_data_01.csv@@cross-probecol:3"]
+"DFT_DATA_CSV_TAG"
+1
+41 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/dft_data/dft_data_02.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+2
+42 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+3
+43 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+4
+44 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+5
+45 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+6
+46 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+7
+47 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+8
+48 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+9
+49 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+10
+50 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+11
+51 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+12
+52 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+13
+53 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+14
+54 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+15
+55 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+16
+56 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+17
+57 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+18
+58 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+19
+59 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+20
+60 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+21
+61 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+22
+62 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+23
+63 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+24
+64 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+25
+65 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+26
+66 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+27
+67 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+28
+68 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+29
+69 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+30
+70 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+31
+71 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+32
+72 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+33
+73 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+34
+74 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+35
+75 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+36
+76 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+37
+77 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+38
+78 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+39
+79 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+40
+80 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+41
+81 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+42
+82 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+43
+83 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+44
+84 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+45
+85 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+46
+86 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+47
+87 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+48
+88 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+49
+89 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+50
+90 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+51
+91 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+52
+92 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+53
+93 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+54
+94 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+55
+95 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+56
+96 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+57
+97 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+58
+98 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+59
+99 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+60
+100 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+61
+101 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+62
+102 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+63
+103 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+64
+104 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+65
+105 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+66
+106 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+67
+107 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+68
+108 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+69
+109 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+70
+110 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+71
+111 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+72
+112 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+73
+113 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+74
+114 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+75
+115 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+76
+116 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+77
+117 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+78
+118 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+79
+119 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+80
+120 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+81
+121 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+82
+122 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+83
+123 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+84
+124 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+85
+125 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+86
+126 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+87
+127 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+88
+128 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+89
+129 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+90
+130 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+91
+131 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+92
+132 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+93
+133 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+94
+134 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+95
+135 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+96
+136 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+97
+137 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+98
+138 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+99
+139 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+100
+140 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+101
+141 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+102
+142 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+103
+143 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+104
+144 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+105
+145 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+106
+146 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+107
+147 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+108
+148 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+109
+149 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+110
+150 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+111
+151 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+112
+152 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+113
+153 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+114
+154 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+115
+155 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+116
+156 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+117
+157 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+118
+158 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+119
+159 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+120
+160 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+121
+161 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+122
+162 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+123
+163 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+124
+164 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+125
+165 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+126
+166 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+127
+167 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+128
+168 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+129
+169 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+130
+170 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+131
+171 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+132
+172 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+133
+173 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+134
+174 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+135
+175 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+136
+176 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+137
+177 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+138
+178 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+139
+179 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+140
+180 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+141
+181 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+142
+182 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+143
+183 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+144
+184 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+145
+185 "Info_DftDebugData" 1
+"DFT_DATA_CSV_TAG"
+146
+187 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/dft_data/dft_data_03.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+147
+189 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/dft_data/dft_data_04.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+148
+191 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/dft_data/dft_data_05.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+149
+193 "Info_DftDebugData" 2
+"Open_Sp_Sheet"
+["./spyglass-1/dft/dft_scan_ready/spyglass_reports/dft/dft_data/dft_data_06.csv@@cross-probecol:2"]
+"DFT_DATA_CSV_TAG"
+150
+-1 "Clock_11" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[3]
+"RULEGROUP"
+["dft/Clock"]
+-1 "Clock_11_capture" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[4]
+"RULEGROUP"
+["dft/Clock"]
+-1 "Coverage_audit" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[5]
+"RULEGROUP"
+["dft/Information"]
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Diagnose_testclock" 4
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[8]
+"RULEGROUP"
+["dft/Information"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_testclock"
+-1 "Diagnose_testmode" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[7]
+"RULEGROUP"
+["dft/Information"]
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "Info_DftDebugData" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]
+-1 "Info_coverage" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[6]
+"RULEGROUP"
+["dft/Information"]
+-1 "Info_forcedScan" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[9]
+"RULEGROUP"
+["dft/Information"]
+-1 "Info_inferredNoScan" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[10]
+"RULEGROUP"
+["dft/Information"]
+-1 "Info_noScan" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[11]
+"RULEGROUP"
+["dft/Information"]
+-1 "Info_path" 4
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[12]
+"RULEGROUP"
+["dft/Information"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_path"
+-1 "Info_scanwrap" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[13]
+"RULEGROUP"
+["dft/Information"]
+-1 "Info_testclock" 4
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[14]
+"RULEGROUP"
+["dft/Information"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_testclock"
+-1 "Info_testmode" 4
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[15]
+"RULEGROUP"
+["dft/Information"]
+"SPG_RULETAG_SCH_INFO_RULE"
+"Info_testmode"
+-1 "dftMandatory_Constraint_Check" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]
+-1 "dftOptional_Constraint_Check" 3
+"TEMPLATE"
+["dft/dft_scan_ready"]
+"RULE_ORDER"
+[-1]
+"RULEGROUP"
+["dft/MustRules"]

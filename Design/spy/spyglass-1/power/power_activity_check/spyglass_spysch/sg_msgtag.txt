@@ -1,0 +1,15 @@
+-1 "DetectTopDesignUnits" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "ElabSummary" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"
+-1 "SGDC_power_est22" 2
+"TEMPLATE"
+["power/power_activity_check"]
+"RULE_ORDER"
+[-1]

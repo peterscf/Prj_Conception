@@ -1,0 +1,80 @@
+##This file is genrated to have command line decompiled Info even in Console
+##(To generate SIGN_OFF report having command line decompiled)
+Run Setup Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Option          Value             Origin  File                           LineNo
+===============================================================================
+--disable_global_scoping <ON>              CmdFile $SPYGLASS_HOME/auxi/policy_data/txv/autoload.f 1
+--goal_info     txv_verification/fp_mcp_verification@ CmdLine -                              -
+--strict_sgdc_check <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 39
+-I              /softslin/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_PHYSICAL_HOME/common/sgphysical/policies/physical CmdLine -                              -
+-batch          <ON>              CmdLine -                              -
+-dbdir          ./spyglass-1/.SG_SaveRestoreDB CmdLine -                              -
+-enable_save_restore <ON>              CmdLine -                              -
+-enable_save_restore_builtin true              CmdLine -                              -
+-inferblackbox  <ON>              Config  $SPYGLASS_HOME/.spyglass.setup 29
+-lib            WORK=>./spyglass-1/WORK CmdLine -                              -
+                SYNOPSYS=>$SPYGLASS_HOME/vhdl_libs/Linux4/SYNOPSYS Config  $SPYGLASS_HOME/.spyglass.setup 25
+-mixed          <ON>              CmdLine -                              -
+-nl             <ON>              CmdLine -                              -
+-policy         txv               CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 35
+-projectwdir    ./spyglass-1      CmdLine -                              -
+-report         moresimple        Config  $SPYGLASS_HOME/.spyglass.setup 17
+-rules          Txv_MCP_StartEnd01 CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 37
+                MCP_Check01       CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 38
+                Txv_FP_Warn04     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 40
+                Txv_FP_Warn05     CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 41
+                Txv_Info05        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 42
+                Txv_Info06        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 43
+                Txv_MCP_Warn05    CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 44
+                Txv_resetvalue01  CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 45
+                Txv_FP01          CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 46
+                Txv_MCP01         CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 47
+                Txv_Info01        CmdFile $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff/txv_verification/fp_mcp_verification.spq 48
+-sgsyn_opt_file /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/auxi/policy_data/spyglass/syn_opt-txv.tcl CmdFile $SPYGLASS_HOME/auxi/policy_data/txv/autoload.f 2
+-sortmethod     du                Config  $SPYGLASS_HOME/.spyglass.setup 27
+-template       txv_verification/fp_mcp_verification CmdLine -                              -
+-templatedir    /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff CmdLine -                              -
+-wdir           ./spyglass-1/txv_verification/fp_mcp_verification CmdLine -                              -
+<design_files>  ../vhd/cell.vhd   APICall -                              -
+                ../vhd/cordic.vhd APICall -                              -
+
+
+Rules Parameter
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+Parameter       Origin  File                           LineNo
+===============================================================================
+
+
+Policy Info
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+===============================================================================
+NameOfPolicy    VersionNumber   Path (from where policy loaded)
+===============================================================================
+spyglass        5.6.0           $SPYGLASS_HOME/policies/spyglass
+txv             5.6.0           $SPYGLASS_HOME/policies/txv
+constraints     5.6.0           $SPYGLASS_HOME/policies/constraints
+clock-reset     5.6.0           $SPYGLASS_HOME/policies/clock
+timing          5.6.0           $SPYGLASS_HOME/policies/timing
+starcad-21      5.6.0           $SPYGLASS_HOME/policies/starcad-21
+starc2005       5.6.0           $SPYGLASS_HOME/policies/starc2005
+starc2002       5.6.0           $SPYGLASS_HOME/policies/starc2002
+starc           5.6.0           $SPYGLASS_HOME/policies/starc
+simulation      5.6.0           $SPYGLASS_HOME/policies/simulation
+power_est       5.6.0           $SPYGLASS_HOME/policies/power_est
+openmore        5.6.0           $SPYGLASS_HOME/policies/openmore
+morelint        5.6.0           $SPYGLASS_HOME/policies/morelint
+miscellaneous   5.6.0           $SPYGLASS_HOME/policies/miscellaneous
+lowpower        5.6.0           $SPYGLASS_HOME/policies/lowpower
+lint            5.6.0           $SPYGLASS_HOME/policies/lint
+latch           5.6.0           $SPYGLASS_HOME/policies/latch
+erc             5.6.0           $SPYGLASS_HOME/policies/erc
+dft_dsm         5.6.0           $SPYGLASS_HOME/policies/dft_dsm
+dft             5.6.0           $SPYGLASS_HOME/policies/dft
+const_intern1   5.6.0           $SPYGLASS_HOME/policies/constraints
+area            5.6.0           $SPYGLASS_HOME/policies/area
+Audits          5.6.0           $SPYGLASS_HOME/policies/Audits
+
+
