@@ -4,7 +4,7 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity CORDIC_top is
-	generic(Nb: integer := 8);
+	generic(Nb: integer);
 
 	port( 	clk  : in std_logic;
 		reset_n  : in std_logic;

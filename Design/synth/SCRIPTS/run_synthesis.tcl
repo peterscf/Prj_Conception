@@ -1,6 +1,6 @@
 source ../SCRIPTS/define_variables.tcl
 
-cd $PROJECT_PATH$WORK_PATH
+#cd $PROJECT_PATH$WORK_PATH
 
 analyze -library $LIBRARY_NAME -format vhdl $VHDL_FILES 
 
@@ -22,8 +22,6 @@ report_power			> ../REPORTS/$DESIGN_NAME.power.log
 report_cell			> ../REPORTS/$DESIGN_NAME.cell.log
 report_clock			> ../REPORTS/$DESIGN_NAME.clock.log
 report_qor			> ../REPORTS/$DESIGN_NAME.qor.log
-
-quit
 
 quit
 

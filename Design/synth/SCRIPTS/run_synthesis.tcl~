@@ -23,7 +23,5 @@ report_cell			> ../REPORTS/$DESIGN_NAME.cell.log
 report_clock			> ../REPORTS/$DESIGN_NAME.clock.log
 report_qor			> ../REPORTS/$DESIGN_NAME.qor.log
 
-quit
-
-quit
+#quit
 

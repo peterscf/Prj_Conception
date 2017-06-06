@@ -1,0 +1,448 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 10
+        -max_paths 10
+Design : CORDIC_top
+Version: J-2014.09-SP2
+Date   : Tue Jun  6 09:56:53 2017
+****************************************
+
+Operating Conditions: nom_pvt   Library: c35_CORELIB_TYP
+Wire Load Model Mode: enclosed
+
+  Startpoint: Y[0] (input port clocked by HCLK)
+  Endpoint: cell1/y_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  Y[0] (in)                                0.00      13.00 f
+  U124/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.25      13.39 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.80 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.18 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.56 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.94 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.32 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.70 f
+  cell1/r68/U1_7/S (ADD32)                 0.55      16.26 r
+  U129/Q (AOI221)                          0.18      16.43 f
+  U128/Q (INV3)                            0.14      16.58 r
+  cell1/y_out_reg[7]/D (DF3)               0.00      16.58 r
+  data arrival time                                  16.58
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/y_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                      -0.01      18.99
+  data required time                                 18.99
+  -----------------------------------------------------------
+  data required time                                 18.99
+  data arrival time                                 -16.58
+  -----------------------------------------------------------
+  slack (MET)                                         2.41
+
+
+  Startpoint: X[0] (input port clocked by HCLK)
+  Endpoint: cell1/y_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  X[0] (in)                                0.00      13.00 f
+  U123/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.22      13.36 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.77 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.15 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.53 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.92 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.30 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.68 f
+  cell1/r68/U1_7/S (ADD32)                 0.55      16.23 r
+  U129/Q (AOI221)                          0.18      16.41 f
+  U128/Q (INV3)                            0.14      16.55 r
+  cell1/y_out_reg[7]/D (DF3)               0.00      16.55 r
+  data arrival time                                  16.55
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/y_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                      -0.01      18.99
+  data required time                                 18.99
+  -----------------------------------------------------------
+  data required time                                 18.99
+  data arrival time                                 -16.55
+  -----------------------------------------------------------
+  slack (MET)                                         2.44
+
+
+  Startpoint: Y[0] (input port clocked by HCLK)
+  Endpoint: cell1/x_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  Y[0] (in)                                0.00      13.00 f
+  U124/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.25      13.39 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.80 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.18 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.56 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.94 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.32 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.70 f
+  cell1/r68/U1_7/S (ADD32)                 0.55      16.26 r
+  U132/Q (AOI221)                          0.13      16.39 f
+  U131/Q (INV3)                            0.14      16.53 r
+  cell1/x_out_reg[7]/D (DF3)               0.00      16.53 r
+  data arrival time                                  16.53
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/x_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                      -0.01      18.99
+  data required time                                 18.99
+  -----------------------------------------------------------
+  data required time                                 18.99
+  data arrival time                                 -16.53
+  -----------------------------------------------------------
+  slack (MET)                                         2.46
+
+
+  Startpoint: Y[0] (input port clocked by HCLK)
+  Endpoint: cell1/y_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  Y[0] (in)                                0.00      13.00 f
+  U124/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.25      13.39 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.80 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.18 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.56 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.94 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.32 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.70 f
+  cell1/r68/U1_7/S (ADD32)                 0.47      16.18 f
+  U129/Q (AOI221)                          0.30      16.48 r
+  U128/Q (INV3)                            0.06      16.53 f
+  cell1/y_out_reg[7]/D (DF3)               0.00      16.53 f
+  data arrival time                                  16.53
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/y_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                       0.00      19.00
+  data required time                                 19.00
+  -----------------------------------------------------------
+  data required time                                 19.00
+  data arrival time                                 -16.53
+  -----------------------------------------------------------
+  slack (MET)                                         2.47
+
+
+  Startpoint: X[0] (input port clocked by HCLK)
+  Endpoint: cell1/x_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  X[0] (in)                                0.00      13.00 f
+  U123/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.22      13.36 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.77 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.15 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.53 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.92 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.30 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.68 f
+  cell1/r68/U1_7/S (ADD32)                 0.55      16.23 r
+  U132/Q (AOI221)                          0.13      16.36 f
+  U131/Q (INV3)                            0.14      16.50 r
+  cell1/x_out_reg[7]/D (DF3)               0.00      16.50 r
+  data arrival time                                  16.50
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/x_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                      -0.01      18.99
+  data required time                                 18.99
+  -----------------------------------------------------------
+  data required time                                 18.99
+  data arrival time                                 -16.50
+  -----------------------------------------------------------
+  slack (MET)                                         2.49
+
+
+  Startpoint: X[0] (input port clocked by HCLK)
+  Endpoint: cell1/y_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  X[0] (in)                                0.00      13.00 f
+  U123/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.22      13.36 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.77 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.15 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.53 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.92 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.30 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.68 f
+  cell1/r68/U1_7/S (ADD32)                 0.47      16.15 f
+  U129/Q (AOI221)                          0.30      16.45 r
+  U128/Q (INV3)                            0.06      16.51 f
+  cell1/y_out_reg[7]/D (DF3)               0.00      16.51 f
+  data arrival time                                  16.51
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/y_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                       0.00      19.00
+  data required time                                 19.00
+  -----------------------------------------------------------
+  data required time                                 19.00
+  data arrival time                                 -16.51
+  -----------------------------------------------------------
+  slack (MET)                                         2.49
+
+
+  Startpoint: Y[0] (input port clocked by HCLK)
+  Endpoint: cell1/x_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  Y[0] (in)                                0.00      13.00 f
+  U124/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.25      13.39 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.80 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.18 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.56 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.94 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.32 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.70 f
+  cell1/r68/U1_7/S (ADD32)                 0.47      16.18 f
+  U132/Q (AOI221)                          0.26      16.43 r
+  U131/Q (INV3)                            0.06      16.49 f
+  cell1/x_out_reg[7]/D (DF3)               0.00      16.49 f
+  data arrival time                                  16.49
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/x_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                       0.00      19.00
+  data required time                                 19.00
+  -----------------------------------------------------------
+  data required time                                 19.00
+  data arrival time                                 -16.49
+  -----------------------------------------------------------
+  slack (MET)                                         2.51
+
+
+  Startpoint: X[0] (input port clocked by HCLK)
+  Endpoint: cell1/x_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 f
+  X[0] (in)                                0.00      13.00 f
+  U123/Q (INV3)                            0.14      13.14 r
+  U122/Q (NOR21)                           0.22      13.36 f
+  cell1/r68/U1_1/CO (ADD32)                0.41      13.77 f
+  cell1/r68/U1_2/CO (ADD32)                0.38      14.15 f
+  cell1/r68/U1_3/CO (ADD32)                0.38      14.53 f
+  cell1/r68/U1_4/CO (ADD32)                0.38      14.92 f
+  cell1/r68/U1_5/CO (ADD32)                0.38      15.30 f
+  cell1/r68/U1_6/CO (ADD32)                0.38      15.68 f
+  cell1/r68/U1_7/S (ADD32)                 0.47      16.15 f
+  U132/Q (AOI221)                          0.26      16.41 r
+  U131/Q (INV3)                            0.06      16.46 f
+  cell1/x_out_reg[7]/D (DF3)               0.00      16.46 f
+  data arrival time                                  16.46
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/x_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                       0.00      19.00
+  data required time                                 19.00
+  -----------------------------------------------------------
+  data required time                                 19.00
+  data arrival time                                 -16.46
+  -----------------------------------------------------------
+  slack (MET)                                         2.54
+
+
+  Startpoint: Y[0] (input port clocked by HCLK)
+  Endpoint: cell1/x_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 r
+  Y[0] (in)                                0.00      13.00 r
+  U124/Q (INV3)                            0.09      13.09 f
+  U121/Q (NOR21)                           0.22      13.31 r
+  U120/Q (INV3)                            0.10      13.41 f
+  cell1/sub_69/U2_1/CO (ADD32)             0.37      13.78 f
+  cell1/sub_69/U2_2/CO (ADD32)             0.38      14.16 f
+  cell1/sub_69/U2_3/CO (ADD32)             0.38      14.54 f
+  cell1/sub_69/U2_4/CO (ADD32)             0.38      14.92 f
+  cell1/sub_69/U2_5/CO (ADD32)             0.38      15.30 f
+  cell1/sub_69/U2_6/CO (ADD32)             0.34      15.65 f
+  cell1/sub_69/U2_7/Q (XOR31)              0.31      15.96 f
+  U132/Q (AOI221)                          0.30      16.26 r
+  U131/Q (INV3)                            0.06      16.31 f
+  cell1/x_out_reg[7]/D (DF3)               0.00      16.31 f
+  data arrival time                                  16.31
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/x_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                       0.00      19.00
+  data required time                                 19.00
+  -----------------------------------------------------------
+  data required time                                 19.00
+  data arrival time                                 -16.31
+  -----------------------------------------------------------
+  slack (MET)                                         2.68
+
+
+  Startpoint: Y[0] (input port clocked by HCLK)
+  Endpoint: cell1/y_out_reg[7]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  CORDIC_top         10k                   c35_CORELIB_TYP
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock HCLK (rise edge)                   0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                    13.00      13.00 r
+  Y[0] (in)                                0.00      13.00 r
+  U124/Q (INV3)                            0.09      13.09 f
+  U122/Q (NOR21)                           0.30      13.39 r
+  cell1/r68/U1_1/CO (ADD32)                0.35      13.74 r
+  cell1/r68/U1_2/CO (ADD32)                0.33      14.07 r
+  cell1/r68/U1_3/CO (ADD32)                0.33      14.40 r
+  cell1/r68/U1_4/CO (ADD32)                0.33      14.73 r
+  cell1/r68/U1_5/CO (ADD32)                0.33      15.06 r
+  cell1/r68/U1_6/CO (ADD32)                0.33      15.38 r
+  cell1/r68/U1_7/S (ADD32)                 0.57      15.95 r
+  U129/Q (AOI221)                          0.18      16.13 f
+  U128/Q (INV3)                            0.14      16.27 r
+  cell1/y_out_reg[7]/D (DF3)               0.00      16.27 r
+  data arrival time                                  16.27
+
+  clock HCLK (rise edge)                  20.00      20.00
+  clock network delay (ideal)              0.00      20.00
+  clock uncertainty                       -1.00      19.00
+  cell1/y_out_reg[7]/C (DF3)               0.00      19.00 r
+  library setup time                      -0.01      18.99
+  data required time                                 18.99
+  -----------------------------------------------------------
+  data required time                                 18.99
+  data arrival time                                 -16.27
+  -----------------------------------------------------------
+  slack (MET)                                         2.72
+
+
+1

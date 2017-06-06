@@ -1,0 +1,20 @@
+ 
+****************************************
+Report : clocks
+Design : CORDIC_top
+Version: J-2014.09-SP2
+Date   : Tue Jun  6 09:56:53 2017
+****************************************
+
+Attributes:
+    d - dont_touch_network
+    f - fix_hold
+    p - propagated_clock
+    G - generated_clock
+    g - lib_generated_clock
+
+Clock          Period   Waveform            Attrs     Sources
+--------------------------------------------------------------------------------
+HCLK            20.00   {0 10}              d         {clk}
+--------------------------------------------------------------------------------
+1
