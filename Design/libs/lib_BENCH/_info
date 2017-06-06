@@ -101,48 +101,50 @@ R23
 R14
 R15
 Etest_top_file
-Z24 w1496397115
-R17
-R0
+Z24 w1496763351
 R1
+R17
+Z25 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
+R0
 R2
 R3
 R4
 R7
-Z25 8/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd
-Z26 F/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd
+Z26 8/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd
+Z27 F/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd
 l0
-L13
-V^cZg;9Q9NHO<X]jZhzA@S1
-!s100 iTzmHGoi9EhZNWRnVIQL62
+L14
+V6b0`kjU_`QON0Do5iX:gO0
+!s100 o`CNCZL?b=chjW8QD5JBg3
 R10
 32
-Z27 !s110 1496397148
+Z28 !s110 1496763355
 !i10b 1
-Z28 !s108 1496397148.000000
-Z29 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd|
-Z30 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd|
+Z29 !s108 1496763355.000000
+Z30 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd|
+Z31 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd|
 !i113 1
 R14
 R15
 Atest1
-R0
 R1
+R25
+R0
 R2
 R3
 R4
-Z31 DEx4 work 13 test_top_file 0 22 ^cZg;9Q9NHO<X]jZhzA@S1
-l40
-L15
-VPIF0T4Rf2nBoUOclPGV4;2
-!s100 aT4D=MYd0JeNhdMeVR@dl1
+Z32 DEx4 work 13 test_top_file 0 22 6b0`kjU_`QON0Do5iX:gO0
+l70
+L16
+VX9iO9M3:^1nCDH1>8kPEC1
+!s100 kgchbPZBcM:>h7l`PGLTc1
 R10
 32
-R27
-!i10b 1
 R28
+!i10b 1
 R29
 R30
+R31
 !i113 1
 R14
 R15

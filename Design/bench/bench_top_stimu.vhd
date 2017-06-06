@@ -3,8 +3,9 @@ library IEEE ;
 use IEEE.std_logic_1164.ALL ;
 --use ieee.std_logic_signed.all;
 use ieee.std_logic_arith.all;
-use ieee.numeric_std.all;
+--use ieee.numeric_std.all;
 use ieee.math_real.all;
+use ieee.std_logic_textio.all;
 use std.textio.all;
 library lib_VHD ;
 use lib_VHD.CORDIC_top;
@@ -23,53 +24,103 @@ architecture test1 of test_top_file is
 		Z  : out std_logic_vector(7 downto 0));
 	end component;
 
+function string_hex_to_std_logic_vector( str_hex: character )return std_logic_vector is 
+ 	variable val : std_logic_vector(3 downto 0);
+ begin
+
+        case str_hex is
+            when '0' =>val:="0000";
+            when '1' =>val:="0001";
+	    when '2' =>val:="0010"; 
+	    when '3' =>val:="0011"; 
+	    when '4' =>val:="0100"; 
+            when '5' =>val:="0101";
+            when '6' =>val:="0110";
+	    when '7' =>val:="0111"; 
+            when '8' =>val:="1000";
+            when '9' =>val:="1001";
+	    when 'A' =>val:="1010"; 
+            when 'B' =>val:="1011";
+            when 'C' =>val:="1100";
+	    when 'D' =>val:="1101"; 
+            when 'E' =>val:="1110";
+            when 'F' =>val:="1111";
+	    when others =>val:="XXXX";
+    end case;
+    return val;
+end string_hex_to_std_logic_vector ;
+
+function string_to_slv(str :string (2 downto 1)) return std_logic_vector is 
+ variable val_std : std_logic_vector(7 downto 0);
+ begin
+ 	val_std(7 downto 4):= string_hex_to_std_logic_vector(str(2));
+	val_std(3 downto 0):= string_hex_to_std_logic_vector(str(1));
+
+	return val_std;
+end string_to_slv;
+ 
+ 
 
 signal sig_clk : std_logic := '0';
 signal sig_resetn : std_logic := '0';
 signal sig_x_in: std_logic_vector(7 downto 0);
 signal sig_y_in:  std_logic_vector(7 downto 0); 
 signal sig_z_out:  std_logic_vector(7 downto 0);
-signal i: integer := 0;
 
-signal in_x: std_logic_vector(7 downto 0);
-signal in_y: std_logic_vector(7 downto 0) ;
---type     tab_x is array (0 to 179) of std_logic_vector(7 downto 0);
---type     tab_y is array (0 to 179) of std_logic_vector(7 downto 0);
-
---signal period: natural;
 begin
 	C1: CORDIC_top
        	generic map(Nb=>8)	
 	port map(sig_clk,sig_resetn,sig_x_in,sig_y_in,sig_z_out);
 	sig_clk <= not(sig_clk) after  10 ns; --50Mhz
 	sig_resetn <= '1' after 60 ns;
-	process
-	begin
-		wait for 60 ns;
-		while i<179 loop
-			sig_x_in <= in_x;  
-			sig_y_in <= in_y;
-			wait for 20 ns ;		
-			i<=i+1;
-		end loop;
-		wait for 80 ns;
-	end process;
 
-	
-read_x_file :process 
-variable inline: line;
-variable character_variable:character;
-variable end_of_line: boolean ;
-file myfile: text is "/home/floriant/Documents/Prj_conception/Design/bench/x_simu.dat";
-		 begin
-			 while not endfile(myfile ) loop 
-				 readline(myfile,inline);
-				 read(inline,character_variable,end_of_line);
-									
-		while end_of_line loop
-			read(inline,character_variable,end_of_line);			
-		end loop;
-		end loop;
-		wait;       -- ne rien faire lorsque c'est fini
-		end process read_x_file;
+
+---- Calcul et Ecriture+Lecture des echantillons et sinus
+ LECTURE_X: process
+	 variable L: line;
+	 file ENTREES : text open read_mode is "./bench/x_simu.dat";
+     	variable LIGNE: LINE;	 -- variables à lire
+	variable val_hex: string (2 downto 1);
+
+  begin
+     while(true) loop
+     	readline(ENTREES,LIGNE);
+	read(LIGNE,val_hex);
+--appel fonction convertion hex vers std_logic_vector
+	wait until  sig_resetn = '1';
+	wait until sig_clk'event and sig_clk = '1';
+		sig_x_in<=string_to_slv(val_hex);
+	end loop; --while
+  end process LECTURE_X;
+
+ LECTURE_Y: process
+	 variable L: line;
+	 file ENTREES : text open read_mode is "./bench/y_simu.dat";
+     	variable LIGNE: LINE;	 -- variables à lire
+	variable val_hex: string (2 downto 1);
+
+  begin
+     while(true) loop
+     	readline(ENTREES,LIGNE);
+	read(LIGNE,val_hex);
+--appel fonction convertion hex vers std_logic_vector
+	wait until  sig_resetn = '1';
+	wait until sig_clk'event and sig_clk = '1';
+		sig_y_in<=string_to_slv(val_hex);
+	end loop; --while
+  end process LECTURE_Y;
+
+      -- 
+ ECRITURE_out: process
+       variable L: line;
+      variable C : integer;
+      file SORTIES: text open WRITE_MODE is "sorties_cordic.dat";
+ begin
+	wait until sig_resetn = '1';
+       wait until sig_clk'event and sig_clk = '1';
+       		C:=conv_integer(signed(sig_z_out));
+		   write(L,C);	-- écriture de Z dans la ligne
+		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+       
+ end process ECRITURE_out;
 end test1;
