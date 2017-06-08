@@ -43,7 +43,7 @@ component PRE_PROCESS
   end component;
 
   signal X0	: std_logic_vector(Nb-1 downto 0);
-  signal Y0 : std_logic_vector(Nb-1 downto 0);
+  signal Y0 	: std_logic_vector(Nb-1 downto 0);
   signal Z0	: std_logic_vector(8 downto 0);
 
   signal X1 	: std_logic_vector(Nb-1 downto 0);
@@ -80,7 +80,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
   	clk,
     	reset_n,
     	X,
-   		Y,
+   	Y,
        	X0,
     	Y0,
     	Z0);	
@@ -91,9 +91,9 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
   port map (
   	clk,
     	reset_n,
-    	X,
-   	Y,
-		Z0,
+    	X0,
+   	Y0,
+	Z0,
        	X1,
     	Y1,
     	Z1);

@@ -45,7 +45,7 @@ if clk'event and clk ='1' then
         	y_out<="00000000";
 
 	else 
- 			z_out<=sig_int_z_out;
+ 		z_out<=sig_int_z_out;
     		x_out<=sig_int_x_out;
     		y_out<=sig_int_y_out;
 	end if;
@@ -58,22 +58,27 @@ compute:process(x_in,y_in,z_in)
 	--variable var_y_shift:signed(7 downto 0);
 begin
 	--var_y_shift:=signed(y_in srl shift); --calcul du shift 
+	if y_in ="00000000" then 
+		sig_z_out<=signed(z_in);
+		sig_x_out<=signed(x_in);
+		sig_y_out<=signed(y_in);
+		
+	else
+		case y_in(Nb-1) is
+		    when '0' =>     sig_z_out<=signed(z_in) + tan_i;
+		                    sig_x_out<=signed(x_in) + SHIFT_RIGHT(signed(y_in),shift);
+		                    sig_y_out<=signed(y_in) - SHIFT_RIGHT(signed(x_in),shift);
 
-
-        case y_in(7) is
-            when '0' =>     sig_z_out<=signed(z_in) + tan_i;
-                            sig_x_out<=signed(x_in) + (signed(y_in) srl shift);
-                            sig_y_out<=signed(y_in) - (signed(x_in) srl shift);
-
-            when '1' =>     sig_z_out<=signed(z_in) - tan_i; 
-                            sig_x_out<=signed(x_in) - (signed(y_in) srl shift);
-                            sig_y_out<=signed(y_in) + (signed(x_in) srl shift);
-            
-            when others =>  sig_z_out<="XXXXXXXXX";
-                            sig_x_out<="XXXXXXXX";
-                            sig_y_out<="XXXXXXXX";
-        end case;
-end process compute;  
+		    when '1' =>     sig_z_out<=signed(z_in) - tan_i; 
+		                    sig_x_out<=signed(x_in) - SHIFT_RIGHT(signed(y_in),shift);
+		                    sig_y_out<=signed(y_in) + SHIFT_RIGHT(signed(x_in),shift);
+		    
+		    when others =>  sig_z_out<="XXXXXXXXX";
+		                    sig_x_out<="XXXXXXXX";
+		                    sig_y_out<="XXXXXXXX";
+		end case;
+	end if;
+end process compute;
 	sig_int_z_out<=std_logic_vector(sig_z_out);
     	sig_int_x_out<=std_logic_vector(sig_x_out);
     	sig_int_y_out<=std_logic_vector(sig_y_out);

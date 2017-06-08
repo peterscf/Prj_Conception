@@ -125,7 +125,7 @@ begin
       variable C : integer;
       file SORTIES: text open WRITE_MODE is "./bench/sorties_cordic.dat";
  begin
-	 wait for 60 ns;
+	 --wait for 60 ns;
        wait until sig_clk'event and sig_clk = '1';
        		C:=conv_integer(signed(sig_z_out));
 		   write(L,C);	-- écriture de Z dans la ligne
