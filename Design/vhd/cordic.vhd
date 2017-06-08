@@ -42,9 +42,9 @@ component PRE_PROCESS
             z_out: out std_logic_vector(8 downto 0));
   end component;
 
-  signal Z0	: std_logic_vector(Nb-1 downto 0);
-  signal X0 : std_logic_vector(Nb-1 downto 0);
-  signal Y0	: std_logic_vector(8 downto 0);
+  signal X0	: std_logic_vector(Nb-1 downto 0);
+  signal Y0 : std_logic_vector(Nb-1 downto 0);
+  signal Z0	: std_logic_vector(8 downto 0);
 
   signal X1 	: std_logic_vector(Nb-1 downto 0);
   signal Y1	: std_logic_vector(Nb-1 downto 0);

@@ -8,7 +8,7 @@
 
 
 #define TAILLE_MAX 50
-#define TAILLE_MAX_FILE 3000
+#define TAILLE_MAX_FILE 11000
 #define N 6
 #define B 7
 
@@ -72,9 +72,9 @@ if (fichier_I != NULL && fichier_Q !=NULL){
     end=i;
     printf("fin fichier I et Q debut cordic\n");
     printf("lancement de la generation des fichiers de verif \n");
-    out_file=fopen("Z_out_verif_txt","w+");
-   file_x=fopen("x_simu.dat","w+");
-   file_y=fopen("y_simu.dat","w+"); 
+    out_file=fopen("./simu_file/Z_out_C.txt","w+");
+   file_x=fopen("./simu_file/x_simu.dat","w+");
+   file_y=fopen("./simu_file/y_simu.dat","w+"); 
    if(out_file == NULL){
             printf("erreur impossible de cree %s \n",file_name);
         }
@@ -87,6 +87,12 @@ if (fichier_I != NULL && fichier_Q !=NULL){
                 y= (int)(a_y*(0x1<<B));
                 fprintf(file_x,"%.2X\n",x);
 		fprintf(file_y,"%.2X\n",y);
+		if (x < 0){
+			x=-x;
+			y=-y;
+			if (y<0)z=180; //y deja inverser
+			else z= -180;			
+		}
 		for (i=0;i<N;i++){
                     cellule(&x,&y,&z,tan0[i],i);
                 }
@@ -103,6 +109,7 @@ else{
         printf("Impossible d'ouvrir les fichier Qout.txt\n");
     }
 }
+printf("Fin de Programme \n\n");
 }//fin main
 
 void cellule(int* x, int* y, int* z, int tani, int i){
@@ -111,7 +118,7 @@ void cellule(int* x, int* y, int* z, int tani, int i){
 	int yk=*y;
 	int zk=*z;
 	
-//	printf(" //CELLULE// Entree:\nxk=%d \nyk=%d \n zk=%d\n" ,xk,yk, zk);
+	//printf(" //CELLULE// Entree:\nxk=%d \nyk=%d \n zk=%d\n" ,xk,yk, zk);
 	if (yk > 0){
 		*x=xk+(yk>>i);
 		*y=yk-(xk>>i);
@@ -122,6 +129,6 @@ void cellule(int* x, int* y, int* z, int tani, int i){
 		*y=yk+(xk>>i);
 		*z=zk-tani;
 	}
-//	printf("//CELLULE// Sortie:\nx=%d \ny=%d \n z=%d\n" ,*x,*y, *z);
+	//printf("//CELLULE// Sortie:\nx=%d \ny=%d \n z=%d\n" ,*x,*y, *z);
 
 }

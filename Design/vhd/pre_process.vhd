@@ -46,11 +46,11 @@ begin
 	if(Iin(Nb-1)='1') then
 		sig_Iout <= not(signed(Iin))+1;
 		sig_Qout <= not(signed(Qin))+1;			
-		if(Qin(Nb-1)='1') then 
+		if(Qin(Nb-1)='0') then --Qin positif 
 			sig_Zout<= "010110100";-- +180°
-		else 
+		else --Qin negatif
 			sig_Zout<= "101001100";-- -180°
-		end if;-- Qin > 0 
+		end if;
 	else 
 		sig_Iout <= signed(Iin);
 		sig_Qout <= signed(Qin);

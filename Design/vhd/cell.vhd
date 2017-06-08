@@ -40,7 +40,7 @@ synchro: process (clk,reset_n)
  begin
 if clk'event and clk ='1' then 
 	if(reset_n = '0')then 
-        	z_out<="00000000";
+        	z_out<="000000000";
         	x_out<="00000000";
         	y_out<="00000000";
 
@@ -69,7 +69,7 @@ begin
                             sig_x_out<=signed(x_in) - (signed(y_in) srl shift);
                             sig_y_out<=signed(y_in) + (signed(x_in) srl shift);
             
-            when others =>  sig_z_out<="XXXXXXXX";
+            when others =>  sig_z_out<="XXXXXXXXX";
                             sig_x_out<="XXXXXXXX";
                             sig_y_out<="XXXXXXXX";
         end case;

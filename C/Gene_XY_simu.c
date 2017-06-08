@@ -33,8 +33,8 @@ i=0;
  	y= (int)(a_y*(0x1<<B));
 	
 // ecriture dans fichier en formats 8bits signé 
-		fprintf(file_x,"%.2X",x);
-		fprintf(file_y,"%.2X",y);
+		fprintf(file_x,"%.2X\n",x);
+		fprintf(file_y,"%.2X\n",y);
 	i++;
 	}
 }

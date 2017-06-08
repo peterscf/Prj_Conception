@@ -8,7 +8,7 @@
 
 
 #define TAILLE_MAX 50
-#define TAILLE_MAX_FILE 3000
+#define TAILLE_MAX_FILE 11000
 #define N 6
 //#define B 6
 
@@ -74,7 +74,7 @@ if (fichier_I != NULL && fichier_Q !=NULL){
     	err=0;
     	err_1=0;
     	nb_tst=0;
-        sprintf(file_name, "Z_out_%d.txt", b);
+        sprintf(file_name, "./valid_file/Z_out_%d.txt", b);
         //printf("file_name=%s\n",file_name);
         out_file=fopen(file_name,"w+"); 
         if(out_file == NULL){
@@ -87,7 +87,12 @@ if (fichier_I != NULL && fichier_Q !=NULL){
                 a_y = Q[j];
                 x= (int)(a_x*(0x1<<b));
                 y= (int)(a_y*(0x1<<b));
-            
+            	if (x < 0){
+			x=-x;
+			y=-y;
+			if (y<0)z=180;
+			else z= -180;			
+		}
                 //printf("lancement du test B=%d\n",b);
                // printf("\nvaleur a_x=%lf\ta_y=%lf \n valeur z= %d",a_x,a_y,z);
                 for (i=0;i<N;i++){
