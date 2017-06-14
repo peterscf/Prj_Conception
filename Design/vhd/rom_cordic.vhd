@@ -2,18 +2,18 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-
+use ieee.std_logic_unsigned.all;
 entity ROM_cordic is
   port( clk		: in std_logic;
 	reset_n 	: in std_logic;
 	enable		: in std_logic;
     X    		: out std_logic_vector(7 downto 0);
-	Y		: out std_logic_vector(7 downto 0)) ;
+	Y			: out std_logic_vector(7 downto 0)) ;
 end ROM_cordic;
 
 architecture A of ROM_cordic is
   type   tab_rom is array (0 to 44) of std_logic_vector(7 downto 0);
-  signal counter : std_logic_vector(7 downto 0); -- 0 to 180
+  signal count : std_logic_vector(7 downto 0); -- 0 to 180
   signal sig_X : std_logic_vector(7 downto 0);
   signal sig_Y : std_logic_vector(7 downto 0);
 
@@ -26,49 +26,57 @@ architecture A of ROM_cordic is
 
 begin
 
-  synchro: process (clk,reset_n)
+  synchro: process (clk,reset_n,enable)
+  variable counter: std_logic_vector(7 downto 0);
   begin
-	if clk'event and clk ='1' then 
-		if(reset_n = '0')then 
-			X <= X"80";
-        	Y <= X"00";
-		else 
- 			X <= sig_X;
-			Y <= sig_Y;
-		end if;
- 	 end if;
+  	if enable = '1' then
+		if clk'event and clk ='1' then 
+			if(reset_n = '0')then
+				counter:= "00000000";
+			else 
+	 			if counter = "10110100" then
+	 				counter :="00000000";
+	 			else
+	 				counter := counter + "00000001";
+	 			end if;
+	 			
+	 			count<= counter;
+	 			X <= sig_X;
+				Y <= sig_Y;
+			end if;
+ 	 	end if;
+ 	else
+		counter :="00000000";
+	end if;
   end process synchro;
 
 
-  compute:process(enable,counter)
+compute:process(enable,count)
+ --variable counter std_logic_vector(7 downto 0) := "00000000";
   begin
-    counter <= "00000000";
-    if enable = '1' then
-	counter <= counter + "00000001";
+     if enable = '1' then
+		if count <= "00101100" then   --44
+			sig_X <= rom_X(conv_integer(count));
+			sig_Y <= rom_Y(conv_integer(count));
 
-	case counter is
+		elsif count <= "01011001" then --89
+			sig_X <= not (rom_X(conv_integer(count - "00101101"))) + "00000001" ;
+			sig_Y <= rom_Y(conv_integer(count - "00101101"));
 
-		when counter < "001011001" => -- 0 to 44
-			sig_X <= rom_X(to_integer(counter));
-			sig_Y <= rom_Y(to_integer(counter));
+		elsif count <= "10000110" then  --134
+			sig_X <= not (rom_X(conv_integer(count - "01011010"))) + "00000001" ;
+			sig_Y <= not (rom_Y(conv_integer(count - "01011010"))) + "00000001" ;
 
-		when "00101101" to "01011001" => -- 45 to 89
-			sig_X <= not (rom_X(to_integer(counter - "00101101"))) + "00000001" ;
-			sig_Y <= rom_X(to_integer(counter - "00101101"));
-
-		when "01011010" to "10000110" =>  -- 90 to 134
-			sig_X <= not (rom_X(to_integer(counter - "01011010"))) + "00000001" ;
-			sig_Y <= not (rom_X(to_integer(counter - "01011010"))) + "00000001" ;
-
-		when "10000111" to "10110011" => -- 135 to 179
-			sig_X <= rom_X(to_integer(counter - "10000111"));
-			sig_Y <= not (rom_Y(to_integer(counter - "10000111"))) + "00000001" ;
-
-		when others 
-   			sig_X <= "XXXXXXXX";
-        	sig_Y <= "XXXXXXXX";
-	end case;
+		else  -- < 179
+			sig_X <= rom_X(conv_integer(count - "10000111"));
+			sig_Y <= not (rom_Y(conv_integer(count - "10000111"))) + "00000001" ;
+		end if;
+		
+	else
+		sig_X <= "00000000";
+		sig_Y <= "00000000";
+    
     end if;
-  end process compute;
+end process compute;
 end A;
 

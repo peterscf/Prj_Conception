@@ -1,0 +1,25 @@
+open_project /tp/xph2app/xph2app003/Prj_conception/Design/spy/WORK/CORDIC_top.prj
+read_file -type vhdl ../../vhd/pre_process.vhd
+
+
+
+current_goal Design_Read -alltop
+
+
+link_design -force
+
+
+
+current_goal lint/lint_rtl -alltop
+run_goal
+current_goal lint/lint_abstract -alltop
+run_goal
+current_goal lint/lint_rtl -alltop
+
+
+
+
+
+
+gui_exit
+gui_exit

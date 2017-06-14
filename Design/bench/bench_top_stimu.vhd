@@ -7,11 +7,11 @@ use ieee.std_logic_arith.all;
 use ieee.math_real.all;
 use ieee.std_logic_textio.all;
 use std.textio.all;
---library lib_VHD ;
-library lib_SYNTH;
-use lib_SYNTH.CORDIC_top;
+library lib_VHD ;
+--library lib_SYNTH;
+--use lib_SYNTH.CORDIC_top;
 
---use lib_VHD.CORDIC_top;
+use lib_VHD.CORDIC_top;
 
 
 entity test_top_file is end test_top_file;

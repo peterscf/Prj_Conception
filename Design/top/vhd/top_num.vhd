@@ -1,0 +1,81 @@
+-----------------------------TOP.vhd----------------------------------------
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+--library lib_VHD;
+
+entity top_num is
+  port( i_CLK		: in  std_logic;                      
+	i_RESET_n    	: in  std_logic;                     
+	i_data          : in  std_logic;
+	i_in_demod_I	: in  std_logic_vector(4 downto 0);
+	i_in_demod_Q	: in  std_logic_vector(4 downto 0);
+	o_out_modu_I    : out std_logic_vector(4 downto 0);
+	o_out_modu_Q    : out std_logic_vector(4 downto 0);
+	o_out_demod_I  	: out std_logic_vector(7 downto 0);
+	o_out_demod_Q  	: out std_logic_vector(7 downto 0);   
+	o_phi  		: out std_logic_vector(8 downto 0)
+      );
+end top_num;
+
+architecture A of top_num is    
+
+--Modulateur MSK
+component msk_modulator is port (	
+	i_hclk		: in  std_logic;                      
+	i_rstn    : in  std_logic;                     
+	i_data    : in  std_logic;   
+	o_i       : out std_logic_vector(4 downto 0);  
+	o_q       : out std_logic_vector(4 downto 0));  
+end component;
+
+--Démodulateur IQ
+component demod_iq is
+  port( 
+	I    	    : in  std_logic_vector(4 downto 0);
+        Q           : in  std_logic_vector(4 downto 0);
+        CLK         : in  std_logic;
+        RESET_n     : in  std_logic;
+        Filter_outI    : out std_logic_vector(7 downto 0);
+        Filter_outQ    : out std_logic_vector(7 downto 0)
+      );
+end component;
+
+-- CORDIC
+component CORDIC_top is
+	generic(Nb_b: integer := 8);
+
+	port( 	CLK  : in std_logic;
+		RESET_n  : in std_logic;
+	  	X  : in  std_logic_vector(Nb_b-1 downto 0);
+		Y  : in  std_logic_vector(Nb_b-1 downto 0);
+		Z  : out std_logic_vector(8 downto 0));
+end component;
+
+-- Signaux du Filtre
+signal out_demod_I    : std_logic_vector(7 downto 0);
+signal out_demod_Q    : std_logic_vector(7 downto 0);
+
+signal in_cordic_I    : std_logic_vector(7 downto 0);
+signal in_cordic_Q    : std_logic_vector(7 downto 0);
+
+
+begin
+
+
+--Modulateur MSK
+modu : msk_modulator port map (i_CLK, i_RESET_n, i_data, o_out_modu_I, o_out_modu_Q);
+--Demodulateur IQ
+demod : demod_iq port map (i_in_demod_I, i_in_demod_Q, i_CLK, i_RESET_n, out_demod_I, out_demod_Q);
+
+in_cordic_I <= out_demod_I;
+in_cordic_Q <= out_demod_Q;
+
+--Cordic
+cordic : cordic_top port map (i_CLK, i_RESET_n, in_cordic_I, in_cordic_Q, o_phi);
+
+--Intermediaire
+o_out_demod_I  	<=	out_demod_I;
+o_out_demod_Q  	<=	out_demod_Q;  
+
+	end A;
