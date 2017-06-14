@@ -1,2 +1,4 @@
 20 12 12
 2 ../../vhd/cordic.vhd	16 29 Architecture	CORDIC_top.A
+24 12 12
+2 ../../vhd/rom_cordic.vhd	14 29 Architecture	ROM_cordic.A

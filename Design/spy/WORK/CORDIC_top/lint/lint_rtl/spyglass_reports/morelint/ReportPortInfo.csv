@@ -1,4 +1,10 @@
 Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
+ROM_cordic,Top_Level,clk,INPUT,1,-,port definition,- 
+ROM_cordic,Top_Level,reset_n,INPUT,1,-,port definition,- 
+ROM_cordic,Top_Level,enable,INPUT,1,-,port definition,- 
+ROM_cordic,Top_Level,X,OUTPUT,8,(7:0),port definition,- 
+ROM_cordic,Top_Level,Y,OUTPUT,8,(7:0),port definition,- 
+Entity,Entity Type,Port Name,Direction,Width,Index,Comment Source,Comment
 CORDIC_top,Top_Level,clk,INPUT,1,-,port definition,- 
 CORDIC_top,Top_Level,reset_n,INPUT,1,-,port definition,- 
 CORDIC_top,Top_Level,X,INPUT,8,(7:0),port definition,- 

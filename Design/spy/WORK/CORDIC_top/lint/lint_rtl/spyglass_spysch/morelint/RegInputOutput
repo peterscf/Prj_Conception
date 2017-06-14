@@ -16,3 +16,5 @@ VALUE@@Y[4]@@CORDIC_top
 VALUE@@Y[5]@@CORDIC_top
 VALUE@@Y[6]@@CORDIC_top
 VALUE@@Y[7]@@CORDIC_top
+SCHEMA@@PName@@HierName
+VALUE@@reset_n@@ROM_cordic

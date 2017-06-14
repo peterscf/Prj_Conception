@@ -1,4 +1,4 @@
-SpyGlass run started at 10:36:22 AM on Jun 08 2017 
+SpyGlass run started at 06:35:57 PM on Jun 14 2017 
 
 SpyGlass Predictive Analyzer(R) - Version 5.6.0
 Last compiled on Dec 15 2015
@@ -16,7 +16,7 @@ Loading Shared library libspyglassrules-Linux4.spyso from /softl3/spyglass5_6_0/
 Loading Shared library libsdcInitRules-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/lib/libsdcInitRules-Linux4.spyso 
 Loading Shared library librmerules-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/lib/librmerules-Linux4.spyso 
 ##build_id : 5.6.0
-##system   : Linux cimeld13 3.2.0-4-amd64 #1 SMP Debian 3.2.68-1+deb7u3 x86_64
+##system   : Linux cimeld19 3.2.0-4-amd64 #1 SMP Debian 3.2.68-1+deb7u3 x86_64
 ##cwd      : /tp/xph2app/xph2app003/Prj_conception/Design/spy/WORK
 ##lang     : Verilog+VHDL
 ##args     : -mSpyGlass::Compatibility::v2_7_3 \
@@ -36,7 +36,8 @@ Loading Shared library librmerules-Linux4.spyso from /softl3/spyglass5_6_0/SpyGl
              -64bit  \
              ../../vhd/cell.vhd \
              ../../vhd/cordic.vhd \
-             ../../vhd/pre_process.vhd
+             ../../vhd/pre_process.vhd \
+             ../../vhd/rom_cordic.vhd
 
 ##verbosity level   : 2
 ##exact cmdline arg : -batch -project CORDIC_top.prj -designread  -64bit
@@ -49,13 +50,14 @@ Loading Shared library librmerules-Linux4.spyso from /softl3/spyglass5_6_0/SpyGl
 ##spyglass_run.csh ends
 ##files    : ../../vhd/cell.vhd \
              ../../vhd/cordic.vhd \
-             ../../vhd/pre_process.vhd
+             ../../vhd/pre_process.vhd \
+             ../../vhd/rom_cordic.vhd
 
 
 INFO [6]    Work Directory `./CORDIC_top/WORK' does not exist.
 
 INFO [75]    Creating the Work Directory `./CORDIC_top/WORK/64' for 64bit  precompiled dump.
-Checking Rule ZeroSizeFile (Rule 1 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule ZeroSizeFile (Rule 1 of total 98) .... done (Time = 0.00s, Memory = -0.5K)
 Checking Rule PrecompileLibCheck01 (Rule 2 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule PrecompileLibCheck02 (Rule 3 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule PrecompileLibCheck03 (Rule 4 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
@@ -71,20 +73,20 @@ Checking Rule SGDC_voltagedomain05 (Rule 13 of total 98) .... done (Time = 0.00s
 Checking Rule SGDC_voltagedomain06 (Rule 14 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_voltagedomain07 (Rule 15 of total 98) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_powerdomainoutputs02 (Rule 16 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_supply01 (Rule 17 of total 98) .... done (Time = 0.00s, Memory = 8.0K)
+Checking Rule SGDC_supply01 (Rule 17 of total 98) .... done (Time = 0.00s, Memory = 16.0K)
 Checking Rule SGDC_waive01 (Rule 18 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive02 (Rule 19 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive03 (Rule 20 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive04 (Rule 21 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive05 (Rule 22 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive06 (Rule 23 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive06 (Rule 23 of total 98) .... done (Time = 0.00s, Memory = -14.4K)
 Checking Rule SGDC_waive07 (Rule 24 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive08 (Rule 25 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive09 (Rule 26 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive10 (Rule 27 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive11 (Rule 28 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive12 (Rule 29 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive13 (Rule 30 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive13 (Rule 30 of total 98) .... done (Time = 0.00s, Memory = -0.5K)
 Checking Rule SGDC_waive21 (Rule 31 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive22 (Rule 32 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive30 (Rule 33 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
@@ -99,43 +101,47 @@ Checking Rule SGDC_libgroup04 (Rule 41 of total 98) .... done (Time = 0.00s, Mem
 Checking Rule SGDC_power_data01 (Rule 42 of total 98) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_ungroup01 (Rule 43 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port06 (Rule 44 of total 98) .... done (Time = 0.00s, Memory = 15.0K)
-Checking Rule SGDC_abstract_port14 (Rule 45 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port15 (Rule 46 of total 98) .... done (Time = 0.00s, Memory = 16.0K)
+Checking Rule SGDC_abstract_port14 (Rule 45 of total 98) .... done (Time = 0.00s, Memory = -27.0K)
+Checking Rule SGDC_abstract_port15 (Rule 46 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port18 (Rule 47 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule sdc_init_rule (Rule 48 of total 98) .... done (Time = 0.00s, Memory = 80.6K)
 Checking Rule CMD_ignorelibs01 (Rule 49 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportRuleNotRun (Rule 50 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportStopSummary (Rule 51 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportIgnoreSummary (Rule 52 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis started: 1 sec, 255487 KB, 623136 KB
-##SGDEBUG [BENCHMARK_INCR]: Analysis started: 1 sec, 255487 KB, 623136 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis started: 1 sec, 255368 KB, 623132 KB
+##SGDEBUG [BENCHMARK_INCR]: Analysis started: 1 sec, 255368 KB, 623132 KB
  Analyzing input file "../../vhd/cell.vhd" ...
  Analyzing input file "../../vhd/cordic.vhd" ...
  Analyzing input file "../../vhd/pre_process.vhd" ...
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis finished: 1 sec, 260352 KB, 628256 KB
-##SGDEBUG [BENCHMARK_INCR]: Analysis finished: 0 sec, 4865 KB, 5120 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration started: 1 sec, 260353 KB, 628256 KB
-##SGDEBUG [BENCHMARK_INCR]: Elaboration started: 0 sec, 1 KB, 0 KB
+ Analyzing input file "../../vhd/rom_cordic.vhd" ...
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Analysis finished: 1 sec, 260624 KB, 628508 KB
+##SGDEBUG [BENCHMARK_INCR]: Analysis finished: 0 sec, 5256 KB, 5376 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration started: 1 sec, 260628 KB, 628508 KB
+##SGDEBUG [BENCHMARK_INCR]: Elaboration started: 0 sec, 4 KB, 0 KB
  Elaborating Top VHDL Design Unit 'CORDIC_top.A' .....
  done
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration finished: 1 sec, 326247 KB, 694048 KB
-##SGDEBUG [BENCHMARK_INCR]: Elaboration finished: 0 sec, 65894 KB, 65792 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker started: 1 sec, 326247 KB, 694048 KB
+ Elaborating Top VHDL Design Unit 'ROM_cordic.A' .....
+ done
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Elaboration finished: 1 sec, 326525 KB, 694300 KB
+##SGDEBUG [BENCHMARK_INCR]: Elaboration finished: 0 sec, 65897 KB, 65792 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker started: 1 sec, 326525 KB, 694300 KB
 ##SGDEBUG [BENCHMARK_INCR]: RTL Semantic Checker started: 0 sec, 0 KB, 0 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker finished: 1 sec, 326247 KB, 694048 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: RTL Semantic Checker finished: 1 sec, 326525 KB, 694300 KB
 ##SGDEBUG [BENCHMARK_INCR]: RTL Semantic Checker finished: 0 sec, 0 KB, 0 KB
 Checking Rule ElabSummary (Rule 53 of total 98)##FILEDEBUG[sgOpenFile]: Opening File './CORDIC_top/Design_Read/spyglass_reports/SpyGlass/elab_summary.rpt' in "w" mode ...
 ##FILEDEBUG[sgCloseFile]: File './CORDIC_top/Design_Read/spyglass_reports/SpyGlass/elab_summary.rpt' closed.
- .... done (Time = 0.00s, Memory = 0.0K)
+ .... done (Time = 0.00s, Memory = 258.3K)
 Checking Rule ReportCheckDataSummary (Rule 54 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
  Reading waiver file "./CORDIC_top/Design_Read/spyglass_spysch/constraint/spg_autogenerated_waivers.sgdc" ...
  Generating SGDC file "./CORDIC_top/Design_Read/spyglass_spysch/constraint/pragma2Constraint.sgdc" from pragmas in HDL source files ....
  Generating WAIVER file "./CORDIC_top/Design_Read/spyglass_spysch/waiver/pragma2Waiver.swl" from pragmas in HDL source files ....
-Checking Rule SGDC_waive37 (Rule 55 of total 98) .... done (Time = 0.00s, Memory = 0.6K)
+Checking Rule SGDC_waive37 (Rule 55 of total 98) .... done (Time = 0.00s, Memory = 1.9K)
 Checking Rule SGDC_waive35 (Rule 56 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule DetectTopDesignUnits (Rule 57 of total 98) Detected 1 top level design units: 
+Checking Rule DetectTopDesignUnits (Rule 57 of total 98) Detected 2 top level design units: 
      CORDIC_top.A
- .... done (Time = 0.00s, Memory = 4.8K)
+     ROM_cordic.A
+ .... done (Time = 0.00s, Memory = 6.9K)
 Performing semantic checks on SGDC contents
 ..... SGDC semantic checks completed. (Time = 0.00s, Memory = 52.0K)
 Checking Rule SGDC_testmode03 (Rule 58 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
@@ -143,24 +149,24 @@ Checking Rule ReportObsoletePragmas (Rule 59 of total 98) .... done (Time = 0.00
 Checking Rule GenerateConfMap (Rule 60 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule HdlLibDuCheck (Rule 61 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule RtlDesignInfo (Rule 62 of total 98)
-##SGDEBUG [BENCHMARK_DATA]: Number of RTL Design Units = 3
- .... done (Time = 0.00s, Memory = 3.1K)
+##SGDEBUG [BENCHMARK_DATA]: Number of RTL Design Units = 4
+ .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule CheckCelldefine (Rule 63 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive23 (Rule 64 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive26 (Rule 65 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive27 (Rule 66 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive29 (Rule 67 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule AnalyzeBBox (Rule 68 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule AnalyzeBBox (Rule 68 of total 98) .... done (Time = 0.01s, Memory = 0.0K)
 Checking Rule ReportCheckDataSummary (Rule 54 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive24 (Rule 69 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive25 (Rule 70 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive31 (Rule 71 of total 98) .... done (Time = 0.00s, Memory = 0.0K)
 
 Generating data for Console...
-##SGDEBUG [PEAK_MEMORY]: 696864 KB for entire run at 'AnalyzeBBox' stage
-##SGDEBUG [VMPEAK_MEMORY]: 697884 KB for entire run
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 2 sec, 327711 KB, 689696 KB
-##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 1 sec, 1464 KB, -4352 KB
+##SGDEBUG [PEAK_MEMORY]: 697372 KB for entire run at 'AnalyzeBBox' stage
+##SGDEBUG [VMPEAK_MEMORY]: 698392 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 2 sec, 328263 KB, 690204 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 1 sec, 1738 KB, -4096 KB
 
 
 =====================================================================================
@@ -192,7 +198,7 @@ Generating data for Console...
  RULE-NAME                      POLICY-NAME     ENABLED VIOL-CNT RULE-TYPE   ERROR-MSG         
 =====================================================================================
  ElabSummary                    SpyGlass        Yes            1 SETUP          -               
- DetectTopDesignUnits           SpyGlass        Yes            1 RTLALLDULIST   -               
+ DetectTopDesignUnits           SpyGlass        Yes            2 RTLALLDULIST   -               
 -------------------------------------------------------------------------------------
 Note: VSDU type of rules (as seen in the above table) are not run on
       unsynthesized modules reported by 'ErrorAnalyzeBBox/InfoAnalyzeBBox' messages
@@ -205,17 +211,18 @@ Results Summary:
 ---------------------------------------------------------------------------------------------
    Goal Run           :      Design_Read
    Command-line read  :      0 error,      0 warning,      0 information message 
-   Design Read        :      0 error,      0 warning,      2 information messages
-      Found 1 top module:
+   Design Read        :      0 error,      0 warning,      3 information messages
+      Found 2 top modules:
          CORDIC_top.A   (file: ../../vhd/cordic.vhd)
+         ROM_cordic.A   (file: ../../vhd/rom_cordic.vhd)
 
    Blackbox Resolution:      0 error,      0 warning,      0 information message 
    SGDC Checks        :      0 error,      0 warning,      0 information message 
    -------------------------------------------------------------------------------------
-   Total              :      0 error,      0 warning,      2 information messages
+   Total              :      0 error,      0 warning,      3 information messages
 
-  Total Number of Generated Messages     :         2 (0 error, 0 warning, 2 Infos)
-  Number of Reported Messages            :         2 (0 error, 0 warning, 2 Infos)
+  Total Number of Generated Messages     :         3 (0 error, 0 warning, 3 Infos)
+  Number of Reported Messages            :         3 (0 error, 0 warning, 3 Infos)
 
 ---------------------------------------------------------------------------------------------
 
@@ -235,4 +242,4 @@ SpyGlass critical reports for the current run are present in directory './CORDIC
 
 SpyGlass Exit Code 0 (Rule-checking completed without errors or warnings)
 SpyGlass total run-time is 0:0:3 (3 secs)
-SpyGlass run completed at 10:36:46 AM on Jun 08 2017
+SpyGlass run completed at 06:36:20 PM on Jun 14 2017

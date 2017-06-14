@@ -4,7 +4,8 @@ set WORK_PATH "spy/WORK/"
 
 set VHDL_FILES "../../vhd/cell.vhd \
 				../../vhd/cordic.vhd \
-				../../vhd/pre_process.vhd"
+				../../vhd/pre_process.vhd\
+				../../vhd/rom_cordic.vhd"
 					
 set DESIGN_NAME CORDIC_top
 

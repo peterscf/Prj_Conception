@@ -15,3 +15,8 @@
 [1]
 "RULEGROUP"
 ["lint/Miscellaneous"]
+-1 "SYNTH_12606" 2
+"RULEGROUP"
+["Design Read"]
+"BUILTIN"
+"1"

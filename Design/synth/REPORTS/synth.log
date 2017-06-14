@@ -30,11 +30,6 @@ Running PRESTO HDLC
 -- Compiling Source File ../../vhd/cell.vhd
 Compiling Entity Declaration CELL
 Compiling Architecture A of CELL
-
--------------------
-    79: 		end case;
-        		        ^
-[Warning] Choices do not cover all cases
 Warning:  ../../vhd/cell.vhd:28: The architecture A has already been analyzed. It is being replaced. (VHD-4)
 -- Compiling Source File ../../vhd/cordic.vhd
 Compiling Entity Declaration CORDIC_TOP
@@ -72,13 +67,14 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=45,shift=0". (HDL-193)
+Warning:  ../../vhd/cell.vhd:66: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            67            |    auto/auto     |
+|            66            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -94,13 +90,14 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=26,shift=1". (HDL-193)
+Warning:  ../../vhd/cell.vhd:66: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            67            |    auto/auto     |
+|            66            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -116,13 +113,14 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=14,shift=2". (HDL-193)
+Warning:  ../../vhd/cell.vhd:66: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            67            |    auto/auto     |
+|            66            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -138,13 +136,14 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=7,shift=3". (HDL-193)
+Warning:  ../../vhd/cell.vhd:66: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            67            |    auto/auto     |
+|            66            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -160,13 +159,14 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=3,shift=4". (HDL-193)
+Warning:  ../../vhd/cell.vhd:66: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            67            |    auto/auto     |
+|            66            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -182,13 +182,14 @@ Inferred memory devices in process
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=1,shift=5". (HDL-193)
+Warning:  ../../vhd/cell.vhd:66: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            67            |    auto/auto     |
+|            66            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -289,21 +290,21 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  178689.4      0.00       0.0       0.0                          
-    0:00:04  178689.4      0.00       0.0       0.0                          
-    0:00:04  178689.4      0.00       0.0       0.0                          
-    0:00:04  178689.4      0.00       0.0       0.0                          
-    0:00:04  178689.4      0.00       0.0       0.0                          
-    0:00:04  146570.8      0.00       0.0       0.0                          
-    0:00:04  145861.0      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:03  179289.4      0.00       0.0       0.0                          
+    0:00:03  179289.4      0.00       0.0       0.0                          
+    0:00:03  179289.4      0.00       0.0       0.0                          
+    0:00:03  179289.4      0.00       0.0       0.0                          
+    0:00:03  179289.4      0.00       0.0       0.0                          
+    0:00:04  146788.6      0.00       0.0       0.0                          
+    0:00:04  146078.8      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
 
 
 
@@ -314,9 +315,9 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -326,21 +327,21 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  145351.4      0.00       0.0       0.0                          
-    0:00:04  139903.4      0.00       0.0       0.0                          
-    0:00:04  138250.8      0.00       0.0       0.0                          
-    0:00:04  137860.4      0.00       0.0       0.0                          
-    0:00:04  137724.2      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
-    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  145569.2      0.00       0.0       0.0                          
+    0:00:04  139939.6      0.00       0.0       0.0                          
+    0:00:04  138332.4      0.00       0.0       0.0                          
+    0:00:04  138005.6      0.00       0.0       0.0                          
+    0:00:04  137869.4      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
+    0:00:04  137778.6      0.00       0.0       0.0                          
 Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
 
 

@@ -170,6 +170,7 @@ Option          Value             Origin  File                           LineNo
 <design_files>  ../../vhd/cell.vhd APICall -                              -
                 ../../vhd/cordic.vhd APICall -                              -
                 ../../vhd/pre_process.vhd APICall -                              -
+                ../../vhd/rom_cordic.vhd APICall -                              -
 
 
 Rules Parameter

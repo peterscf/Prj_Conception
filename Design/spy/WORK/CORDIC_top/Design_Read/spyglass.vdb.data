@@ -1,5 +1,5 @@
 ##spyglass_version: 5.6.0
-##date: Thu Jun  8 10:36:44 2017
+##date: Wed Jun 14 18:36:18 2017
 ##user: xph2app003
 ##cwd: /tp/xph2app/xph2app003/Prj_conception/Design/spy/WORK
 ##lang: verilog+vhdl
@@ -11,23 +11,29 @@
 ##sde_property: rule DetectTopDesignUnits -policy SpyGlass -highProfile
 ##sde_property: rule AnalyzeBBox -policy SpyGlass -highProfile
 ##file_label: SPG_ELAB_SUMMARY_FILE -file ./CORDIC_top/Design_Read/spyglass_reports/SpyGlass/elab_summary.rpt -policy SpyGlass -external
-##files_vhdl: ../../vhd/cordic.vhd ../../vhd/pre_process.vhd ../../vhd/cell.vhd
-##sde_property: file ../../vhd/cordic.vhd -id 1 -inactiveList slc 1 1 0 slc 30 30 24 slc 31 31 19 slc 32 32 18
-##sde_property: file ../../vhd/pre_process.vhd -id 2 -inactiveList slc 1 1 0 slc 49 49 25 slc 50 50 26 slc 51 51 7 slc 52 52 26
-##sde_property: file ../../vhd/cell.vhd -id 3 -inactiveList slc 1 4 0 slc 8 8 0 slc 13 13 23 slc 14 14 22 slc 15 15 21 slc 29 29 0 slc 58 58 0 slc 60 60 0
+##files_vhdl: ../../vhd/rom_cordic.vhd ../../vhd/cordic.vhd ../../vhd/pre_process.vhd ../../vhd/cell.vhd
+##sde_property: file ../../vhd/rom_cordic.vhd -id 1 -inactiveList slc 1 1 0 slc 16 16 0 slc 21 21 32 slc 24 24 31 slc 42 42 0 slc 52 74 0 slc 77 103 0
+##sde_property: file ../../vhd/cordic.vhd -id 2 -inactiveList slc 1 1 0 slc 30 30 24 slc 31 31 19 slc 32 32 18
+##sde_property: file ../../vhd/pre_process.vhd -id 3 -inactiveList slc 1 1 0 slc 49 49 25 slc 50 50 26 slc 51 51 7 slc 52 52 26
+##sde_property: file ../../vhd/cell.vhd -id 4 -inactiveList slc 1 4 0 slc 8 8 0 slc 13 13 23 slc 14 14 22 slc 15 15 21 slc 29 29 0 slc 58 58 0 slc 60 60 0
+#span WORK.ROM_cordic.A ../../vhd/rom_cordic.vhd 6 12 ../../vhd/rom_cordic.vhd 1 12 ../../vhd/rom_cordic.vhd 14 104
+#rtl_idmap WORK.ROM_cordic 1 -lang 2
+#rtl_idmap WORK.ROM_cordic.A 2 -entityid 1
 #span WORK.CORDIC_top.A ../../vhd/cordic.vhd 6 14 ../../vhd/cordic.vhd 1 14 ../../vhd/cordic.vhd 16 165
-#rtl_idmap WORK.CORDIC_top 1 -lang 2
-#rtl_idmap WORK.CORDIC_top.A 2 -entityid 1
+#rtl_idmap WORK.CORDIC_top 3 -lang 2
+#rtl_idmap WORK.CORDIC_top.A 4 -entityid 3
 #span WORK.PRE_PROCESS.A ../../vhd/pre_process.vhd 6 17 ../../vhd/pre_process.vhd 1 17 ../../vhd/pre_process.vhd 19 61
-#rtl_idmap WORK.PRE_PROCESS 3 -lang 2
-#rtl_idmap WORK.PRE_PROCESS.A 4 -entityid 3
-#span WORK.CELL.A ../../vhd/cell.vhd 11 26 ../../vhd/cell.vhd 1 26 ../../vhd/cell.vhd 28 80
-#rtl_idmap WORK.CELL 5 -lang 2
-#rtl_idmap WORK.CELL.A 6 -entityid 5
+#rtl_idmap WORK.PRE_PROCESS 5 -lang 2
+#rtl_idmap WORK.PRE_PROCESS.A 6 -entityid 5
+#span WORK.CELL.A ../../vhd/cell.vhd 11 26 ../../vhd/cell.vhd 1 26 ../../vhd/cell.vhd 28 84
+#rtl_idmap WORK.CELL 7 -lang 2
+#rtl_idmap WORK.CELL.A 8 -entityid 7
+#greybox WORK.ROM_cordic.A 15
 #greybox WORK.CORDIC_top.A 15
 #greybox WORK.PRE_PROCESS.A 15
 #greybox WORK.CELL.A 15
-#rtl_top_modules CORDIC_top
+#rtl_top_modules CORDIC_top ROM_cordic
+#childElab ROM_cordic WORK.ROM_cordic.A -elabDuId 9
 #childElab CORDIC_top WORK.CORDIC_top.A -elabDuId 1 pp1 pre_process cell1 work_cell_a_8_45_0 cell2 work_cell_a_8_26_1 cell3 work_cell_a_8_14_2 cell4 work_cell_a_8_7_3 cell5 work_cell_a_8_3_4 cell6 work_cell_a_8_1_5
 #childElab pre_process WORK.PRE_PROCESS.A -elabDuId 2
 #childElab work_cell_a_8_45_0 WORK.CELL.A -elabDuId 3
@@ -36,8 +42,8 @@
 #childElab work_cell_a_8_7_3 WORK.CELL.A -elabDuId 6
 #childElab work_cell_a_8_3_4 WORK.CELL.A -elabDuId 7
 #childElab work_cell_a_8_1_5 WORK.CELL.A -elabDuId 8
-##totalGeneratedCount:         2
+##totalGeneratedCount:         3
 ##totalWaivedViolationCount:         0
-##totalReportCount:         2
+##totalReportCount:         3
 ##totalSuppressedCount:         0
 ##Active_Rules  ZeroSizeFile

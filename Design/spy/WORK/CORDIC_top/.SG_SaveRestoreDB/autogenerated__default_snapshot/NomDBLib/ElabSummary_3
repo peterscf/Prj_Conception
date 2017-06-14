@@ -67,8 +67,13 @@ Elaborated Name: 'work_cell_a_8_1_5'
 
 ================================================================================
 
+Elaborated Name: 'ROM_cordic'
+    (RTL Design Unit name: 'ROM_cordic', ../../vhd/rom_cordic.vhd:6)
+     Parameters (Total: 0)
+================================================================================
+
 Elaborated Name: 'CORDIC_top'
     (RTL Design Unit name: 'CORDIC_top', ../../vhd/cordic.vhd:6)
      Parameters (Total: 1)
-	       Nb = 8 (default: 8)
+	       Nb_b = 8 (default: 8)
 ================================================================================

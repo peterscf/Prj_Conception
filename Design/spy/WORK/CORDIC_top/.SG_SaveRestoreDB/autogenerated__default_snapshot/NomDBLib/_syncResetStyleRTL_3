@@ -19,3 +19,6 @@ T@@38@@54@@
 M@@PRE_PROCESS.A@@
 N@@reset_n@@
 T@@27@@41@@
+M@@ROM_cordic.A@@
+N@@reset_n@@
+T@@28@@50@@

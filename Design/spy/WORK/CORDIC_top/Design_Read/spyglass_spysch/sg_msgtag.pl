@@ -20,6 +20,6 @@ if(!defined $::spyInIspy || !$::spyInIspy)
 )
 );
 }
-spyMessageTagTestBenchmark(2,"./CORDIC_top/Design_Read/spyglass.vdb");
+spyMessageTagTestBenchmark(3,"./CORDIC_top/Design_Read/spyglass.vdb");
 
 1;
