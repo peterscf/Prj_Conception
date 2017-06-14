@@ -1,4 +1,4 @@
-SpyGlass run started at 02:32:51 PM on Jun 06 2017 
+SpyGlass run started at 10:36:22 AM on Jun 08 2017 
 
 SpyGlass Predictive Analyzer(R) - Version 5.6.0
 Last compiled on Dec 15 2015
@@ -44,7 +44,8 @@ Loading Shared library libVhLint-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlas
              -enable_save_restore_builtin 'true' \
              -64bit  \
              ../../vhd/cell.vhd \
-             ../../vhd/cordic.vhd
+             ../../vhd/cordic.vhd \
+             ../../vhd/pre_process.vhd
 
 ##verbosity level   : 2
 ##exact cmdline arg : -batch -project CORDIC_top.prj -goal lint/lint_abstract -64bit
@@ -56,7 +57,8 @@ Loading Shared library libVhLint-Linux4.spyso from /softl3/spyglass5_6_0/SpyGlas
 ;	/softl3/spyglass5_6_0/SpyGlass-5.6.0/SPYGLASS_HOME/bin/spyglass  -batch -project CORDIC_top.prj -goal lint/lint_abstract -64bit
 ##spyglass_run.csh ends
 ##files    : ../../vhd/cell.vhd \
-             ../../vhd/cordic.vhd
+             ../../vhd/cordic.vhd \
+             ../../vhd/pre_process.vhd
 
 
 INFO [76]    Using `./CORDIC_top/WORK/64' as the Work Directory for 64bit precompiled dump.
@@ -65,7 +67,7 @@ Checking Rule PrecompileLibCheck02 (Rule 2 of total 116) .... done (Time = 0.00s
 Checking Rule PrecompileLibCheck03 (Rule 3 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule PrecompileLibCheck04 (Rule 4 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ElabSummary (Rule 5 of total 116)##FILEDEBUG[sgOpenFile]: Opening File './CORDIC_top/lint/lint_abstract/spyglass_reports/SpyGlass/elab_summary.rpt' in "w" mode ...
- .... done (Time = 0.00s, Memory = 0.0K)
+ .... done (Time = 0.00s, Memory = -0.6K)
 Checking Rule SGDC_assume_path01 (Rule 6 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_sdcschema02 (Rule 7 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_clock05 (Rule 8 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -74,14 +76,14 @@ Checking Rule SGDC_force_ta05 (Rule 10 of total 116) .... done (Time = 0.00s, Me
 Checking Rule SGDC_require_path03 (Rule 11 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_require_value03 (Rule 12 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_voltagedomain05 (Rule 13 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_voltagedomain06 (Rule 14 of total 116) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule SGDC_voltagedomain06 (Rule 14 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_voltagedomain07 (Rule 15 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_powerdomainoutputs02 (Rule 16 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_supply01 (Rule 17 of total 116) .... done (Time = 0.00s, Memory = 16.0K)
 Checking Rule SGDC_waive01 (Rule 18 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive02 (Rule 19 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive03 (Rule 20 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive04 (Rule 21 of total 116) .... done (Time = 0.00s, Memory = -0.4K)
+Checking Rule SGDC_waive04 (Rule 21 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive05 (Rule 22 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive06 (Rule 23 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive07 (Rule 24 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -94,11 +96,11 @@ Checking Rule SGDC_waive13 (Rule 30 of total 116) .... done (Time = 0.00s, Memor
 Checking Rule SGDC_waive21 (Rule 31 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive22 (Rule 32 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive30 (Rule 33 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_waive32 (Rule 34 of total 116) .... done (Time = 0.00s, Memory = -0.2K)
+Checking Rule SGDC_waive32 (Rule 34 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive33 (Rule 35 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive36 (Rule 36 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive38 (Rule 37 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_fifo01 (Rule 38 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_fifo01 (Rule 38 of total 116) .... done (Time = 0.00s, Memory = -0.4K)
 Checking Rule SGDC_libgroup01 (Rule 39 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_libgroup02 (Rule 40 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_libgroup04 (Rule 41 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -107,34 +109,34 @@ Checking Rule SGDC_ungroup01 (Rule 43 of total 116) .... done (Time = 0.00s, Mem
 Checking Rule SGDC_abstract_port06 (Rule 44 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_abstract_port14 (Rule 45 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port15 (Rule 46 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port18 (Rule 47 of total 116) .... done (Time = 0.00s, Memory = 0.8K)
-Checking Rule sdc_init_rule (Rule 48 of total 116) .... done (Time = 0.00s, Memory = 3.8K)
+Checking Rule SGDC_abstract_port18 (Rule 47 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule sdc_init_rule (Rule 48 of total 116) .... done (Time = 0.00s, Memory = 0.6K)
 Checking Rule CMD_ignorelibs01 (Rule 49 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportRuleNotRun (Rule 50 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
  Reading waiver file "./CORDIC_top/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver.swl" ...
  Reading included SGDC file "./CORDIC_top/lint/lint_abstract/spyglass_spysch/waiver/pragma2Waiver_varfile.swl" ....
 Checking Rule ReportStopSummary (Rule 51 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportIgnoreSummary (Rule 52 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 3 sec, 285396 KB, 780380 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 3 sec, 285396 KB, 780380 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM started: 3 sec, 285646 KB, 780384 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring NOM started: 3 sec, 285646 KB, 780384 KB
 
 INFO [235]    Restoring design database from directory './CORDIC_top/.SG_SaveRestoreDB/autogenerated__default_snapshot' ...
               done
 
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 3 sec, 322462 KB, 817244 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring NOM completed: 3 sec, 322712 KB, 817248 KB
 ##SGDEBUG [BENCHMARK_INCR]: Restoring NOM completed: 0 sec, 37066 KB, 36864 KB
-     (Memory Used = 37065.9K(incr), 322462.7K(tot), Cpu Time = 0.01s(incr))
+     (Memory Used = 37066.1K(incr), 322712.2K(tot), Cpu Time = 0.01s(incr))
 Checking Rule InferBlackBox (Rule 53 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 7
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 634
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 1293
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 2960
-##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 102, 90
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 3 sec, 323527 KB, 817500 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 1065 KB, 256 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 3 sec, 323548 KB, 817500 KB
-##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 21 KB, 0 KB
-     (Memory Used = 4.1K(incr), 323548.1K(tot), Cpu Time = 0.00s(incr))
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Modules = 8
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances = 745
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Nets = 1500
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Terminals = 3422
+##SGDEBUG [BENCHMARK_DATA]: Number of NOM Instances per Module (max and avg) = 106, 93
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data started: 3 sec, 323782 KB, 817504 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data started: 0 sec, 1070 KB, 256 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Restoring SDE Data completed: 3 sec, 323790 KB, 817504 KB
+##SGDEBUG [BENCHMARK_INCR]: Restoring SDE Data completed: 0 sec, 8 KB, 0 KB
+     (Memory Used = 8.3K(incr), 323790.5K(tot), Cpu Time = 0.00s(incr))
 Checking Rule SGDC_waive37 (Rule 54 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive24 (Rule 55 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive25 (Rule 56 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -145,7 +147,7 @@ Checking Rule DetectTopDesignUnits (Rule 59 of total 116) Detected 1 top level d
  .... done (Time = 0.00s, Memory = 0.2K)
 Checking Rule GenerateConfMap (Rule 60 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Performing semantic checks on SGDC contents
-..... SGDC semantic checks completed. (Time = 0.00s, Memory = 68.0K)
+..... SGDC semantic checks completed. (Time = 0.00s, Memory = 51.4K)
 Checking Rule SGDC_testmode03 (Rule 61 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule CheckCelldefine (Rule 62 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule checkSGDC_01 (Rule 63 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -153,8 +155,8 @@ Checking Rule checkSGDC_03 (Rule 64 of total 116) .... done (Time = 0.00s, Memor
 Checking Rule checkSGDC_08 (Rule 65 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_memorywritepin04 (Rule 66 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
 Checking Rule SGDC_reset02 (Rule 67 of total 116) .... done (Time = 0.00s, Memory = 15.0K)
-Checking Rule SGDC_reset03 (Rule 68 of total 116) .... done (Time = 0.00s, Memory = 8.0K)
-Checking Rule SGDC_waive23 (Rule 69 of total 116) .... done (Time = 0.00s, Memory = 32.0K)
+Checking Rule SGDC_reset03 (Rule 68 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_waive23 (Rule 69 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive26 (Rule 70 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive27 (Rule 71 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_waive29 (Rule 72 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
@@ -165,43 +167,43 @@ Checking Rule SGDC_abstract_port03 (Rule 76 of total 116) .... done (Time = 0.00
 Checking Rule SGDC_abstract_port04 (Rule 77 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port05 (Rule 78 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port07 (Rule 79 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port08 (Rule 80 of total 116) .... done (Time = 0.00s, Memory = 0.9K)
+Checking Rule SGDC_abstract_port08 (Rule 80 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port10 (Rule 81 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule SGDC_abstract_port11 (Rule 82 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
+Checking Rule SGDC_abstract_port11 (Rule 82 of total 116) .... done (Time = 0.00s, Memory = 48.0K)
 Checking Rule SGDC_abstract_port12 (Rule 83 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule SGDC_abstract_port13 (Rule 84 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportUngroup (Rule 85 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule LINT_portReten (Rule 86 of total 116) .... done (Time = 0.00s, Memory = 3.8K)
 Checking Rule SGDC_abstract_port21 (Rule 87 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 3 sec, 323636 KB, 817500 KB
-##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 0 sec, 88 KB, 0 KB
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 3 sec, 324543 KB, 818268 KB
-##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 907 KB, 768 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: VS rule checking finished...: 3 sec, 323876 KB, 817760 KB
+##SGDEBUG [BENCHMARK_INCR]: VS rule checking finished...: 0 sec, 86 KB, 256 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening started: 3 sec, 324796 KB, 818528 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening started: 0 sec, 920 KB, 768 KB
  Flattening CORDIC_top (.lib instances separately flattened) ....
-     (Memory Used = 1501.3K(incr), 326044.5K(tot), Cpu Time = 0.02s(incr))
+     (Memory Used = 1525.2K(incr), 326321.8K(tot), Cpu Time = 0.02s(incr))
  Flattening completed
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 628
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 869
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 2536
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 7
-##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 29
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Instances = 738
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Nets = 1007
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Terms = 2934
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Paths = 8
+##SGDEBUG [BENCHMARK_DATA]: Number of Flat Ports = 30
 ##SGDEBUG [BENCHMARK_DATA]: Number of Black-Box Instances = 0
 ##SGDEBUG [BENCHMARK_DATA]: Number of Lib Instances = 0
 ##SGDEBUG [BENCHMARK_DATA]: Number of ILM Instances = 0
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 3 sec, 326044 KB, 819548 KB
-##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1501 KB, 1280 KB
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Flattening finished: 3 sec, 326321 KB, 819808 KB
+##SGDEBUG [BENCHMARK_INCR]: Flattening finished: 0 sec, 1525 KB, 1280 KB
 Checking Rule SGDC_set_case_analysis_LC (Rule 88 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
-Checking Rule LINT_abstract01 (Rule 89 of total 116) .... done (Time = 0.01s, Memory = 1053.9K)
+Checking Rule LINT_abstract01 (Rule 89 of total 116) .... done (Time = 0.00s, Memory = 1065.8K)
 Checking Rule AnalyzeBBox (Rule 90 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 Checking Rule ReportCheckDataSummary (Rule 91 of total 116) .... done (Time = 0.00s, Memory = 0.0K)
 
 Applying user specified and internally generated waivers on violation database .... done (Time = 0.03s)
 
 Generating data for Console...
-##SGDEBUG [PEAK_MEMORY]: 824924 KB for entire run at 'just before destroying nvn arrays in flattener' stage
-##SGDEBUG [VMPEAK_MEMORY]: 1231716 KB for entire run
-##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 3 sec, 326613 KB, 813404 KB
-##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 0 sec, 569 KB, -6144 KB
+##SGDEBUG [PEAK_MEMORY]: 825184 KB for entire run at 'just before destroying nvn arrays in flattener' stage
+##SGDEBUG [VMPEAK_MEMORY]: 1231720 KB for entire run
+##SGDEBUG [BENCHMARK_ABSOLUTE]: Rule checking finished: 3 sec, 326404 KB, 813664 KB
+##SGDEBUG [BENCHMARK_INCR]: Rule checking finished: 0 sec, 83 KB, -6144 KB
 
 
 =====================================================================================
@@ -559,5 +561,5 @@ Policy specific data (reports) are present in the directory './CORDIC_top/lint/l
 SpyGlass critical reports for the current run are present in directory './CORDIC_top/consolidated_reports/lint_lint_abstract/'.
 
 SpyGlass Exit Code 0 (Rule-checking completed without errors or warnings)
-SpyGlass total run-time is 0:0:3 (3 secs)
-SpyGlass run completed at 02:33:22 PM on Jun 06 2017
+SpyGlass total run-time is 0:0:5 (5 secs)
+SpyGlass run completed at 10:37:25 AM on Jun 08 2017

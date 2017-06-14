@@ -7,8 +7,11 @@ use ieee.std_logic_arith.all;
 use ieee.math_real.all;
 use ieee.std_logic_textio.all;
 use std.textio.all;
-library lib_VHD ;
-use lib_VHD.CORDIC_top;
+--library lib_VHD ;
+library lib_SYNTH;
+use lib_SYNTH.CORDIC_top;
+
+--use lib_VHD.CORDIC_top;
 
 
 entity test_top_file is end test_top_file;
@@ -16,11 +19,11 @@ entity test_top_file is end test_top_file;
 architecture test1 of test_top_file is
 --Test fonctionel !!!
 	component CORDIC_top is
-	generic (Nb: integer);
+--	generic (Nb: integer);
 	port( 	clk  : in std_logic;
 		reset_n  : in std_logic;
-	  	X  : in  std_logic_vector(Nb-1 downto 0);
-		Y  : in  std_logic_vector(Nb-1 downto 0);
+	  	X  : in  std_logic_vector(7 downto 0);
+		Y  : in  std_logic_vector(7 downto 0);
 		Z  : out std_logic_vector(8 downto 0));
 	end component;
 
@@ -72,7 +75,7 @@ begin
        	generic map(Nb=>8)	
 	port map(sig_clk,sig_resetn,sig_x_in,sig_y_in,sig_z_out);
 	sig_clk <= not(sig_clk) after  10 ns; --50Mhz
-	sig_resetn <= '1' after 5 ns;
+	sig_resetn <= '1' after 15 ns;
 
 
 ---- Calcul et Ecriture+Lecture des echantillons et sinus
@@ -84,17 +87,19 @@ begin
 	variable i: integer :=0;
 
   begin
+  --if sig_resetn ='1'then
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
 	read(LIGNE,val_hex);
 --appel fonction convertion hex vers std_logic_vector
-	--wait until  sig_resetn = '1';
-	wait until sig_clk'event and sig_clk = '1';
-		sig_x_in<=string_to_slv(val_hex);
-	report "  >>>>>>>>>>> y it=" & integer'image(i);
-	i:=i+1;
-	end loop; --while
-	wait;
+	
+		wait until sig_clk'event and sig_clk = '1';
+			sig_x_in<=string_to_slv(val_hex);
+		report "  >>>>>>>>>>> y it=" & integer'image(i);
+		i:=i+1;
+		end loop; --while
+		wait;
+	--end if;
   end process LECTURE_X;
 
  LECTURE_Y: process
@@ -104,18 +109,20 @@ begin
 	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
   begin
+  	--if sig_resetn = '1'then
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
 	read(LIGNE,val_hex);
 --appel fonction convertion hex vers std_logic_vector
-	--wait until  sig_resetn = '1';
-	wait until sig_clk'event and sig_clk = '1';
-		sig_y_in<=string_to_slv(val_hex);
-	report "  >>>>>>>>>>> y it=" & integer'image(i);
-	i:=i+1;
-	end loop; --while
-	wait for 200 ns;
-	assert false report " FIN DE LA SIMULATION" severity failure;
+
+		wait until sig_clk'event and sig_clk = '1';
+			sig_y_in<=string_to_slv(val_hex);
+		report "  >>>>>>>>>>> y it=" & integer'image(i);
+		i:=i+1;
+		end loop; --while
+		wait for 200 ns;
+		assert false report " FIN DE LA SIMULATION" severity failure;
+	--end if;
 
   end process LECTURE_Y;
 

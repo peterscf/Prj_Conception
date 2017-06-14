@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version J-2014.09-SP2 for amd64 -- Nov 25, 2014
-#@ # Date:   Tue Jun  6 09:56:46 2017
-#@ # Run by: xph2app0@cimeld13
+#@ # Date:   Mon Jun 12 16:48:08 2017
+#@ # Run by: xph2app0@cimeld23
 #@ 
 
 source /softslin/synthesisvJ2014_09_sp2_64b/admin/setup/.synopsys_dc.setup
@@ -3801,7 +3801,7 @@ source -echo -verbose /tp/xph2app/xph2app003/Prj_conception/Design/synth/WORK/..
 #@ set PROJECT_PATH "/tp/xph2app/xph2app003/Prj_conception/Design/"
 #@ set WORK_PATH "synth/WORK/"
 #@ 
-#@ set VHDL_FILES "	../../vhd/cell.vhd 			../../vhd/cordic.vhd"
+#@ set VHDL_FILES "	../../vhd/cell.vhd 					../../vhd/cordic.vhd 					../../vhd/pre_process.vhd"
 #@ 
 #@ #set VHDL_FILES_TOP "	../../vhd/cordic.vhd"
 #@ 

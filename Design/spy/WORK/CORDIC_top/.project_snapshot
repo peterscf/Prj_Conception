@@ -2,6 +2,7 @@
 
 read_file -type vhdl ../../vhd/cell.vhd
 read_file -type vhdl ../../vhd/cordic.vhd
+read_file -type vhdl ../../vhd/pre_process.vhd
 
 ##Common Options Section
 

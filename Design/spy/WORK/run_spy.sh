@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ../../config/config_VERIF
+#source ../../config/config_VERIF
 
 
 echo running spyglass verifications ...

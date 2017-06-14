@@ -18,11 +18,11 @@ current_goal lint/lint_rtl -alltop
 run_goal
 current_goal lint/lint_abstract -alltop
 run_goal
-current_goal adv_lint/adv_lint_struct -alltop
-run_goal
-current_goal adv_lint/adv_lint_verify -alltop
-run_goal
-current_goal lint/lint_rtl -alltop
+#current_goal adv_lint/adv_lint_struct -alltop
+#run_goal
+#current_goal adv_lint/adv_lint_verify -alltop
+#run_goal
+
 
 save_project
 close_project $DESIGN_NAME

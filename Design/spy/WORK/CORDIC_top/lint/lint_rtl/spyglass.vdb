@@ -1,5 +1,5 @@
 ##spyglass_version: 5.6.0
-##date: Tue Jun  6 14:33:11 2017
+##date: Thu Jun  8 10:37:10 2017
 ##user: xph2app003
 ##cwd: /tp/xph2app/xph2app003/Prj_conception/Design/spy/WORK
 ##lang: verilog+vhdl
@@ -1542,45 +1542,51 @@
 ElabSummary@@ElabSummary@@Info@@./CORDIC_top/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt@@0@@1@@2@@Please refer file './CORDIC_top/lint/lint_rtl/spyglass_reports/SpyGlass/elab_summary.rpt' for elab summary report
 ##sde_property: msg_label DEFAULT
 ##sde_property: msg_id DEFAULT
-##files_vhdl: ../../vhd/cordic.vhd ../../vhd/cell.vhd
-##sde_property: file ../../vhd/cell.vhd -id 1 -inactiveList slc 1 4 0 slc 8 8 0 slc 13 13 23 slc 14 14 19 slc 15 15 18 slc 29 29 0 slc 58 58 0 slc 60 60 0
-##sde_property: file ../../vhd/cordic.vhd -id 2 -inactiveList slc 1 1 0 slc 19 19 24 slc 20 20 19 slc 21 21 18
-#span WORK.CORDIC_top.A ../../vhd/cordic.vhd 6 14 ../../vhd/cordic.vhd 1 14 ../../vhd/cordic.vhd 16 142
+##files_vhdl: ../../vhd/cordic.vhd ../../vhd/pre_process.vhd ../../vhd/cell.vhd
+##sde_property: file ../../vhd/cell.vhd -id 1 -inactiveList slc 1 4 0 slc 8 8 0 slc 13 13 23 slc 14 14 22 slc 15 15 21 slc 29 29 0 slc 58 58 0 slc 60 60 0
+##sde_property: file ../../vhd/cordic.vhd -id 2 -inactiveList slc 1 1 0 slc 30 30 24 slc 31 31 19 slc 32 32 18
+##sde_property: file ../../vhd/pre_process.vhd -id 3 -inactiveList slc 1 1 0 slc 49 49 25 slc 50 50 26 slc 51 51 7 slc 52 52 26
+#span WORK.CORDIC_top.A ../../vhd/cordic.vhd 6 14 ../../vhd/cordic.vhd 1 14 ../../vhd/cordic.vhd 16 165
 #rtl_idmap WORK.CORDIC_top 1 -lang 2
 #rtl_idmap WORK.CORDIC_top.A 2 -entityid 1
+#span WORK.PRE_PROCESS.A ../../vhd/pre_process.vhd 6 17 ../../vhd/pre_process.vhd 1 17 ../../vhd/pre_process.vhd 19 61
+#rtl_idmap WORK.PRE_PROCESS 3 -lang 2
+#rtl_idmap WORK.PRE_PROCESS.A 4 -entityid 3
 #span WORK.CELL.A ../../vhd/cell.vhd 11 26 ../../vhd/cell.vhd 1 26 ../../vhd/cell.vhd 28 80
-#rtl_idmap WORK.CELL 3 -lang 2
-#rtl_idmap WORK.CELL.A 4 -entityid 3
+#rtl_idmap WORK.CELL 5 -lang 2
+#rtl_idmap WORK.CELL.A 6 -entityid 5
 #greybox WORK.CORDIC_top.A 15
+#greybox WORK.PRE_PROCESS.A 15
 #greybox WORK.CELL.A 15
 DetectTopDesignUnits@@DetectTopDesignUnits@@Info@@../../vhd/cordic.vhd@@16@@29@@2@@Architecture CORDIC_top.A is a top level design unit
 ##sde_property: violation -duId 2 
 #rtl_top_modules CORDIC_top
 ReportPortInfo-ML@@@@Data@@./CORDIC_top/lint/lint_rtl/spyglass_reports/morelint/ReportPortInfo@@1@@1@@2@@Port Information for top design unit has been generated. For details see report ReportPortInfo.rpt
 ##sde_property: violation -elabDuId 2 
-#child work_cell_a_8_1_5 WORK.work_cell_a_8_1_5.A WORK.CELL.A -elabDuId 7
-#child work_cell_a_8_3_4 WORK.work_cell_a_8_3_4.A WORK.CELL.A -elabDuId 6
-#child work_cell_a_8_7_3 WORK.work_cell_a_8_7_3.A WORK.CELL.A -elabDuId 5
-#child work_cell_a_8_14_2 WORK.work_cell_a_8_14_2.A WORK.CELL.A -elabDuId 4
-#child work_cell_a_8_26_1 WORK.work_cell_a_8_26_1.A WORK.CELL.A -elabDuId 3
-#child work_cell_a_8_45_0 WORK.work_cell_a_8_45_0.A WORK.CELL.A -elabDuId 2
-#child CORDIC_top WORK.CORDIC_top.A WORK.CORDIC_top.A -elabDuId 1 cell1 work_cell_a_8_45_0 cell2 work_cell_a_8_26_1 cell3 work_cell_a_8_14_2 cell4 work_cell_a_8_7_3 cell5 work_cell_a_8_3_4 cell6 work_cell_a_8_1_5
+#child work_cell_a_8_1_5 WORK.work_cell_a_8_1_5.A WORK.CELL.A -elabDuId 8
+#child work_cell_a_8_3_4 WORK.work_cell_a_8_3_4.A WORK.CELL.A -elabDuId 7
+#child work_cell_a_8_7_3 WORK.work_cell_a_8_7_3.A WORK.CELL.A -elabDuId 6
+#child work_cell_a_8_14_2 WORK.work_cell_a_8_14_2.A WORK.CELL.A -elabDuId 5
+#child work_cell_a_8_26_1 WORK.work_cell_a_8_26_1.A WORK.CELL.A -elabDuId 4
+#child work_cell_a_8_45_0 WORK.work_cell_a_8_45_0.A WORK.CELL.A -elabDuId 3
+#child pre_process WORK.pre_process.A WORK.PRE_PROCESS.A -elabDuId 2
+#child CORDIC_top WORK.CORDIC_top.A WORK.CORDIC_top.A -elabDuId 1 pp1 pre_process cell1 work_cell_a_8_45_0 cell2 work_cell_a_8_26_1 cell3 work_cell_a_8_14_2 cell4 work_cell_a_8_7_3 cell5 work_cell_a_8_3_4 cell6 work_cell_a_8_1_5
 #top_modules CORDIC_top
 #bbox_modules
 #precompiled_dulist
-RegInputOutput-ML@@@@Data@@../../vhd/cell.vhd@@48@@1@@10@@Port 'reset_n' is not registered [Hierarchy: 'CORDIC_top']@@0
+RegInputOutput-ML@@@@Data@@../../vhd/pre_process.vhd@@35@@1@@10@@Port 'reset_n' is not registered [Hierarchy: 'CORDIC_top']@@0
 ##continue: S.1
 ##sde_property: container S.1 -rtlpath 2 -nonprob
 ##sde_property: violation -duId 4 -elabDuId 1 
 ##sde_property: msg_label RegInputOutput-ML
 ##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../vhd/cell.vhd@@69@@1@@10@@Port 'Y[7:0]' is not registered [Hierarchy: 'CORDIC_top']@@0
+RegInputOutput-ML@@@@Data@@../../vhd/pre_process.vhd@@48@@1@@10@@Port 'Y[7:0]' is not registered [Hierarchy: 'CORDIC_top']@@0
 ##continue: S.3
 ##sde_property: container S.3 -rtlpath 2 
 ##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 Y -mergeRange1 7:0 -completeRange1 7:0  
 ##sde_property: msg_label RegInputOutput-ML
 ##sde_property: msg_id RegInputOutput-ML
-RegInputOutput-ML@@@@Data@@../../vhd/cell.vhd@@69@@1@@10@@Port 'X[7:0]' is not registered [Hierarchy: 'CORDIC_top']@@0
+RegInputOutput-ML@@@@Data@@../../vhd/pre_process.vhd@@47@@1@@10@@Port 'X[7:0]' is not registered [Hierarchy: 'CORDIC_top']@@0
 ##continue: S.2
 ##sde_property: container S.2 -rtlpath 2 
 ##sde_property: violation -duId 4 -elabDuId 1 -type 1WBusMerge -mergeStr1 X -mergeRange1 7:0 -completeRange1 7:0  

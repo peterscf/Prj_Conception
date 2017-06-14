@@ -23,6 +23,7 @@ Option          Value             Origin  File                           LineNo
 -wdir           ./CORDIC_top/Design_Read CmdLine -                              -
 <design_files>  ../../vhd/cell.vhd APICall -                              -
                 ../../vhd/cordic.vhd APICall -                              -
+                ../../vhd/pre_process.vhd APICall -                              -
 
 
 Rules Parameter

@@ -3,21 +3,21 @@
 Report : qor
 Design : CORDIC_top
 Version: J-2014.09-SP2
-Date   : Tue Jun  6 09:56:53 2017
+Date   : Mon Jun 12 16:48:16 2017
 ****************************************
 
 
   Timing Path Group 'HCLK'
   -----------------------------------
-  Levels of Logic:              11.00
-  Critical Path Length:          3.58
-  Critical Path Slack:           2.41
+  Levels of Logic:              14.00
+  Critical Path Length:          2.94
+  Critical Path Slack:           3.06
   Critical Path Clk Period:     20.00
   Total Negative Slack:          0.00
   No. of Violating Paths:        0.00
-  Worst Hold Violation:         -0.18
-  Total Hold Violation:         -0.77
-  No. of Hold Violations:        7.00
+  Worst Hold Violation:         -0.34
+  Total Hold Violation:         -7.07
+  No. of Hold Violations:       67.00
   -----------------------------------
 
 
@@ -25,57 +25,57 @@ Date   : Tue Jun  6 09:56:53 2017
   -----------------------------------
   Hierarchical Cell Count:          0
   Hierarchical Port Count:          0
-  Leaf Cell Count:                722
-  Buf/Inv Cell Count:             209
-  Buf Cell Count:                   3
-  Inv Cell Count:                 206
+  Leaf Cell Count:                962
+  Buf/Inv Cell Count:             216
+  Buf Cell Count:                  14
+  Inv Cell Count:                 202
   CT Buf/Inv Cell Count:            0
-  Combinational Cell Count:       613
-  Sequential Cell Count:          109
+  Combinational Cell Count:       817
+  Sequential Cell Count:          145
   Macro Count:                      0
   -----------------------------------
 
 
   Area
   -----------------------------------
-  Combinational Area:    56784.000160
-  Noncombinational Area: 29757.000000
-  Buf/Inv Area:           7662.200310
-  Total Buffer Area:           163.80
-  Total Inverter Area:        7498.40
+  Combinational Area:    78132.600258
+  Noncombinational Area: 39585.000000
+  Buf/Inv Area:           8117.200287
+  Total Buffer Area:           764.40
+  Total Inverter Area:        7352.80
   Macro/Black Box Area:      0.000000
-  Net Area:              13995.000000
+  Net Area:              20061.000000
   -----------------------------------
-  Cell Area:             86541.000160
-  Design Area:          100536.000160
+  Cell Area:            117717.600258
+  Design Area:          137778.600258
 
 
   Design Rules
   -----------------------------------
-  Total Number of Nets:           898
+  Total Number of Nets:          1195
   Nets With Violations:             0
   Max Trans Violations:             0
   Max Cap Violations:               0
   -----------------------------------
 
 
-  Hostname: cimeld13
+  Hostname: cimeld23
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    0.69
-  Logic Optimization:                  0.66
-  Mapping Optimization:                0.73
+  Resource Sharing:                    0.90
+  Logic Optimization:                  0.67
+  Mapping Optimization:                1.14
   -----------------------------------------
-  Overall Compile Time:                3.53
-  Overall Compile Wall Clock Time:     4.04
+  Overall Compile Time:                4.19
+  Overall Compile Wall Clock Time:     4.70
 
   --------------------------------------------------------------------
 
   Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
 
 
-  Design (Hold)  WNS: 0.18  TNS: 0.77  Number of Violating Paths: 7
+  Design (Hold)  WNS: 0.34  TNS: 7.07  Number of Violating Paths: 67
 
   --------------------------------------------------------------------
 

@@ -62,7 +62,6 @@ begin
 		sig_z_out<=signed(z_in);
 		sig_x_out<=signed(x_in);
 		sig_y_out<=signed(y_in);
-		
 	else
 		case y_in(Nb-1) is
 		    when '0' =>     sig_z_out<=signed(z_in) + tan_i;

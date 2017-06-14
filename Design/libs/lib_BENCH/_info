@@ -3,171 +3,192 @@ K4
 z2
 13
 cModel Technology
-dC:/Users/flori/OneDrive/Documents/INP PHELMA/Projet Conception/Prj_Conception-master/Design
+Z0 dC:/Users/flori/OneDrive/Documents/INP PHELMA/Projet Conception/Prj_Conception-master/Design
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
+T_opt
+VF^=TX4Mafh4z?j=Xl4L@[0
+Z1 04 13 5 work test_top_file test1 1
+=1-002564c6e24c-593eb1d0-2d07c-2425
+o-quiet -auto_acc_if_foreign -work lib_BENCH
+n@_opt
+Z2 OL;O;10.2c;57
+Z3 dC:/Users/flori/OneDrive/Documents/INP PHELMA/Projet Conception/Prj_Conception-master/Design
+!s110 1497280976
+T_opt1
+!s110 1497281257
+V@^gj:RI6_PX:biJn?i[9a0
+R1
+=1-002564c6e24c-593eb2e8-eb151-24ba
+o-quiet -auto_acc_if_foreign -work lib_BENCH -L c35_IOLIB_4M -L c35_CORELIB
+n@_opt1
+R2
 Etest_cell
 DEx7 lib_vhd 4 cell 0 22 QR?2`U@JnaT^WYO?`=YMi3
-Z0 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z2 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z5 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z6 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 32
-Z5 !s110 1496905760
-!i10b 1
-Z6 w1496240434
-Z7 d/home/floriant/Documents/Prj_conception/Design
-Z8 8./bench/bench_cell.vhd
-Z9 F./bench/bench_cell.vhd
+Z9 !s110 1496905760
+Z10 w1496240434
+Z11 d/home/floriant/Documents/Prj_conception/Design
+Z12 8./bench/bench_cell.vhd
+Z13 F./bench/bench_cell.vhd
 l0
 L13
 V[7Mjk4lclH1n[WJYj`BC43
+Z14 OV;C;10.5c;63
+Z15 !s108 1496905759.000000
+Z16 !s90 -work|lib_BENCH|./bench/bench_cell.vhd|./bench/bench_preprocess.vhd|./bench/bench_top_stimu.vhd|./bench/bench_top.vhd|
+Z17 !s107 ./bench/bench_top.vhd|./bench/bench_top_stimu.vhd|./bench/bench_preprocess.vhd|./bench/bench_cell.vhd|
+Z18 o-work lib_BENCH
+Z19 tExplicit 1 CvgOpt 0
+!i10b 1
 !s100 zAQ@>9c<bZa^dQQXW]GQJ1
-Z10 OV;C;10.5c;63
-Z11 !s108 1496905759.000000
-Z12 !s90 -work|lib_BENCH|./bench/bench_cell.vhd|./bench/bench_preprocess.vhd|./bench/bench_top_stimu.vhd|./bench/bench_top.vhd|
-Z13 !s107 ./bench/bench_top.vhd|./bench/bench_top_stimu.vhd|./bench/bench_preprocess.vhd|./bench/bench_cell.vhd|
 !i113 1
-Z14 o-work lib_BENCH
-Z15 tExplicit 1 CvgOpt 0
 Atest1
-R0
-R1
-R2
-R3
 R4
+R5
+R6
+R7
+R8
 DEx4 work 9 test_cell 0 22 [7Mjk4lclH1n[WJYj`BC43
 32
-R5
-!i10b 1
+R9
 l48
 L15
 VF@bR0b@iN[90N_=h1mR0`1
-!s100 2b=dV_LmfWmhdCbjM>f4I0
-R10
-R11
-R12
-R13
-!i113 1
 R14
 R15
-Etest_preprocess
-R1
-DEx7 lib_vhd 11 pre_process 0 22 jlLIU_3NBg:[JJWeADSQ?1
-R3
-R4
-32
-R5
+R16
+R17
+R18
+R19
 !i10b 1
-w1496849705
+!s100 2b=dV_LmfWmhdCbjM>f4I0
+!i113 1
+Etest_preprocess
+R5
+DEx7 lib_vhd 11 pre_process 0 22 jlLIU_3NBg:[JJWeADSQ?1
 R7
+R8
+32
+R9
+w1496849705
+R11
 8./bench/bench_preprocess.vhd
 F./bench/bench_preprocess.vhd
 l0
 L9
 VfL2SWFnEA3ijNa`D::h<52
-!s100 DWSOCR3bUP_KlIjcaLH4H0
-R10
-R11
-R12
-R13
-!i113 1
 R14
 R15
+R16
+R17
+R18
+R19
+!i10b 1
+!s100 DWSOCR3bUP_KlIjcaLH4H0
+!i113 1
 Etest_top
-Z16 w1496299132
-Z17 DEx7 lib_vhd 10 cordic_top 0 22 L45CGKgVCMXF8E^mCE^1j1
-R0
-R1
-R2
-R3
+Z20 w1496299132
+DEx7 lib_vhd 10 cordic_top 0 22 L45CGKgVCMXF8E^mCE^1j1
 R4
+R5
+R6
 R7
-Z18 8/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
-Z19 F/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+R8
+R11
+Z21 8/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
+Z22 F/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd
 l0
 L13
 VjnPnGbhT2KJoECXaM?ic12
-!s100 h=fXhKkbO2hH@`g022VXe0
-R10
-32
-Z20 !s110 1496914082
-!i10b 1
-Z21 !s108 1496914081.000000
-Z22 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd|
-Z23 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd|
-!i113 1
 R14
-R15
+32
+Z23 !s110 1496914082
+Z24 !s108 1496914081.000000
+Z25 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd|
+Z26 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_top.vhd|
+R18
+R19
+!s100 h=fXhKkbO2hH@`g022VXe0
+!i10b 1
+!i113 1
 Atest1
-R0
-R1
-R2
-R3
 R4
+R5
+R6
+R7
+R8
 DEx4 work 8 test_top 0 22 jnPnGbhT2KJoECXaM?ic12
 l41
 L15
 V?7HGe327j;Z7@8R]m>2mY1
-!s100 P4URgm3OU42kQYWNe9a2<1
-R10
+R14
 32
-R20
-!i10b 1
-R21
-R22
 R23
-!i113 1
-R14
-R15
-Etest_top_file
-Z24 w1496910781
-R1
-R17
-Z25 DPx4 ieee 16 std_logic_textio 0 22 V5TSK`;aJKC<l]CEg1>mz1
-R0
-R2
-R3
-R4
-R7
-Z26 8/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd
-Z27 F/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd
-l0
-L14
-V6b0`kjU_`QON0Do5iX:gO0
-!s100 o`CNCZL?b=chjW8QD5JBg3
-R10
-32
-Z28 !s110 1496914233
-!i10b 1
-Z29 !s108 1496914233.000000
-Z30 !s90 -reportprogress|300|-work|lib_BENCH|/home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd|
-Z31 !s107 /home/floriant/Documents/Prj_conception/Design/bench/bench_top_stimu.vhd|
-!i113 1
-R14
-R15
-Atest1
-R1
+R24
 R25
-R0
-R2
-R3
-R4
-Z32 DEx4 work 13 test_top_file 0 22 6b0`kjU_`QON0Do5iX:gO0
-l70
-L16
-Z33 Vehk=:C8<TO2>S`iD6mlRM0
-Z34 !s100 FbZmmY7BIQC8gLii=SLEA0
-R10
-32
-R28
+R26
+R18
+R19
+!s100 P4URgm3OU42kQYWNe9a2<1
 !i10b 1
+!i113 1
+Etest_top_file
+Z27 w1497278158
+Z28 DPx4 ieee 12 vital_timing 0 22 4Obk6FzZz7P8i2>0<?dVb3
+Z29 DPx11 c35_corelib 11 vcomponents 0 22 [Pc9bhg@G4V@:e4`AMgng0
+Z30 DPx9 lib_synth 20 conv_pack_cordic_top 0 22 OZ;^[@[?GUMo3P6RmPX9?2
+DEx9 lib_synth 10 cordic_top 0 22 `?=<0@C`BT==M:L460HUK2
+Z31 DPx4 ieee 16 std_logic_textio 0 22 E=LR>a2bb_I?VV>QDdAdh3
+Z32 DPx4 ieee 9 math_real 0 22 X1eFklFj<NHn@4Wz7P8j:2
+Z33 DPx4 ieee 15 std_logic_arith 0 22 I`lKR?Ob>E^B_e2VdVLiQ0
+Z34 DPx3 std 6 textio 0 22 Y8d?=bLj9m4jiPLbo;>GT0
+Z35 DPx4 ieee 14 std_logic_1164 0 22 1bm?@Gd;P>[>_lN8Do9gP3
+Z36 d/tp/xph2app/xph2app003/Prj_conception/Design
+Z37 8/tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top_stimu.vhd
+Z38 F/tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top_stimu.vhd
+l0
+L17
+VC08o^1l1L@G2n9lIH;9Zj2
+Z39 OL;C;10.2c;57
+32
+Z40 !s110 1497280974
+Z41 !s108 1497280974.742309
+Z42 !s90 -reportprogress|300|-work|lib_BENCH|/tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top_stimu.vhd|
+Z43 !s107 /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top_stimu.vhd|
+R18
+Z44 tOptimize_1164 0 Explicit 1 IgnoreVitalErrors 1 Show_VitalChecksWarnings 0
+!s100 7n?OdYQ6P7EAhB@T0X:J42
+!i10b 1
+!i111 0
+Atest1
+R28
 R29
 R30
 R31
-!i113 1
-R14
-R15
+R32
+R33
+R34
+R35
+DEx4 work 13 test_top_file 0 22 C08o^1l1L@G2n9lIH;9Zj2
+l73
+L19
+VoDSa[azGZ0a:4gf:ZLX:k3
+R39
+32
+R40
+R41
+R42
+R43
+R18
+R44
+!s100 ml^Se:ojbj9zGb@OPf^l[3
+!i10b 1
+!i111 0

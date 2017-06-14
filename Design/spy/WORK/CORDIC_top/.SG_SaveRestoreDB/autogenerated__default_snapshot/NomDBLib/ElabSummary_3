@@ -1,4 +1,12 @@
 ================================================================================
+Elaborated Name: 'pre_process'
+    (RTL Design Unit name: 'PRE_PROCESS', ../../vhd/pre_process.vhd:6)
+     Parameters (Total: 1)
+	       Nb = 8 (default: Not Given)
+     Instances (Total: 1): CORDIC_top.pp1 
+
+================================================================================
+
 Elaborated Name: 'work_cell_a_8_45_0'
     (RTL Design Unit name: 'CELL', ../../vhd/cell.vhd:11)
      Parameters (Total: 3)

@@ -4,12 +4,12 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity CORDIC_top is
-	generic(Nb: integer := 8);
+	generic(Nb_b: integer := 8);
 
 	port( 	clk  : in std_logic;
 		reset_n  : in std_logic;
-	  	X  : in  std_logic_vector(Nb-1 downto 0);
-		Y  : in  std_logic_vector(Nb-1 downto 0);
+	  	X  : in  std_logic_vector(Nb_b-1 downto 0);
+		Y  : in  std_logic_vector(Nb_b-1 downto 0);
 		Z  : out std_logic_vector(8 downto 0));
 end CORDIC_top;
 
@@ -42,32 +42,32 @@ component PRE_PROCESS
             z_out: out std_logic_vector(8 downto 0));
   end component;
 
-  signal X0	: std_logic_vector(Nb-1 downto 0);
-  signal Y0 	: std_logic_vector(Nb-1 downto 0);
+  signal X0	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y0 	: std_logic_vector(Nb_b-1 downto 0);
   signal Z0	: std_logic_vector(8 downto 0);
 
-  signal X1 	: std_logic_vector(Nb-1 downto 0);
-  signal Y1	: std_logic_vector(Nb-1 downto 0);
+  signal X1 	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y1	: std_logic_vector(Nb_b-1 downto 0);
   signal Z1	: std_logic_vector(8 downto 0);
  
-  signal X2 	: std_logic_vector(Nb-1 downto 0);
-  signal Y2	: std_logic_vector(Nb-1 downto 0);
+  signal X2 	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y2	: std_logic_vector(Nb_b-1 downto 0);
   signal Z2	: std_logic_vector(8 downto 0);
 
-  signal X3 	: std_logic_vector(Nb-1 downto 0);
-  signal Y3	: std_logic_vector(Nb-1 downto 0);
+  signal X3 	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y3	: std_logic_vector(Nb_b-1 downto 0);
   signal Z3	: std_logic_vector(8 downto 0);
 
-  signal X4 	: std_logic_vector(Nb-1 downto 0);
-  signal Y4	: std_logic_vector(Nb-1 downto 0);
+  signal X4 	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y4	: std_logic_vector(Nb_b-1 downto 0);
   signal Z4	: std_logic_vector(8 downto 0);
 
-  signal X5 	: std_logic_vector(Nb-1 downto 0);
-  signal Y5	: std_logic_vector(Nb-1 downto 0);
+  signal X5 	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y5	: std_logic_vector(Nb_b-1 downto 0);
   signal Z5	: std_logic_vector(8 downto 0);
 
-  signal X6 	: std_logic_vector(Nb-1 downto 0);
-  signal Y6	: std_logic_vector(Nb-1 downto 0);
+  signal X6 	: std_logic_vector(Nb_b-1 downto 0);
+  signal Y6	: std_logic_vector(Nb_b-1 downto 0);
   signal Z6	: std_logic_vector(8 downto 0);
 
 
@@ -75,7 +75,7 @@ begin
 
 	Z <= Z6;
 
-pp1: PRE_PROCESS generic map ( Nb => 8)
+pp1: PRE_PROCESS generic map ( Nb => Nb_b )
   port map (
   	clk,
     	reset_n,
@@ -85,7 +85,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
     	Y0,
     	Z0);	
 	
-  cell1 : CELL generic map ( Nb => 8,
+  cell1 : CELL generic map ( Nb => Nb_b,
 		tan_i => 45,
 		shift => 0 )
   port map (
@@ -98,7 +98,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
     	Y1,
     	Z1);
     
-  cell2 : CELL generic map ( Nb => 8,
+  cell2 : CELL generic map ( Nb => Nb_b,
 		 tan_i=> 26,
 		shift => 1)
   port map (
@@ -111,7 +111,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
     	Y2,
     	Z2);
     
-  cell3 : CELL generic map ( Nb => 8,
+  cell3 : CELL generic map ( Nb => Nb_b,
 		tan_i=> 14,
 		shift => 2)
   port map (
@@ -124,7 +124,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
     	Y3,
     	Z3);
     
-  cell4 : CELL generic map ( Nb => 8,
+  cell4 : CELL generic map ( Nb => Nb_b,
 		tan_i=> 7,
 		shift => 3)
  port map (
@@ -137,7 +137,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
     	Y4,
     	Z4);
     
-  cell5 : CELL generic map ( Nb => 8,
+  cell5 : CELL generic map ( Nb => Nb_b,
 		tan_i=> 3,
 		shift => 4)
   port map (
@@ -150,7 +150,7 @@ pp1: PRE_PROCESS generic map ( Nb => 8)
     	Y5,
     	Z5);
     
-  cell6 : CELL generic map ( Nb => 8,
+  cell6 : CELL generic map ( Nb => Nb_b,
 		tan_i=> 1,
 		shift => 5)
   port map (

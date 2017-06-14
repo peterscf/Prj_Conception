@@ -8,7 +8,7 @@ Report : power
         -analysis_effort low
 Design : CORDIC_top
 Version: J-2014.09-SP2
-Date   : Tue Jun  6 09:56:53 2017
+Date   : Mon Jun 12 16:48:16 2017
 ****************************************
 
 
@@ -34,12 +34,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =   3.3363 mW   (71%)
-  Net Switching Power  =   1.3521 mW   (29%)
+  Cell Internal Power  =   4.0278 mW   (71%)
+  Net Switching Power  =   1.6219 mW   (29%)
                          ---------
-Total Dynamic Power    =   4.6884 mW  (100%)
+Total Dynamic Power    =   5.6497 mW  (100%)
 
-Cell Leakage Power     = 751.1390 pW
+Cell Leakage Power     =   1.0151 nW
 
 
                  Internal         Switching           Leakage            Total
@@ -49,9 +49,9 @@ io_pad             0.0000            0.0000            0.0000            0.0000 
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
 clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register           2.2497            0.4949          303.4531            2.7446  (  58.54%)
+register           2.8873            0.6678          403.6761            3.5551  (  62.92%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      1.0865            0.8573          447.6860            1.9438  (  41.46%)
+combinational      1.1405            0.9542          611.3922            2.0946  (  37.08%)
 --------------------------------------------------------------------------------------------------
-Total              3.3363 mW         1.3521 mW       751.1390 pW         4.6884 mW
+Total              4.0278 mW         1.6219 mW     1.0151e+03 pW         5.6497 mW
 1

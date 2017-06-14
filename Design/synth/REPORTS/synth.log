@@ -30,11 +30,20 @@ Running PRESTO HDLC
 -- Compiling Source File ../../vhd/cell.vhd
 Compiling Entity Declaration CELL
 Compiling Architecture A of CELL
+
+-------------------
+    79: 		end case;
+        		        ^
+[Warning] Choices do not cover all cases
 Warning:  ../../vhd/cell.vhd:28: The architecture A has already been analyzed. It is being replaced. (VHD-4)
 -- Compiling Source File ../../vhd/cordic.vhd
 Compiling Entity Declaration CORDIC_TOP
 Compiling Architecture A of CORDIC_TOP
 Warning:  ../../vhd/cordic.vhd:16: The architecture A has already been analyzed. It is being replaced. (VHD-4)
+-- Compiling Source File ../../vhd/pre_process.vhd
+Compiling Entity Declaration PRE_PROCESS
+Compiling Architecture A of PRE_PROCESS
+Warning:  ../../vhd/pre_process.vhd:19: The architecture A has already been analyzed. It is being replaced. (VHD-4)
 Presto compilation completed successfully.
 Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
 1
@@ -47,16 +56,29 @@ Running PRESTO HDLC
 Presto compilation completed successfully.
 Elaborated 1 design.
 Current design is now 'CORDIC_top'.
+Information: Building the design 'PRE_PROCESS' instantiated from design 'CORDIC_top' with
+	the parameters "Nb=8". (HDL-193)
+
+Inferred memory devices in process
+	in routine PRE_PROCESS_Nb8 line 27 in file
+		'../../vhd/pre_process.vhd'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      Qout_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|        Z_reg        | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+|      Iout_reg       | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=45,shift=0". (HDL-193)
-Warning:  ../../vhd/cell.vhd:63: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            63            |    auto/auto     |
+|            67            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -66,20 +88,19 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      y_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|      z_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      z_out_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 |      x_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=26,shift=1". (HDL-193)
-Warning:  ../../vhd/cell.vhd:63: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            63            |    auto/auto     |
+|            67            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -89,20 +110,19 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      y_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|      z_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      z_out_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 |      x_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=14,shift=2". (HDL-193)
-Warning:  ../../vhd/cell.vhd:63: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            63            |    auto/auto     |
+|            67            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -112,20 +132,19 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      y_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|      z_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      z_out_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 |      x_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=7,shift=3". (HDL-193)
-Warning:  ../../vhd/cell.vhd:63: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            63            |    auto/auto     |
+|            67            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -135,20 +154,19 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      y_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|      z_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      z_out_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 |      x_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=3,shift=4". (HDL-193)
-Warning:  ../../vhd/cell.vhd:63: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            63            |    auto/auto     |
+|            67            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -158,20 +176,19 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      y_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|      z_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      z_out_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 |      x_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
 Information: Building the design 'CELL' instantiated from design 'CORDIC_top' with
 	the parameters "Nb=8,tan_i=1,shift=5". (HDL-193)
-Warning:  ../../vhd/cell.vhd:63: DEFAULT branch of CASE statement cannot be reached. (ELAB-311)
 
 Statistics for case statements in always block at line 57 in file
 	'../../vhd/cell.vhd'
 ===============================================
 |           Line           |  full/ parallel  |
 ===============================================
-|            63            |    auto/auto     |
+|            67            |    auto/auto     |
 ===============================================
 
 Inferred memory devices in process
@@ -181,7 +198,7 @@ Inferred memory devices in process
 |    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
 ===============================================================================
 |      y_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
-|      z_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|      z_out_reg      | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
 |      x_out_reg      | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
 ===============================================================================
 Presto compilation completed successfully.
@@ -199,7 +216,7 @@ Information: Evaluating DesignWare library utilization. (UISN-27)
 ============================================================================
 
 
-Information: There are 21 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+Information: There are 13 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
 
 
 Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY12'. (OPT-1307)
@@ -216,10 +233,14 @@ Warning: Setting dont_use on dont_touched lib_cell 'c35_CORELIB_TYP'/'DLY42'. (O
   Processing 'CELL_Nb8_tan_i14_shift2'
   Processing 'CELL_Nb8_tan_i26_shift1'
   Processing 'CELL_Nb8_tan_i45_shift0'
+  Processing 'PRE_PROCESS_Nb8'
+Information: The register 'Z_reg[1]' is a constant and will be removed. (OPT-1206)
+Information: The register 'Z_reg[0]' is a constant and will be removed. (OPT-1206)
   Processing 'CORDIC_top'
 
   Updating timing information
 Information: Updating design information... (UID-85)
+Information: Ungrouping hierarchy pp1. (OPT-772)
 Information: Ungrouping hierarchy cell1. (OPT-772)
 Information: Ungrouping hierarchy cell2. (OPT-772)
 Information: Ungrouping hierarchy cell3. (OPT-772)
@@ -229,32 +250,34 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
 
   Beginning Implementation Selection
   ----------------------------------
-  Processing 'DW01_inc_width8'
-  Processing 'DW01_dec_width8'
+  Processing 'DW01_inc_width9'
+  Processing 'DW01_dec_width9'
+  Processing 'DW01_add_width9'
+  Processing 'DW01_sub_width8'
+  Processing 'DW01_sub_width9'
+  Processing 'DW01_add_width8'
+  Processing 'DW01_add_width9'
   Processing 'DW01_add_width8'
   Processing 'DW01_sub_width8'
+  Processing 'DW01_sub_width9'
+  Processing 'DW01_sub_width8'
+  Processing 'DW01_add_width8'
+  Processing 'DW01_add_width9'
+  Processing 'DW01_add_width8'
+  Processing 'DW01_sub_width8'
+  Processing 'DW01_sub_width9'
+  Processing 'DW01_sub_width8'
+  Processing 'DW01_add_width8'
+  Processing 'DW01_add_width9'
+  Processing 'DW01_add_width8'
+  Processing 'DW01_sub_width8'
+  Processing 'DW01_sub_width9'
   Processing 'DW01_sub_width8'
   Processing 'DW01_add_width8'
   Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
+  Processing 'DW01_add_width9'
   Processing 'DW01_sub_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_sub_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
-  Processing 'DW01_add_width8'
+  Processing 'DW01_sub_width9'
   Processing 'DW01_sub_width8'
   Processing 'DW01_sub_width8'
   Processing 'DW01_sub_width8'
@@ -266,19 +289,21 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:03  128370.6      0.00       0.0       0.0                          
-    0:00:03  128370.6      0.00       0.0       0.0                          
-    0:00:03  128370.6      0.00       0.0       0.0                          
-    0:00:03  128370.6      0.00       0.0       0.0                          
-    0:00:03  128370.6      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
+    0:00:04  178689.4      0.00       0.0       0.0                          
+    0:00:04  178689.4      0.00       0.0       0.0                          
+    0:00:04  178689.4      0.00       0.0       0.0                          
+    0:00:04  178689.4      0.00       0.0       0.0                          
+    0:00:04  178689.4      0.00       0.0       0.0                          
+    0:00:04  146570.8      0.00       0.0       0.0                          
+    0:00:04  145861.0      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
 
 
 
@@ -289,9 +314,9 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
 
 
   Beginning Area-Recovery Phase  (cleanup)
@@ -301,21 +326,21 @@ Information: Ungrouping hierarchy cell6. (OPT-772)
    ELAPSED            WORST NEG   SETUP    DESIGN                            
     TIME      AREA      SLACK     COST    RULE COST         ENDPOINT         
   --------- --------- --------- --------- --------- -------------------------
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  105693.4      0.00       0.0       0.0                          
-    0:00:04  101879.8      0.00       0.0       0.0                          
-    0:00:04  100744.8      0.00       0.0       0.0                          
-    0:00:04  100626.8      0.00       0.0       0.0                          
-    0:00:04  100581.4      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
-    0:00:04  100536.0      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  145351.4      0.00       0.0       0.0                          
+    0:00:04  139903.4      0.00       0.0       0.0                          
+    0:00:04  138250.8      0.00       0.0       0.0                          
+    0:00:04  137860.4      0.00       0.0       0.0                          
+    0:00:04  137724.2      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
+    0:00:04  137633.4      0.00       0.0       0.0                          
 Loading db file '/softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db'
 
 
@@ -330,7 +355,7 @@ Note: Symbol # after min delay cost means estimated hold TNS across all active s
 #Genere la netlist au format VHDL
 write -hierarchy -format vhdl -output ../RESULTS/$DESIGN_NAME.vhd	
 Writing vhdl file '/tp/xph2app/xph2app003/Prj_conception/Design/synth/RESULTS/CORDIC_top.vhd'.
-Warning: A dummy net 'n_1000' is created to connect open pin 'CO'. (VHDL-290)
+Warning: A dummy net 'n_1000' is created to connect open pin 'QN'. (VHDL-290)
 Warning: A dummy net 'n_1001' is created to connect open pin 'QN'. (VHDL-290)
 Warning: A dummy net 'n_1002' is created to connect open pin 'QN'. (VHDL-290)
 Warning: A dummy net 'n_1003' is created to connect open pin 'QN'. (VHDL-290)
@@ -360,6 +385,9 @@ Warning: A dummy net 'n_1026' is created to connect open pin 'QN'. (VHDL-290)
 Warning: A dummy net 'n_1027' is created to connect open pin 'QN'. (VHDL-290)
 Warning: A dummy net 'n_1028' is created to connect open pin 'QN'. (VHDL-290)
 Warning: A dummy net 'n_1029' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1030' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1031' is created to connect open pin 'QN'. (VHDL-290)
+Warning: A dummy net 'n_1032' is created to connect open pin 'QN'. (VHDL-290)
 1
 report_timing -nworst 10	> ../REPORTS/$DESIGN_NAME.timing.log
 report_area			> ../REPORTS/$DESIGN_NAME.area.log

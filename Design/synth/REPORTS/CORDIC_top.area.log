@@ -3,28 +3,28 @@
 Report : area
 Design : CORDIC_top
 Version: J-2014.09-SP2
-Date   : Tue Jun  6 09:56:53 2017
+Date   : Mon Jun 12 16:48:15 2017
 ****************************************
 
 Library(s) Used:
 
     c35_CORELIB_TYP (File: /softslin/AMS_410_CDS/synopsys/c35_3.3V/c35_CORELIB_TYP.db)
 
-Number of ports:                           26
-Number of nets:                           898
-Number of cells:                          722
-Number of combinational cells:            613
-Number of sequential cells:               109
+Number of ports:                           27
+Number of nets:                          1195
+Number of cells:                          962
+Number of combinational cells:            817
+Number of sequential cells:               145
 Number of macros/black boxes:               0
-Number of buf/inv:                        209
-Number of references:                      17
+Number of buf/inv:                        216
+Number of references:                      19
 
-Combinational area:              56784.000160
-Buf/Inv area:                     7662.200310
-Noncombinational area:           29757.000000
+Combinational area:              78132.600258
+Buf/Inv area:                     8117.200287
+Noncombinational area:           39585.000000
 Macro/Black Box area:                0.000000
-Net Interconnect area:           13995.000000
+Net Interconnect area:           20061.000000
 
-Total cell area:                 86541.000160
-Total area:                     100536.000160
+Total cell area:                117717.600258
+Total area:                     137778.600258
 1
