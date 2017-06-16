@@ -1,0 +1,19 @@
+# //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
+# //
+# //  Copyright 1991-2013 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim lib_BENCH_TOP.test_top_num
+# vsim lib_BENCH_TOP.test_top_num 
+# ** Error: (vsim-19) Failed to access library 'lib_vhd' at "lib_vhd".
+# No such file or directory. (errno = ENOENT)
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(140): (vopt-1272) Length of o_count is 6; length of component port is 4.
+# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(141): (vopt-1272) Length of i_counter is 6; length of component port is 4.
+# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(142): (vopt-1272) Length of i_counter is 6; length of component port is 4.
+# Optimization failed
+# Error loading design

@@ -15,8 +15,10 @@ library lib_VHD ; --include design top
 
 entity test_top_num is end test_top_num; --/!\ top_num_2.vhd /!\
 
+architecture test_functional of test_top_num is
+
 component top_num is
-  port map( i_CLK	: in  std_logic;                      
+  port( i_CLK		: in  std_logic;                      
 	i_RESET_n    	: in  std_logic;                     
 	i_data          : in  std_logic;
 	i_in_demod_I	: in  std_logic_vector(4 downto 0);
@@ -25,7 +27,7 @@ component top_num is
 	o_out_modu_Q    : out std_logic_vector(4 downto 0);
 	o_out_demod_I  	: out std_logic_vector(7 downto 0);
 	o_out_demod_Q  	: out std_logic_vector(7 downto 0);   
-	o_phi  			: out std_logic_vector(8 downto 0)
+	o_phi  		: out std_logic_vector(8 downto 0)
       );
 end component;
 -----------------------------------------------------------------------------------------------------------------
@@ -37,7 +39,7 @@ function string_bin_to_std_logic( str_bin: character )return std_logic is
  	variable val : std_logic;
  begin
 
-        case str_hex is
+        case str_bin is
             when '0' =>val:='0';
             when '1' =>val:='1';
 	    when others =>val:='X';
@@ -105,6 +107,8 @@ begin
 	sig_clk,
 	sig_resetn,
 	sig_i_data,
+	i_in_demod_I,
+	i_in_demod_Q,
 	sig_o_out_modu_I,
 	sig_o_out_modu_Q,
 	sig_o_out_demod_I,
@@ -123,43 +127,43 @@ begin
 	 variable L: line;
 	 file ENTREES : text open read_mode is "./top/bit_stream.dat";
      	variable LIGNE: LINE;	 -- variables à lire
-	variable val_bin: string;
+	variable val_bin: character;
 	variable i: integer :=0;
   begin
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
-	read(LIGNE,val_bin);
---appel fonction convertion hex vers std_logic_vector
-	if(reset ='1')then
-		wait until sig_clk'event and sig_clk = '1';
-			sig_i_data<=string_bin_to_sl(val_bin);
-		report "  >>>>>>>>>>> stream bit nb=" & integer'image(i);
-		i:=i+1;
+		read(LIGNE,val_bin);
+	--appel fonction convertion hex vers std_logic_vector
+		if(sig_resetn ='1')then
+			wait until sig_clk'event and sig_clk = '1';
+				sig_i_data<=string_bin_to_std_logic(val_bin);
+			report "  >>>>>>>>>>> stream bit nb=" & integer'image(i);
+			i:=i+1;
+		end if;
 		end loop; --while
 		wait;
-	end if;
   end process LECTURE_data;
   
   ----Ecriture+Lecture des echantillons Q_in
  LECTURE_Q: process
-	 variable L: line;
+ 	 variable L: line;
 	 file ENTREES : text open read_mode is "./top/DEMOD_Q_in.dat";
      	variable LIGNE: LINE;	 -- variables à lire
-	variable val_bin: string (1 downto 0);
+	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
   begin
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
-	read(LIGNE,val_bin);
+	read(LIGNE,val_hex);
 	--appel fonction convertion hex vers std_logic_vector
-	if(reset ='1')then
+	--if(sig_resetn ='1')then
 		wait until sig_clk'event and sig_clk = '1';
-			i_in_demod_Q<=string_hex_to_slv(val_hex);
+			i_in_demod_Q<=string_hex_to_slv(val_hex)(4 downto 0);
 		report "  >>>>>>>>>>> stream DEMOD Q nb=" & integer'image(i);
 		i:=i+1;
 		end loop; --while
 		wait;
-	end if;
+	--end if;
   end process LECTURE_Q;
   
   ----Ecriture+Lecture des echantillons I_in
@@ -167,21 +171,21 @@ begin
 	 variable L: line;
 	 file ENTREES : text open read_mode is "./top/DEMOD_I_in.dat";
      	variable LIGNE: LINE;	 -- variables à lire
-	variable val_bin: string (1 downto 0);
+	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
   begin
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
-	read(LIGNE,val_bin);
+	read(LIGNE,val_hex);
 	--appel fonction convertion hex vers std_logic_vector
-	if(reset ='1')then
+	--if(sig_resetn ='1')then
 		wait until sig_clk'event and sig_clk = '1';
-			i_in_demod_I<=string_hex_to_slv(val_bin);
-		report "  >>>>>>>>>>> stream DEMOD Q nb=" & integer'image(i);
+			i_in_demod_I<=string_hex_to_slv(val_hex)(4 downto 0);
+		report "  >>>>>>>>>>> stream DEMOD I nb=" & integer'image(i);
 		i:=i+1;
 		end loop; --while
 		wait;
-	end if;
+	--end if;
   end process LECTURE_I;
 
 
@@ -259,4 +263,4 @@ begin
        
  end process  ECRITURE_out_Q_MOD;
 
-end test1;
+end test_functional;

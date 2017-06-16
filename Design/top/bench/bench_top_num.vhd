@@ -9,7 +9,7 @@ use ieee.math_real.all;
 use ieee.std_logic_textio.all;
 use std.textio.all;
 
-library lib_VHD ; --include design top
+library lib_VHD_TOP ; --include design top
 
 
 
@@ -18,16 +18,15 @@ entity test_top_num is end test_top_num; --/!\ top_num_2.vhd /!\
 architecture test_functional of test_top_num is
 
 component top_num is
-  port( i_CLK		: in  std_logic;                      
-	i_RESET_n    	: in  std_logic;                     
-	i_data          : in  std_logic;
-	i_in_demod_I	: in  std_logic_vector(4 downto 0);
-	i_in_demod_Q	: in  std_logic_vector(4 downto 0);
-	o_out_modu_I    : out std_logic_vector(4 downto 0);
-	o_out_modu_Q    : out std_logic_vector(4 downto 0);
-	o_out_demod_I  	: out std_logic_vector(7 downto 0);
-	o_out_demod_Q  	: out std_logic_vector(7 downto 0);   
-	o_phi  		: out std_logic_vector(8 downto 0)
+   port( 
+        i_CLK			: in  std_logic;                      
+		i_RESET_n    	: in  std_logic;                     
+		i_data          : in  std_logic;
+		i_in_demod_I	: in  std_logic_vector(4 downto 0);
+		i_in_demod_Q	: in  std_logic_vector(4 downto 0);
+        	i_debug_demod   : in  std_logic;
+       		i_debug_cordic  : in  std_logic;
+        	o_output        : out std_logic_vector (18 downto 0)	
       );
 end component;
 -----------------------------------------------------------------------------------------------------------------
@@ -88,44 +87,42 @@ end string_hex_to_slv;
 -----------------------------------------------------------------------------------------------------------------
 --Declaration des signaux
 
-signal 	sig_clk 			:std_logic := '0';
-signal 	sig_resetn 			:std_logic := '0';                 
-signal	sig_i_data          :std_logic;
-signal 	i_in_demod_I		:std_logic_vector(4 downto 0);
-signal 	i_in_demod_Q		:std_logic_vector(4 downto 0);
-signal	sig_o_out_modu_I   	:std_logic_vector(4 downto 0);
-signal	sig_o_out_modu_Q   	:std_logic_vector(4 downto 0);
-signal	sig_o_out_demod_I  	:std_logic_vector(7 downto 0);
-signal	sig_o_out_demod_Q  	:std_logic_vector(7 downto 0);   
-signal	sig_o_phi			:std_logic_vector(8 downto 0);
+signal sig_clk		:std_logic:='0';                      
+signal sig_resetn    	:std_logic:='0';                     
+signal sig_i_data          	:std_logic;
+signal sig_in_demod_I		:std_logic_vector(4 downto 0);
+signal sig_in_demod_Q		:std_logic_vector(4 downto 0);
+signal sig_debug_demod   	:std_logic;
+signal sig_debug_cordic  	:std_logic;
+signal sig_o_output        	:std_logic_vector (18 downto 0);
 
 begin
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 --instanciation du TOP
 	TOP_NUM1: top_num port map(
-	sig_clk,
-	sig_resetn,
-	sig_i_data,
-	i_in_demod_I,
-	i_in_demod_Q,
-	sig_o_out_modu_I,
-	sig_o_out_modu_Q,
-	sig_o_out_demod_I,
-	sig_o_out_demod_Q,
-	sig_o_phi);
+	sig_clk,		
+        sig_resetn,    	
+        sig_i_data,       
+        sig_in_demod_I,	
+        sig_in_demod_Q,	
+        sig_debug_demod,  
+        sig_debug_cordic, 
+        sig_o_output);
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 --drive CLK et RESET
 	sig_clk <= not(sig_clk) after  10 ns; --50Mhz
-	sig_resetn <= '1' after 5 ns; --reset
+	sig_resetn <= '1' after 15 ns; --reset
+	sig_debug_demod <= '0';
+	sig_debug_cordic <= '0';
 
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 ----Ecriture+Lecture des echantillons Bit_stream
  LECTURE_data: process
 	 variable L: line;
-	 file ENTREES : text open read_mode is "./top/bit_stream.dat";
+	 file ENTREES : text open read_mode is "./top/bench/bit_stream.dat";
      	variable LIGNE: LINE;	 -- variables à lire
 	variable val_bin: character;
 	variable i: integer :=0;
@@ -133,13 +130,13 @@ begin
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
 		read(LIGNE,val_bin);
-	--appel fonction convertion hex vers std_logic_vector
-		if(sig_resetn ='1')then
+	--appel fonction convertion caractere vers std_logic
+	--	if(sig_resetn ='1')then
 			wait until sig_clk'event and sig_clk = '1';
 				sig_i_data<=string_bin_to_std_logic(val_bin);
 			report "  >>>>>>>>>>> stream bit nb=" & integer'image(i);
 			i:=i+1;
-		end if;
+	--	end if;
 		end loop; --while
 		wait;
   end process LECTURE_data;
@@ -147,7 +144,7 @@ begin
   ----Ecriture+Lecture des echantillons Q_in
  LECTURE_Q: process
  	 variable L: line;
-	 file ENTREES : text open read_mode is "./top/DEMOD_Q_in.dat";
+	 file ENTREES : text open read_mode is "./top/bench/Qif.dat";
      	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
@@ -158,18 +155,18 @@ begin
 	--appel fonction convertion hex vers std_logic_vector
 	--if(sig_resetn ='1')then
 		wait until sig_clk'event and sig_clk = '1';
-			i_in_demod_Q<=string_hex_to_slv(val_hex)(4 downto 0);
+			sig_in_demod_Q<=string_hex_to_slv(val_hex)(4 downto 0);
 		report "  >>>>>>>>>>> stream DEMOD Q nb=" & integer'image(i);
 		i:=i+1;
 		end loop; --while
 		wait;
-	--end if;
+	--end if;
   end process LECTURE_Q;
   
   ----Ecriture+Lecture des echantillons I_in
  LECTURE_I: process
 	 variable L: line;
-	 file ENTREES : text open read_mode is "./top/DEMOD_I_in.dat";
+	 file ENTREES : text open read_mode is "./top/bench/Iif.dat";
      	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
@@ -180,7 +177,7 @@ begin
 	--appel fonction convertion hex vers std_logic_vector
 	--if(sig_resetn ='1')then
 		wait until sig_clk'event and sig_clk = '1';
-			i_in_demod_I<=string_hex_to_slv(val_hex)(4 downto 0);
+			sig_in_demod_I<=string_hex_to_slv(val_hex)(4 downto 0);
 		report "  >>>>>>>>>>> stream DEMOD I nb=" & integer'image(i);
 		i:=i+1;
 		end loop; --while
@@ -190,77 +187,77 @@ begin
 
 
 --Ecriture de la sortie CORDIC
- ECRITURE_out_cordic: process
-       variable L: line;
-      variable C : integer;
-      file SORTIES: text open WRITE_MODE is "./top/sorties_cordic.dat";
- begin
-	 --wait for 60 ns;
-       wait until sig_clk'event and sig_clk = '1';
-       		C:=conv_integer(signed(sig_o_phi)); -- ecriture des angles en integer
-		   write(L,C);	-- écriture de Z dans la ligne
-		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
-       
- end process ECRITURE_out_cordic;
- 
- 
---Ecriture de la sortie I_out_DEMOD
- ECRITURE_out_I_DEMOD: process
-       variable L: line;
-      variable C : integer;
-      file SORTIES: text open WRITE_MODE is "./top/sorties_I_DEMOD.dat";
- begin
-	 --wait for 60 ns;
-       wait until sig_clk'event and sig_clk = '1';
-       		C:=conv_integer(signed(sig_o_out_demod_I)); -- conversion sortie /!\ A determiner
-		   write(L,C);	-- écriture de Z dans la ligne
-		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
-       
- end process ECRITURE_out_I_DEMOD;
- 
- 
---Ecriture de la sortie Q_out_DEMOD
- ECRITURE_out_Q_DEMOD: process
-       variable L: line;
-      variable C : integer;
-      file SORTIES: text open WRITE_MODE is "./top/sorties_Q_DEMOD.dat";
- begin
-	 --wait for 60 ns;
-       wait until sig_clk'event and sig_clk = '1';
-       		C:=conv_integer(signed(sig_o_out_demod_Q));-- conversion sortie /!\ A determiner
-		   write(L,C);	-- écriture de Z dans la ligne
-		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
-       
- end process  ECRITURE_out_Q_DEMOD;
- 
- 
---Ecriture de la sortie I_out_MOD
- ECRITURE_out_I_MOD: process
-       variable L: line;
-      variable C : integer;
-      file SORTIES: text open WRITE_MODE is "./top/sorties_I_MOD.dat";
- begin
-	 --wait for 60 ns;
-       wait until sig_clk'event and sig_clk = '1';
-       		C:=conv_integer(signed(sig_o_out_modu_I));-- conversion sortie /!\ A determiner
-		   write(L,C);	-- écriture de Z dans la ligne
-		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
-       
- end process ECRITURE_out_I_MOD;
- 
- 
---Ecriture de la sortie Q_out_MOD
- ECRITURE_out_Q_MOD: process
-       variable L: line;
-      variable C : integer;
-      file SORTIES: text open WRITE_MODE is "./top/sorties_Q_MOD.dat";
- begin
-	 --wait for 60 ns;
-       wait until sig_clk'event and sig_clk = '1';
-       		C:=conv_integer(signed(sig_o_out_modu_Q));-- conversion sortie /!\ A determiner
-		   write(L,C);	-- écriture de Z dans la ligne
-		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
-       
- end process  ECRITURE_out_Q_MOD;
+-- ECRITURE_out_cordic: process
+--       variable L: line;
+--      variable C : integer;
+--      file SORTIES: text open WRITE_MODE is "./top/sorties_cordic.dat";
+-- begin
+--	 --wait for 60 ns;
+--       wait until sig_clk'event and sig_clk = '1';
+--       		C:=conv_integer(signed(sig_o_phi)); -- ecriture des angles en integer
+--		   write(L,C);	-- écriture de Z dans la ligne
+--		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+--       
+-- end process ECRITURE_out_cordic;
+-- 
+-- 
+----Ecriture de la sortie I_out_DEMOD
+-- ECRITURE_out_I_DEMOD: process
+--       variable L: line;
+--      variable C : integer;
+--      file SORTIES: text open WRITE_MODE is "./top/sorties_I_DEMOD.dat";
+-- begin
+--	 --wait for 60 ns;
+--       wait until sig_clk'event and sig_clk = '1';
+--       		C:=conv_integer(signed(sig_o_out_demod_I)); -- conversion sortie /!\ A determiner
+--		   write(L,C);	-- écriture de Z dans la ligne
+--		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+--       
+-- end process ECRITURE_out_I_DEMOD;
+-- 
+-- 
+----Ecriture de la sortie Q_out_DEMOD
+-- ECRITURE_out_Q_DEMOD: process
+--       variable L: line;
+--      variable C : integer;
+--      file SORTIES: text open WRITE_MODE is "./top/sorties_Q_DEMOD.dat";
+-- begin
+--	 --wait for 60 ns;
+--       wait until sig_clk'event and sig_clk = '1';
+--       		C:=conv_integer(signed(sig_o_out_demod_Q));-- conversion sortie /!\ A determiner
+--		   write(L,C);	-- écriture de Z dans la ligne
+--		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+--       
+-- end process  ECRITURE_out_Q_DEMOD;
+-- 
+-- 
+----Ecriture de la sortie I_out_MOD
+-- ECRITURE_out_I_MOD: process
+--       variable L: line;
+--      variable C : integer;
+--      file SORTIES: text open WRITE_MODE is "./top/sorties_I_MOD.dat";
+-- begin
+--	 --wait for 60 ns;
+--       wait until sig_clk'event and sig_clk = '1';
+--       		C:=conv_integer(signed(sig_o_out_modu_I));-- conversion sortie /!\ A determiner
+--		   write(L,C);	-- écriture de Z dans la ligne
+--		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+--       
+-- end process ECRITURE_out_I_MOD;
+-- 
+-- 
+----Ecriture de la sortie Q_out_MOD
+-- ECRITURE_out_Q_MOD: process
+--       variable L: line;
+--      variable C : integer;
+--      file SORTIES: text open WRITE_MODE is "./top/sorties_Q_MOD.dat";
+-- begin
+--	 --wait for 60 ns;
+--       wait until sig_clk'event and sig_clk = '1';
+--       		C:=conv_integer(signed(sig_o_out_modu_Q));-- conversion sortie /!\ A determiner
+--		   write(L,C);	-- écriture de Z dans la ligne
+--		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+--       
+-- end process  ECRITURE_out_Q_MOD;
 
 end test_functional;

@@ -17,19 +17,18 @@ entity test_top_num is end test_top_num; --/!\ top_num_2.vhd /!\
 
 architecture test_functional of test_top_num is
 
-component top_num is
-  port( i_CLK		: in  std_logic;                      
-	i_RESET_n    	: in  std_logic;                     
-	i_data          : in  std_logic;
-	i_in_demod_I	: in  std_logic_vector(4 downto 0);
-	i_in_demod_Q	: in  std_logic_vector(4 downto 0);
-	o_out_modu_I    : out std_logic_vector(4 downto 0);
-	o_out_modu_Q    : out std_logic_vector(4 downto 0);
-	o_out_demod_I  	: out std_logic_vector(7 downto 0);
-	o_out_demod_Q  	: out std_logic_vector(7 downto 0);   
-	o_phi  		: out std_logic_vector(8 downto 0)
+entity top_num is
+   port( 
+        i_CLK			: in  std_logic;                      
+		i_RESET_n    	: in  std_logic;                     
+		i_data          : in  std_logic;
+		i_in_demod_I	: in  std_logic_vector(4 downto 0);
+		i_in_demod_Q	: in  std_logic_vector(4 downto 0);
+        i_debug_demod   : in  std_logic;
+        i_debug_cordic  : in  std_logic;
+        o_output        : out std_logic_vector (18 downto 0)	
       );
-end component;
+end top_num;
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 --Declaration des fonctions
@@ -88,16 +87,14 @@ end string_hex_to_slv;
 -----------------------------------------------------------------------------------------------------------------
 --Declaration des signaux
 
-signal 	sig_clk 			:std_logic := '0';
-signal 	sig_resetn 			:std_logic := '0';                 
-signal	sig_i_data          :std_logic;
-signal 	i_in_demod_I		:std_logic_vector(4 downto 0);
-signal 	i_in_demod_Q		:std_logic_vector(4 downto 0);
-signal	sig_o_out_modu_I   	:std_logic_vector(4 downto 0);
-signal	sig_o_out_modu_Q   	:std_logic_vector(4 downto 0);
-signal	sig_o_out_demod_I  	:std_logic_vector(7 downto 0);
-signal	sig_o_out_demod_Q  	:std_logic_vector(7 downto 0);   
-signal	sig_o_phi			:std_logic_vector(8 downto 0);
+signal i_CLK			:std_logic;                      
+signal i_RESET_n    	:std_logic;                     
+signal i_data          	:std_logic;
+signal i_in_demod_I		:std_logic_vector(4 downto 0);
+signal i_in_demod_Q		:std_logic_vector(4 downto 0);
+signal i_debug_demod   	:std_logic;
+signal i_debug_cordic  	:std_logic;
+signal o_output        	:std_logic_vector (18 downto 0);
 
 begin
 -----------------------------------------------------------------------------------------------------------------

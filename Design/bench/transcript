@@ -7,57 +7,6 @@
 # //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
 # //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
 # //
-vsim lib_BENCH.test_top
-# vsim lib_BENCH.test_top 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: bench_top.vhd(44): (vopt-1271) Bad default binding for component instance "C1: CORDIC_top".
-#  (Component generic "Nb" is not on the entity.)
-# ** Warning: [1] bench_top.vhd(44): (vopt-3473) Component instance "/test_TOP/C1 : CORDIC_top" is not bound.
-# Optimization failed
-# Error loading design
-vsim lib_BENCH.test_top
-# vsim lib_BENCH.test_top 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: bench_top.vhd(44): (vopt-1271) Bad default binding for component instance "C1: CORDIC_top".
-#  (Component generic "Nb" is not on the entity.)
-# ** Warning: [1] bench_top.vhd(44): (vopt-3473) Component instance "/test_TOP/C1 : CORDIC_top" is not bound.
-# Optimization failed
-# Error loading design
-vsim lib_BENCH.test_top
-# vsim lib_BENCH.test_top 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: bench_top.vhd(44): (vopt-1271) Bad default binding for component instance "C1: CORDIC_top".
-#  (Component generic "Nb" is not on the entity.)
-# ** Warning: [1] bench_top.vhd(44): (vopt-3473) Component instance "/test_TOP/C1 : CORDIC_top" is not bound.
-# Optimization failed
-# Error loading design
-vsim lib_BENCH.test_top
-# vsim lib_BENCH.test_top 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: bench_top.vhd(44): (vopt-1271) Bad default binding for component instance "C1: CORDIC_top".
-#  (Component generic "Nb" is not on the entity.)
-# ** Warning: [1] bench_top.vhd(44): (vopt-3473) Component instance "/test_TOP/C1 : CORDIC_top" is not bound.
-# Optimization failed
-# Error loading design
-vcom -work lib_BENCH /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top.vhd
-# Model Technology ModelSim SE-64 vcom 10.2c Compiler 2013.07 Jul 18 2013
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package std_logic_arith
-# -- Loading package NUMERIC_STD
-# -- Loading package MATH_REAL
-# -- Loading entity CORDIC_top
-# -- Compiling entity test_TOP
-# -- Compiling architecture test1 of test_TOP
-vsim lib_BENCH.test_top
-# vsim lib_BENCH.test_top 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top.vhd(44): (vopt-1271) Bad default binding for component instance "C1: CORDIC_top".
-#  (Component generic "Nb" is not on the entity.)
-# ** Warning: [1] /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top.vhd(44): (vopt-3473) Component instance "/test_TOP/C1 : CORDIC_top" is not bound.
-# Optimization failed
-# Error loading design
 vsim lib_BENCH.test_top_file
 # vsim lib_BENCH.test_top_file 
 # Loading std.standard
@@ -79,7 +28,7 @@ vsim lib_BENCH.test_top_file
 # No such file or directory. (errno = ENOENT)
 #    Time: 0 ns  Iteration: 0  Instance: /test_top_file
 # ** Warning: (vsim-WLF-5022) WLF summary optimizations disabled.  This will adversely affect wave draw performance.
-run
+run -all
 # ** Fatal: (vsim-7) Failed to open VHDL file "./bench/y_simu.dat" in r mode.
 # No such file or directory. (errno = ENOENT)
 #    Time: 0 ns  Iteration: 0  Process: /test_top_file/LECTURE_Y File: /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top_stimu.vhd
@@ -88,11 +37,3 @@ run
 # HDL call sequence:
 # Stopped at /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top_stimu.vhd 113 Process LECTURE_Y
 # 
-vsim lib_BENCH.test_top
-# vsim lib_BENCH.test_top 
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top.vhd(44): (vopt-1271) Bad default binding for component instance "C1: CORDIC_top".
-#  (Component generic "Nb" is not on the entity.)
-# ** Warning: [1] /tp/xph2app/xph2app003/Prj_conception/Design/bench/bench_top.vhd(44): (vopt-3473) Component instance "/test_TOP/C1 : CORDIC_top" is not bound.
-# Optimization failed
-# Error loading design

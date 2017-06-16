@@ -71,7 +71,7 @@ component counter is
   port(	
 	i_hclk	: in std_logic;
         i_rstn	: in std_logic;
-	o_count : out std_logic_vector(5 downto 0)
+	o_count : out std_logic_vector(3 downto 0)
   );
 end component;
 
@@ -80,7 +80,7 @@ component lut_i is
   port (	
         i_hclk		: in  std_logic;                --Horloge	
 	i_rstn    : in  std_logic;                      --Reset asynchrone sur 0
-	i_counter : in  std_logic_vector(5 downto 0);   --Valeur du compteur global
+	i_counter : in  std_logic_vector(3 downto 0);   --Valeur du compteur global
 	i_i_even  : in  std_logic;                      --Entrée des bits pairs
 	o_i       : out std_logic_vector(4 downto 0)    --Sortie I générée
   );
@@ -92,7 +92,7 @@ component lut_q is
   port (
 	i_hclk	: in  std_logic;                        --Horloge	
 	i_rstn    : in  std_logic;                      --Reset asynchrone sur 0
-	i_counter : in  std_logic_vector(5 downto 0);   --Valeur du compteur global
+	i_counter : in  std_logic_vector(3 downto 0);   --Valeur du compteur global
 	i_i_odd   : in  std_logic;                      --Entrée des bits pairs
 	o_q       : out std_logic_vector(4 downto 0)    --Sortie Q générée
   );
@@ -117,7 +117,7 @@ signal add1S_s       : std_logic_vector(add_size_out downto 0);
 signal add2S_s       : std_logic_vector(add_size_out downto 0);
 
 -- Signal de commande des LUTs
-signal counter_s     : std_logic_vector(5 downto 0);
+signal counter_s     : std_logic_vector(3 downto 0);
 -- Signaux Transportant la sortie des LUTs
 signal cos : std_logic_vector(mult_size_in downto 0); 
 signal sin : std_logic_vector(mult_size_in downto 0);
