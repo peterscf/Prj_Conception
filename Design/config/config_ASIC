@@ -42,5 +42,5 @@ source /softslin/configCAO/MentorGraphics/licence_mentor_graphics
 #source /softslin/configCAO/Xilinx/config_ISE
 source /softslin/configCAO/MentorGraphics/config_ModelSim
 source /softslin/configCAO/MentorGraphics/config_Calibre
-export MODELSIM="${TP_PATH}/config/modelsim.ini"
+export MODELSIM="${TP_PATH}/modelsim.ini"
 

@@ -225,7 +225,7 @@ begin
 			reg2_out19 <= resize_out19;
 			reg2_out20 <= resize_out20;
 		--Affectation synchrone de la sortie des adds au buffer de sortie
-		output <= add_out5_1(accu_out_size) & add_out5_1(accu_out_size-7 downto 11);		
+		output <= add_out5_1(accu_out_size) & add_out5_1(accu_out_size-6 downto 12);		
 
 		end if;
 	end if;
@@ -301,3 +301,4 @@ begin
 
 
 end A;
+

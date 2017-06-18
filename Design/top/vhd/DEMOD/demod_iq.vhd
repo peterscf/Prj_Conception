@@ -67,7 +67,7 @@ component FILTER_para is
 end component;
 
 --Composant compteur du modulateur, permettant de contrôler la création des signaux sin/cos
-component counter is 
+component counter_demod is 
   port(	
 	i_hclk	: in std_logic;
         i_rstn	: in std_logic;
@@ -76,7 +76,7 @@ component counter is
 end component;
 
 --Composant de la LUT in phase, issu du modulateur
-component lut_i is 
+component lut_i_demod is 
   port (	
         i_hclk		: in  std_logic;                --Horloge	
 	i_rstn    : in  std_logic;                      --Reset asynchrone sur 0
@@ -88,7 +88,7 @@ end component;
 
 
 --Composant de la LUT in quadrature, issu du modulateur
-component lut_q is 
+component lut_q_demod is 
   port (
 	i_hclk	: in  std_logic;                        --Horloge	
 	i_rstn    : in  std_logic;                      --Reset asynchrone sur 0
@@ -137,9 +137,9 @@ process(CLK_s)
 	end if;
 end process;
 
-  control_lut : counter port map(CLK_s, RESET_n_s, counter_s);
-  lut_cos : lut_i port map (CLK_s, RESET_n_s, counter_s, '0', cos);
-  lut_sin : lut_q port map (CLK_s, RESET_n_s, counter_s, '1', sin);
+  control_lut : counter_demod port map(CLK_s, RESET_n_s, counter_s);
+  lut_cos : lut_i_demod port map (CLK_s, RESET_n_s, counter_s, '0', cos);
+  lut_sin : lut_q_demod port map (CLK_s, RESET_n_s, counter_s, '1', sin);
 
   mult1 : mult_s port map (
     A => I_s,
