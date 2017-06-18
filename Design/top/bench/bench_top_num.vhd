@@ -160,7 +160,7 @@ begin
 		i:=i+1;
 		end loop; --while
 		wait;
-	--end if;
+	--end if;
   end process LECTURE_Q;
   
   ----Ecriture+Lecture des echantillons I_in
@@ -254,7 +254,7 @@ begin
  begin
 	 --wait for 60 ns;
        wait until sig_clk'event and sig_clk = '1';
-       		C:=conv_integer(signed(sig_o_output(13 downto 9)));-- conversion sortie /!\ A determiner
+       		C:=conv_integer(signed(sig_o_output(13 downto 9))); -- conversion sortie /!\ A determiner
 		   write(L,C);	-- écriture de Z dans la ligne
 		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
        
