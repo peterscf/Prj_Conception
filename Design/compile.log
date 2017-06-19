@@ -1,0 +1,13 @@
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
+Start time: 14:05:04 on Jun 19,2017
+vcom -work lib_BENCH_TOP /home/floriant/Prj_conception/Design/top/bench/bench_top_num.vhd 
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package MATH_REAL
+-- Loading package std_logic_textio
+-- Compiling entity test_top_num
+-- Compiling architecture test_functional of test_top_num
+End time: 14:05:04 on Jun 19,2017, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
