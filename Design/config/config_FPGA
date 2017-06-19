@@ -30,7 +30,7 @@ source /softslin/configCAO/Xilinx/config_ISE
 source /softslin/configCAO/MentorGraphics/licence_mentor_graphics
 	# ATTENTION à l'ordre : en interne modelsim.ini utilise des variables définies dans
 source /softslin/configCAO/MentorGraphics/config_ModelSim
-export MODELSIM="${TP_PATH}/config/modelsim.ini"
+export MODELSIM="${TP_PATH}/modelsim.ini"
 
 source /softslin/configCAO/MentorGraphics/config_Precision
 

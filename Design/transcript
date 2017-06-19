@@ -1,3 +1,7 @@
+# ** Error: (vish-19) Failed to access library '~/Prj_conception/Design/libs/lib_BENCH' at "~/Prj_conception/Design/libs/lib_BENCH".
+# No such file or directory. (errno = ENOENT)
+# ** Error: (vish-19) Failed to access library '~/Prj_conception/Design/libs/lib_VHD' at "~/Prj_conception/Design/libs/lib_VHD".
+# No such file or directory. (errno = ENOENT)
 # //  ModelSim SE-64 10.2c Jul 18 2013 Linux 3.2.0-4-amd64
 # //
 # //  Copyright 1991-2013 Mentor Graphics Corporation
@@ -9,31 +13,6 @@
 # //
 vsim lib_BENCH_TOP.test_top_num
 # vsim lib_BENCH_TOP.test_top_num 
-# ** Error: (vsim-19) Failed to access library '/home/floriant/Documents/Prj_conception/Design/libs/lib_VHD' at "/home/floriant/Documents/Prj_conception/Design/libs/lib_VHD".
-# No such file or directory. (errno = ENOENT)
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(140): (vopt-1272) Length of o_count is 6; length of component port is 4.
-# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(141): (vopt-1272) Length of i_counter is 6; length of component port is 4.
-# ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(142): (vopt-1272) Length of i_counter is 6; length of component port is 4.
-# Optimization failed
-# Error loading design
-vmap -del lib_BENCH
-# Removing reference to logical library lib_BENCH
-# Modifying /tp/xph2app/xph2app003/Prj_conception/Design/config/modelsim.ini
-vmap -del lib_BENCH_TOP
-# Removing reference to logical library lib_BENCH_TOP
-# Modifying /tp/xph2app/xph2app003/Prj_conception/Design/config/modelsim.ini
-vmap -del lib_VHD
-# Removing reference to logical library lib_VHD
-# Modifying /tp/xph2app/xph2app003/Prj_conception/Design/config/modelsim.ini
-vmap -del lib_VHD_TOP
-# Removing reference to logical library lib_VHD_TOP
-# Modifying /tp/xph2app/xph2app003/Prj_conception/Design/config/modelsim.ini
-cd top/
-vsim lib_BENCH_TOP.test_top_num
-# vsim lib_BENCH_TOP.test_top_num 
-# ** Error: (vsim-19) Failed to access library 'lib_vhd' at "lib_vhd".
-# No such file or directory. (errno = ENOENT)
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(140): (vopt-1272) Length of o_count is 6; length of component port is 4.
 # ** Error: /tp/xph2app/xph2app003/Prj_conception/Design/top/vhd/DEMOD/demod_iq.vhd(141): (vopt-1272) Length of i_counter is 6; length of component port is 4.

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+PRJ_PATH="~/Prj_conception/Design/top"
+cd ${PRJ_PATH}/../config/
+source config_RTL
+
+
+cd ${PRJ_PATH}/MODEL/matlab/simu_2canaux/
+./gene_valid
+cp -vr ${PRJ_PATH}/MODEL/matlab/simu_2canaux/bit_sequence.txt ${PRJ_PATH}/MODEL/matlab/simu_2canaux/bit_stream.dat
+cp -vr ${PRJ_PATH}/MODEL/matlab/simu_2canaux/*.dat ${PRJ_PATH}/bench/
+echo "copie des fichier simu validation ok"
+echo "lancement de vsim"
+
+#cd ${PRJ_PATH}/
+#./compile_top.sh
+
+#vsim &
