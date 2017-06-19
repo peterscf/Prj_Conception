@@ -128,7 +128,6 @@ architecture A of FILTER_para is
   signal reg2_out19			 : std_logic_vector(accu_out_size downto 0);
   signal reg2_out20			 : std_logic_vector(accu_out_size downto 0);
 
-
 --24 downto 0 (20+20 -> 21 bits max)
   signal add_out1_1			 : std_logic_vector(accu_out_size downto 0);
   signal add_out1_2			 : std_logic_vector(accu_out_size downto 0);
@@ -152,6 +151,13 @@ architecture A of FILTER_para is
 --24 downto 0
   signal add_out4_1			 : std_logic_vector(accu_out_size downto 0);
   signal add_out5_1			 : std_logic_vector(accu_out_size downto 0);
+
+  signal add_reg_out2_1			 : std_logic_vector(accu_out_size downto 0);
+  signal add_reg_out2_2			 : std_logic_vector(accu_out_size downto 0);
+  signal add_reg_out2_3			 : std_logic_vector(accu_out_size downto 0);
+  signal add_reg_out2_4			 : std_logic_vector(accu_out_size downto 0);
+  signal add_reg_out2_5			 : std_logic_vector(accu_out_size downto 0);
+
   signal output : std_logic_vector(out_size downto 0);
 
 begin
@@ -224,33 +230,39 @@ begin
 			reg2_out18 <= resize_out18;
 			reg2_out19 <= resize_out19;
 			reg2_out20 <= resize_out20;
-		--Affectation synchrone de la sortie des adds au buffer de sortie
-		output <= add_out5_1(accu_out_size) & add_out5_1(accu_out_size-6 downto 12);		
 
+			add_reg_out2_1 <= add_out2_1;
+			add_reg_out2_2 <= add_out2_2;
+			add_reg_out2_3 <= add_out2_3;
+			add_reg_out2_4 <= add_out2_4;
+			add_reg_out2_5 <= add_out2_5;
+
+		--Affectation synchrone de la sortie des adds au buffer de sortie
+		output <= add_out5_1(accu_out_size) & add_out5_1(accu_out_size-5 downto 13);		
 		end if;
 	end if;
 	end process P_Sync ;
 
-  U1 : MULT port map (reg1_out1, "11110101110", mult_out1);
-  U2 : MULT port map (reg1_out2, "00101001010", mult_out2);
-  U3 : MULT port map (reg1_out3, "00011101010", mult_out3);
-  U4 : MULT port map (reg1_out4, "00011111101", mult_out4);
-  U5 : MULT port map (reg1_out5, "00100101001", mult_out5);
-  U6 : MULT port map (reg1_out6, "00101010110", mult_out6);
-  U7 : MULT port map (reg1_out7, "00101111111", mult_out7);
-  U8 : MULT port map (reg1_out8, "00110100000", mult_out8);
-  U9 : MULT port map (reg1_out9, "00110110111", mult_out9);
-  U10 : MULT port map (reg1_out10, "00111000110", mult_out10);
-  U11 : MULT port map (reg1_out11, "00111000110", mult_out11);
-  U12 : MULT port map (reg1_out12, "00110110111", mult_out12);
-  U13 : MULT port map (reg1_out13, "00110100000", mult_out13);
-  U14 : MULT port map (reg1_out14, "00101111111", mult_out14);
-  U15 : MULT port map (reg1_out15, "00101010110", mult_out15);
-  U16 : MULT port map (reg1_out16, "00100101001", mult_out16);
-  U17 : MULT port map (reg1_out17, "00011111101", mult_out17);
-  U18 : MULT port map (reg1_out18, "00011101010", mult_out18);
-  U19 : MULT port map (reg1_out19, "00101001010", mult_out19);
-  U20 : MULT port map (reg1_out20, "11110101110", mult_out20);
+  U1 : MULT port map (reg1_out1, "00000111000", mult_out1);
+  U2 : MULT port map (reg1_out2, "00011001101", mult_out2);
+  U3 : MULT port map (reg1_out3, "00010010101", mult_out3);
+  U4 : MULT port map (reg1_out4, "00011101111", mult_out4);
+  U5 : MULT port map (reg1_out5, "00100011101", mult_out5);
+  U6 : MULT port map (reg1_out6, "00101010111", mult_out6);
+  U7 : MULT port map (reg1_out7, "00110001000", mult_out7);
+  U8 : MULT port map (reg1_out8, "00110110001", mult_out8);
+  U9 : MULT port map (reg1_out9, "00111001110", mult_out9);
+  U10 : MULT port map (reg1_out10, "00111011101", mult_out10);
+  U11 : MULT port map (reg1_out11, "00111011101", mult_out11);
+  U12 : MULT port map (reg1_out12, "00111001110", mult_out12);
+  U13 : MULT port map (reg1_out13, "00110110001", mult_out13);
+  U14 : MULT port map (reg1_out14, "00110001000", mult_out14);
+  U15 : MULT port map (reg1_out15, "00101010111", mult_out15);
+  U16 : MULT port map (reg1_out16, "00100011101", mult_out16);
+  U17 : MULT port map (reg1_out17, "00011101111", mult_out17);
+  U18 : MULT port map (reg1_out18, "00010010101", mult_out18);
+  U19 : MULT port map (reg1_out19, "00011001101", mult_out19);
+  U20 : MULT port map (reg1_out20, "00000111000", mult_out20);
 
   U30 : Resize port map(mult_out1, resize_out1);
   U31 : Resize port map(mult_out2, resize_out2);
@@ -290,12 +302,12 @@ begin
   add_out2_4 <= std_logic_vector(signed(add_out1_7) + signed(add_out1_8));
   add_out2_5 <= std_logic_vector(signed(add_out1_9) + signed(add_out1_10));
 
-  add_out3_1 <= std_logic_vector(signed(add_out2_1) + signed(add_out2_2));
-  add_out3_2 <= std_logic_vector(signed(add_out2_3) + signed(add_out2_4));
+  add_out3_1 <= std_logic_vector(signed(add_reg_out2_1) + signed(add_reg_out2_2));
+  add_out3_2 <= std_logic_vector(signed(add_reg_out2_3) + signed(add_reg_out2_4));
 
   add_out4_1 <= std_logic_vector(signed(add_out3_1) + signed(add_out3_2));
 
-  add_out5_1 <= std_logic_vector(signed(add_out4_1) + signed(add_out2_5));
+  add_out5_1 <= std_logic_vector(signed(add_out4_1) + signed(add_reg_out2_5));
 
   Filter_Out <= output;
 
