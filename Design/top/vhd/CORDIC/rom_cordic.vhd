@@ -28,25 +28,45 @@ begin
 synchro: process (clk,reset_n,enable)
   variable counter: std_logic_vector(7 downto 0);
   begin
-  	if enable = '1' then
-		if clk'event and clk ='1' then 
-			if(reset_n = '0')then
-				counter:= "00000000";
-			else 
-	 			if counter = "01011110" then
+  	
+	if clk'event and clk ='1' then 
+		if(reset_n = '0')then
+			counter:= "00000000";
+		else
+			if enable = '1' then
+				if counter = "01011110" then
 	 				counter :="00000000";
 	 			else
 	 				counter := counter + "00000001";
-	 			end if;
-	 			
+	 			end if;	 			
 	 			--count=> counter;
 	 			X <=  rom_X(conv_integer(counter));
 				Y <=  rom_Y(conv_integer(counter));
+			else 
+				counter :="00000000";
 			end if;
- 	 	end if;
- 	else
-		counter :="00000000";
+		end if;
 	end if;
+
+--	if enable = '1' then
+--		if clk'event and clk ='1' then 
+--			if(reset_n = '0')then
+--				counter:= "00000000";
+--			else 
+--	 			if counter = "01011110" then
+--	 				counter :="00000000";
+--	 			else
+--	 				counter := counter + "00000001";
+--	 			end if;
+--	 			
+--	 			--count=> counter;
+--	 			X <=  rom_X(conv_integer(counter));
+--				Y <=  rom_Y(conv_integer(counter));
+--			end if;
+--	 	end if;
+--	else
+--		counter :="00000000";
+--	end if;
   end process synchro;
 
 --  synchro: process (clk,reset_n,enable)

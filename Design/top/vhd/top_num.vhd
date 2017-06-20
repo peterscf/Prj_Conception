@@ -107,6 +107,9 @@ rom: rom_cordic   port map (i_CLK,i_RESET_n,i_debug_cordic,o_x,o_y);
 comparator_1: comparator port map (i_CLK,i_RESET_n,out_phi,o_out_comparator);
 
 
+
+o_output_comparator<=o_out_comparator;
+
 i_cordic_selection:process (i_debug_cordic, out_demod_I, out_demod_Q, o_x, o_y)
 begin 
  if (i_debug_cordic = '1' ) then          -- Select Rom

@@ -1,5 +1,7 @@
 ------------------------------------------bench_top_num.vhd------------------------------------------------------
 --https://www.hdlworks.com/hdl_corner/vhdl_ref/VHDLContents/TEXTIOPackage.htm
+--24 cycle de latence pour le demod
+--7 cylce de latence pour le cordic
 library IEEE ;
 use IEEE.std_logic_1164.ALL ;
 --use ieee.std_logic_signed.all;
@@ -26,7 +28,9 @@ component top_num is
 		i_in_demod_Q	: in  std_logic_vector(4 downto 0);
         	i_debug_demod   : in  std_logic;
        		i_debug_cordic  : in  std_logic;
-        	o_output        : out std_logic_vector (18 downto 0)	
+        	o_output        : out std_logic_vector (18 downto 0);
+		o_output_comparator: out std_logic_vector (1 downto 0)	
+	
       );
 end component;
 -----------------------------------------------------------------------------------------------------------------
@@ -95,6 +99,7 @@ signal sig_in_demod_Q		:std_logic_vector(4 downto 0);
 signal sig_debug_demod   	:std_logic;
 signal sig_debug_cordic  	:std_logic;
 signal sig_o_output        	:std_logic_vector (18 downto 0);
+signal sig_o_output_comparator  :std_logic_vector (1 downto 0);	
 
 begin
 -----------------------------------------------------------------------------------------------------------------
@@ -108,7 +113,8 @@ begin
         sig_in_demod_Q,	
         sig_debug_demod,  
         sig_debug_cordic, 
-        sig_o_output);
+        sig_o_output,
+	sig_o_output_comparator);
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 --drive CLK et RESET
@@ -126,6 +132,7 @@ begin
      	variable LIGNE: LINE;	 -- variables à lire
 	variable val_bin: character;
 	variable i: integer :=0;
+	variable send :integer:=24;
   begin
      while(not(endfile(ENTREES))) loop
      	readline(ENTREES,LIGNE);
@@ -133,9 +140,14 @@ begin
 	--appel fonction convertion caractere vers std_logic
 	--	if(sig_resetn ='1')then
 			wait until sig_clk'event and sig_clk = '1';
+			send := send+1;
+			if send = 25 then 
 				sig_i_data<=string_bin_to_std_logic(val_bin);
-			report "  >>>>>>>>>>> stream bit nb=" & integer'image(i);
-			i:=i+1;
+				report "  >>>>>>>>>>> stream bit nb=" & integer'image(i);
+				i:=i+1;
+				send:=0;
+			end if;
+
 	--	end if;
 		end loop; --while
 		wait;
@@ -144,7 +156,7 @@ begin
   ----Ecriture+Lecture des echantillons Q_in
  LECTURE_Q: process
  	 variable L: line;
-	 file ENTREES : text open read_mode is "./top/bench/Qif.dat";
+	 file ENTREES : text open read_mode is "./top/bench/Q_in.dat";
      	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
@@ -166,7 +178,7 @@ begin
   ----Ecriture+Lecture des echantillons I_in
  LECTURE_I: process
 	 variable L: line;
-	 file ENTREES : text open read_mode is "./top/bench/Iif.dat";
+	 file ENTREES : text open read_mode is "./top/bench/I_in.dat";
      	variable LIGNE: LINE;	 -- variables à lire
 	variable val_hex: string (2 downto 1);
 	variable i: integer :=0;
@@ -259,5 +271,18 @@ begin
 		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
        
  end process  ECRITURE_out_Q_MOD;
+--Ecriture de la sortie comparator
+ ECRITURE_out_comparator: process
+       variable L: line;
+      variable C : integer;
+      file SORTIES: text open WRITE_MODE is "./top/sorties_comparator.dat";
+ begin
+	 --wait for 60 ns;
+       wait until sig_clk'event and sig_clk = '1';
+       		C:=conv_integer(unsigned(sig_o_output_comparator)); -- conversion sortie /!\ A determiner
+		   write(L,C);	-- écriture de Z dans la ligne
+		   writeline(SORTIES, L); -- écriture de la ligne dans le fichier
+       
+ end process  ECRITURE_out_comparator;
 
 end test_functional;

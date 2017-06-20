@@ -32,4 +32,5 @@ echo "///////////////////////////////////////////////"
 
 vcom -work lib_BENCH_TOP ~/Prj_conception/Design/top/bench/*.vhd > compile.log
 grep Errors compile.log
+grep Error compile.log
 

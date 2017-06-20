@@ -21,8 +21,12 @@ architecture encoder_behaviour of encoder is
       if (i_hclk'event and i_hclk = '1') then 
         if i_rstn = '0' then
           v_xor := '1';
-        elsif (i_cnt = "000000" or i_cnt = "011001" ) then  
-          v_xor := v_xor xor i_data;
+        elsif (i_cnt = "000000" or i_cnt = "011001" ) then
+		if (i_data = '0') then
+			v_xor := v_xor xor '0';
+		else
+			v_xor := v_xor xor '1';
+		end if;          
         end if;
         o_data <= v_xor;
       end if;    

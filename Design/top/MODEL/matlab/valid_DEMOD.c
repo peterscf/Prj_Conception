@@ -18,10 +18,10 @@ void cellule(int* x, int* y, int* z, int tani, int i);
 
 int main(int argc, char* argv[]){
  
-int x,y,z,i,j,k,teta,res, nb_tst, err, err_1, b,end;
+int x,y,z,i,j,k,teta,res, nb_tst, err, err_1, b,end, val_2;
 double rad,a_x,a_y;
 int tan0[] ={45,26,14,7,3,1};
-char str [TAILLE_MAX], file_name[TAILLE_MAX],write_str[TAILLE_MAX]; 
+char str2 [TAILLE_MAX], str [TAILLE_MAX], file_name[TAILLE_MAX],write_str[TAILLE_MAX]; 
 char time[TAILLE_MAX_FILE][100];
 double I[TAILLE_MAX_FILE];
 double Q[TAILLE_MAX_FILE];
@@ -30,20 +30,45 @@ char* errCheck;
 
 FILE* fichier_I=NULL;
 FILE* fichier_Q=NULL;
-
+FILE* fichier_B=NULL;
 
 FILE* file_x=NULL;
 FILE* file_y=NULL;
-
+FILE* file_b=NULL;
+FILE* file_val_b=NULL;
 
 
 printf("debut programme\n");
 fichier_I=fopen("./I_in.txt","r");
 fichier_Q=fopen("./Q_in.txt","r");
+fichier_B=fopen("./bit_sequence.txt","r");
 
-if (fichier_I != NULL && fichier_Q !=NULL){
+if (fichier_I != NULL && fichier_Q != NULL && fichier_B != NULL){
     //recuperation des donne des fichiers
     i=0;
+    file_b=fopen("./bit_stream.dat","w+");
+    file_val_b=fopen("./bit_streamvalid.txt","w+");
+    while(fgets(str, TAILLE_MAX, fichier_B)!=NULL){
+        char* p_virg=strchr(str,',');
+	fprintf(file_b,"%d\n",(int)strtold((p_virg+1),&errCheck));
+	if (i%2>0){
+		fprintf(file_val_b,"%d%d\n",val_2,(int)strtold((p_virg+1),&errCheck));
+		fprintf(file_val_b,"%d%d\n",val_2,(int)strtold((p_virg+1),&errCheck));
+		fprintf(file_val_b,"%d%d\n",val_2,(int)strtold((p_virg+1),&errCheck));
+		fprintf(file_val_b,"%d%d\n",val_2,(int)strtold((p_virg+1),&errCheck));
+		fprintf(file_val_b,"%d%d\n",val_2,(int)strtold((p_virg+1),&errCheck));
+	}
+	val_2 = (int)strtold((p_virg+1),&errCheck);
+	if (errCheck == p_virg+1){
+            printf("Converssion Error:%s\ni=%d\n",p_virg+1,i);
+        }
+        i++;
+    }
+    fclose(fichier_B);
+    fclose(file_b);
+    fclose(file_val_b);
+    i=0;
+
     while(fgets(str, TAILLE_MAX, fichier_I)!=NULL){
         char* p_virg=strchr(str,',');
         I[i]= strtold((p_virg+1),&errCheck);
