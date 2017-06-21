@@ -1,7 +1,7 @@
 #@ # 
 #@ # Running dc_shell Version J-2014.09-SP2 for amd64 -- Nov 25, 2014
-#@ # Date:   Wed Jun 14 18:38:12 2017
-#@ # Run by: xph2app0@cimeld19
+#@ # Date:   Wed Jun 21 11:43:56 2017
+#@ # Run by: xph2app0@cimeld23
 #@ 
 
 source /softslin/synthesisvJ2014_09_sp2_64b/admin/setup/.synopsys_dc.setup
@@ -3820,7 +3820,7 @@ source -echo -verbose /tp/xph2app/xph2app003/Prj_conception/Design/synth/WORK/..
 #@ source ../SCRIPTS/constraints.tcl
 #@ # -- Starting source ../SCRIPTS/constraints.tcl
 
-#@ #set CLK_PERIOD 20.00
+#@ set CLK_PERIOD 20.00
 #@ #set CLK_SKEW 0.00
 #@ #set INPUT_DELAY 0.00
 #@ #set OUTPUT_DELAY 0.00
@@ -3840,7 +3840,7 @@ source -echo -verbose /tp/xph2app/xph2app003/Prj_conception/Design/synth/WORK/..
 #@ 
 #@ compile -exact_map -area_effort high -ungroup_all
 #@ 
-#@ #write_sdf RESULTS/$DESIGN_NAME.sdf
+#@ write_sdf RESULTS/$DESIGN_NAME.sdf
 #@ #write -format ddc -hierarchy -output RESULTS/$DESIGN_NAME.ddc
 #@ 
 #@ #Genere la netlist au format VHDL

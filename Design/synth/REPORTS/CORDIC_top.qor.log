@@ -3,7 +3,7 @@
 Report : qor
 Design : CORDIC_top
 Version: J-2014.09-SP2
-Date   : Wed Jun 14 18:38:21 2017
+Date   : Wed Jun 21 11:44:06 2017
 ****************************************
 
 
@@ -59,16 +59,16 @@ Date   : Wed Jun 14 18:38:21 2017
   -----------------------------------
 
 
-  Hostname: cimeld19
+  Hostname: cimeld23
 
   Compile CPU Statistics
   -----------------------------------------
-  Resource Sharing:                    0.89
-  Logic Optimization:                  0.66
-  Mapping Optimization:                1.13
+  Resource Sharing:                    0.90
+  Logic Optimization:                  0.67
+  Mapping Optimization:                1.12
   -----------------------------------------
-  Overall Compile Time:                4.16
-  Overall Compile Wall Clock Time:     5.59
+  Overall Compile Time:                4.17
+  Overall Compile Wall Clock Time:     5.64
 
   --------------------------------------------------------------------
 
