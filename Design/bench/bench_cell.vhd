@@ -15,27 +15,28 @@ entity test_Cell is end test_cell;
 architecture test1 of test_Cell is
 --Test fonctionel !!!
 	component Cell 
-	generic(  tan_i: integer; --angle
+	generic(  Nb: integer;
+		tan_i: integer; --angle
 	  shift: integer --etage du pipe
   	);
 	 port(   clk: in std_logic;
             reset_n : in std_logic;
             x_in: in std_logic_vector(7 downto 0);
             y_in: in std_logic_vector(7 downto 0);
-            z_in: in std_logic_vector(7 downto 0);
+            z_in: in std_logic_vector(8 downto 0);
             x_out: out std_logic_vector(7 downto 0);         
             y_out: out std_logic_vector(7 downto 0);
-            z_out: out std_logic_vector(7 downto 0));
+            z_out: out std_logic_vector(8 downto 0));
 	end component;
 
 signal sig_clk : std_logic := '0';
 signal sig_resetn : std_logic := '0';
 signal sig_x_in: std_logic_vector(7 downto 0);
 signal sig_y_in:  std_logic_vector(7 downto 0);
-signal sig_z_in:  std_logic_vector(7 downto 0);
+signal sig_z_in:  std_logic_vector(8 downto 0);
 signal sig_x_out:  std_logic_vector(7 downto 0);         
 signal sig_y_out:  std_logic_vector(7 downto 0);
-signal sig_z_out:  std_logic_vector(7 downto 0);
+signal sig_z_out:  std_logic_vector(8 downto 0);
 signal i: integer := 0;
 --signal sig_val: bit_vector(7 downto 0);
 type     tab_x is array (0 to 179) of std_logic_vector(7 downto 0);
@@ -46,8 +47,8 @@ constant in_y : tab_y := (0=>X"80",	1=>X"81",	2=>X"81",	3=>X"81",	4=>X"81",	5=>X
 
 --signal period: natural;
 begin
-	sig_z_in <= "00000000";
-	C1: Cell generic map (
+	sig_z_in <= "000000000";
+	C1: Cell generic map (Nb=>8,
 		shift => 0,
 		tan_i=> 45 )
 		port map(sig_clk,sig_resetn,sig_x_in,sig_y_in,sig_z_in,sig_x_out,sig_y_out,sig_z_out);

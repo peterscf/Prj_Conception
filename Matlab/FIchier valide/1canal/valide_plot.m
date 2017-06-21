@@ -186,10 +186,11 @@ devmax= max (abs(dev))
 devmoy= mean(abs(dev))
 %plot(dev,'.')
 figure
-title('derivation en sortie')
 [counts, binValues] = hist(dev);
 normalizedCounts = 100 * counts / sum(counts);
 bar(binValues, normalizedCounts, 'barwidth', 1);
 xlabel('Déviation angulaire (°)');
 ylabel('Occurence normalisée (%)');
+title('derivation en sortie')
+
 grid on

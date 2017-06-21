@@ -1,13 +1,26 @@
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5c Compiler 2017.01 Jan 23 2017
-Start time: 15:30:41 on Jun 21,2017
-vcom -work lib_BENCH_TOP /home/floriant/Prj_conception/Design/top/bench/bench_top_num.vhd 
+Start time: 17:11:53 on Jun 21,2017
+vcom -work lib_BENCH /home/floriant/Prj_conception/Design/bench/bench_cell.vhd /home/floriant/Prj_conception/Design/bench/bench_cordic_rom.vhd /home/floriant/Prj_conception/Design/bench/bench_rom.vhd /home/floriant/Prj_conception/Design/bench/bench_top_stimu.vhd /home/floriant/Prj_conception/Design/bench/bench_top.vhd 
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package std_logic_arith
+-- Loading package NUMERIC_STD
 -- Loading package MATH_REAL
+-- Loading entity CELL
+-- Compiling entity test_Cell
+-- Compiling architecture test1 of test_Cell
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading entity ROM_cordic
+-- Compiling entity test_rom_cordic
+-- Compiling architecture test1 of test_rom_cordic
+-- Compiling entity test_rom
+-- Compiling architecture test1 of test_rom
 -- Loading package std_logic_textio
--- Compiling entity test_top_num
--- Compiling architecture test_functional of test_top_num
-End time: 15:30:41 on Jun 21,2017, Elapsed time: 0:00:00
+-- Loading entity CORDIC_top
+-- Compiling entity test_top_file
+-- Compiling architecture test1 of test_top_file
+-- Compiling entity test_TOP
+-- Compiling architecture test1 of test_TOP
+End time: 17:11:53 on Jun 21,2017, Elapsed time: 0:00:00
 Errors: 0, Warnings: 0

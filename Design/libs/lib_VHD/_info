@@ -2,187 +2,222 @@ m255
 K4
 z2
 13
-cModel Technology
-Z0 d/tp/xph2app/xph2app003/Prj_Conception/Design
-!s112 0.1
+!s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
-T_opt
-V7zbW70b6m0?A9<z_YHgf10
-04 4 1 work cell a 7
-04 10 1 work cordic_top a 1
-=1-002564c6e24c-593eb1c2-2ac0f-2412
-o-quiet -auto_acc_if_foreign -work lib_VHD
-n@_opt
-OL;O;10.2c;57
-R0
-!s110 1497280962
+cModel Technology
+Z0 d/home/floriant/Prj_conception/Design
 Ecell
-Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 OV;C;10.5c;63
-32
-Z5 !s110 1497280965
-!i10b 1
-Z6 w1497278609
-Z7 d/tp/xph2app/xph2app003/Prj_conception/Design
-Z8 8/tp/xph2app/xph2app003/Prj_conception/Design/vhd/cell.vhd
-Z9 F/tp/xph2app/xph2app003/Prj_conception/Design/vhd/cell.vhd
+Z1 w1497872551
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cell.vhd
+Z6 F/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cell.vhd
 l0
 L11
-VBa8O3iW:EbmXeZjIOAi<i2
-Z10 OL;C;10.2c;57
-Z11 !s108 1497280965.500603
-Z12 !s90 -reportprogress|300|-work|lib_VHD|/tp/xph2app/xph2app003/Prj_conception/Design/vhd/cell.vhd|
-Z13 !s107 /tp/xph2app/xph2app003/Prj_conception/Design/vhd/cell.vhd|
-Z14 o-work lib_VHD
-Z15 tOptimize_1164 0 Explicit 1 IgnoreVitalErrors 1 Show_VitalChecksWarnings 0
-!s100 17T>:<l]fIBhYzgHd50JU0
+VQR?2`U@JnaT^WYO?`=YMi3
+!s100 MFNb5QSPfm;CSUGoDnN;h2
+Z7 OV;C;10.5c;63
+32
+Z8 !s110 1498057913
+!i10b 1
+Z9 !s108 1498057913.000000
+Z10 !s90 -work|lib_VHD|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cell.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/comparator.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cordic.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/pre_process.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/rom_cordic.vhd|
+Z11 !s107 /home/floriant/Prj_conception/Design/top/vhd/CORDIC/rom_cordic.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/pre_process.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cordic.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/comparator.vhd|/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cell.vhd|
+!i113 1
+Z12 o-work lib_VHD
+Z13 tExplicit 1 CvgOpt 0
 Aa
-R1
 R2
 R3
-DEx4 work 4 cell 0 22 Ba8O3iW:EbmXeZjIOAi<i2
 R4
-32
-R5
-!i10b 1
+DEx4 work 4 cell 0 22 QR?2`U@JnaT^WYO?`=YMi3
 l36
 L28
-V1X;26Ng86lM_TFaIRahB[2
+VR1Rn;1;NBTDl=OeiKi1E[0
+!s100 QE=0>CRiL4KfC3RG_OA?G2
+R7
+32
+R8
+!i10b 1
+R9
 R10
 R11
+!i113 1
 R12
 R13
-R14
+Ecomparator
+Z14 w1497888991
+Z15 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z16 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+R2
+R3
+R4
+R0
+Z17 8/home/floriant/Prj_conception/Design/top/vhd/CORDIC/comparator.vhd
+Z18 F/home/floriant/Prj_conception/Design/top/vhd/CORDIC/comparator.vhd
+l0
+L6
+VSg2W]Y@53kaJPE?midzTN2
+!s100 W@0_ESE]0j`bY^aa@jzU31
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Artl_comparator
 R15
-!s100 QDH<@CF>dRBCEe1;PL6_03
+R16
+R2
+R3
+R4
+DEx4 work 10 comparator 0 22 Sg2W]Y@53kaJPE?midzTN2
+l17
+L15
+VXmXB1LD10dBSSd:P<Fb?D3
+!s100 ?C?NMLPVn@FhzO[f9J^?B0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
 Ecordic_top
 R1
 R2
 R3
 R4
-32
-R5
-!i10b 1
-Z16 w1497278877
-R7
-Z17 8/tp/xph2app/xph2app003/Prj_conception/Design/vhd/cordic.vhd
-Z18 F/tp/xph2app/xph2app003/Prj_conception/Design/vhd/cordic.vhd
+R0
+Z19 8/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cordic.vhd
+Z20 F/home/floriant/Prj_conception/Design/top/vhd/CORDIC/cordic.vhd
 l0
 L6
-V]ISIAiC=JU[YAdlcmFz2G2
+VY=GKE20VceO6SnA^Th@UF0
+!s100 A7mWMgj?4_lF=hN@bXM;P2
+R7
+32
+R8
+!i10b 1
+R9
 R10
-Z19 !s108 1497280965.582603
-Z20 !s90 -reportprogress|300|-work|lib_VHD|/tp/xph2app/xph2app003/Prj_conception/Design/vhd/cordic.vhd|
-Z21 !s107 /tp/xph2app/xph2app003/Prj_conception/Design/vhd/cordic.vhd|
-R14
-R15
-!s100 3ec2?U`eh0:IlT^GJ6MO60
+R11
+!i113 1
+R12
+R13
 Aa
-R1
 R2
 R3
-DEx4 work 10 cordic_top 0 22 ]ISIAiC=JU[YAdlcmFz2G2
 R4
-32
-R5
-!i10b 1
+DEx4 work 10 cordic_top 0 22 Y=GKE20VceO6SnA^Th@UF0
 l74
 L16
-VYhfGS>3Y^ff_6i9W]P<5E3
+VY?bd@`1R>Gf>dmWV5hWUz2
+!s100 3NzTVbI<V9ngALL0@_2092
+R7
+32
+R8
+!i10b 1
+R9
 R10
-R19
-R20
-R21
-R14
-R15
-!s100 6PIW>IgjbW]dEDaPaQ9NA0
+R11
+!i113 1
+R12
+R13
 Epre_process
 R1
 R2
 R3
 R4
-32
-R5
-!i10b 1
-Z22 w1497278622
-R7
-Z23 8/tp/xph2app/xph2app003/Prj_conception/Design/vhd/pre_process.vhd
-Z24 F/tp/xph2app/xph2app003/Prj_conception/Design/vhd/pre_process.vhd
+R0
+Z21 8/home/floriant/Prj_conception/Design/top/vhd/CORDIC/pre_process.vhd
+Z22 F/home/floriant/Prj_conception/Design/top/vhd/CORDIC/pre_process.vhd
 l0
 L6
-VceECYDGSl;P6>7Q6HDe?;0
+VjlLIU_3NBg:[JJWeADSQ?1
+!s100 DlHGP=WdYYibki2WEmk<d1
+R7
+32
+R8
+!i10b 1
+R9
 R10
-Z25 !s108 1497280965.673182
-Z26 !s90 -reportprogress|300|-work|lib_VHD|/tp/xph2app/xph2app003/Prj_conception/Design/vhd/pre_process.vhd|
-Z27 !s107 /tp/xph2app/xph2app003/Prj_conception/Design/vhd/pre_process.vhd|
-R14
-R15
-!s100 dRd=CKaSFfi9cY7c16ZDg1
+R11
+!i113 1
+R12
+R13
 Aa
-R1
 R2
 R3
-DEx4 work 11 pre_process 0 22 ceECYDGSl;P6>7Q6HDe?;0
 R4
-32
-R5
-!i10b 1
+DEx4 work 11 pre_process 0 22 jlLIU_3NBg:[JJWeADSQ?1
 l25
 L19
-V0YB<X2KIkWOIW>41jMhZH2
+VLo0mFS47^Tb]=nFFkkjPJ3
+!s100 akB82oJi[V[;;H9DBH@M>0
+R7
+32
+R8
+!i10b 1
+R9
 R10
-R25
-R26
-R27
-R14
-R15
-!s100 PVH^Id4Y9LRf3W8VYDnMa2
+R11
+!i113 1
+R12
+R13
 Erom_cordic
-Z28 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z29 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-R1
+Z23 w1497939954
+R15
+R16
 R2
 R3
 R4
-32
-Z30 !s110 1497457962
-!i10b 1
-Z31 w1497457917
-R7
-Z32 8/tp/xph2app/xph2app003/Prj_conception/Design/vhd/rom_cordic.vhd
-Z33 F/tp/xph2app/xph2app003/Prj_conception/Design/vhd/rom_cordic.vhd
+R0
+Z24 8/home/floriant/Prj_conception/Design/top/vhd/CORDIC/rom_cordic.vhd
+Z25 F/home/floriant/Prj_conception/Design/top/vhd/CORDIC/rom_cordic.vhd
 l0
 L6
-V1b45<XYcfQ3[P;`Hkd`d03
-!s100 0]FcKf1iLGmMZ:Khaim<b0
+V3U`^WM`M_[U0TOnCgdEER3
+!s100 FJRk`dn_H[4@^h`g2gDWB0
+R7
+32
+R8
+!i10b 1
+R9
 R10
-Z34 !s108 1497457962.937072
-Z35 !s90 -reportprogress|300|-work|lib_VHD|/tp/xph2app/xph2app003/Prj_conception/Design/vhd/rom_cordic.vhd|
-Z36 !s107 /tp/xph2app/xph2app003/Prj_conception/Design/vhd/rom_cordic.vhd|
-R14
-R15
+R11
+!i113 1
+R12
+R13
 Aa
-R28
-R29
-R1
+R15
+R16
 R2
 R3
-DEx4 work 10 rom_cordic 0 22 1b45<XYcfQ3[P;`Hkd`d03
 R4
-32
-R30
-!i10b 1
+DEx4 work 10 rom_cordic 0 22 3U`^WM`M_[U0TOnCgdEER3
 l27
 L14
-V9_HJ1=eMQYVAVTIKKO_>R3
-!s100 ]edU[5V4O>e4@ZKfmz;en3
+V@lYHKO^J0aM9?6F`heS6:2
+!s100 OZMc=dGO4P5`TSHGleocV2
+R7
+32
+R8
+!i10b 1
+R9
 R10
-R34
-R35
-R36
-R14
-R15
+R11
+!i113 1
+R12
+R13

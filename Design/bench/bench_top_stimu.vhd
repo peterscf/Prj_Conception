@@ -64,7 +64,7 @@ end string_to_slv;
  
  
 
-signal sig_clk : std_logic := '0';
+signal sig_clk : std_logic := '1';
 signal sig_resetn : std_logic := '0';
 signal sig_x_in: std_logic_vector(7 downto 0);
 signal sig_y_in:  std_logic_vector(7 downto 0); 
