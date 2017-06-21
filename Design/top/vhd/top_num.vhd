@@ -14,8 +14,8 @@ entity top_num is
 	i_in_demod_Q	   : in  std_logic_vector(4 downto 0);
         i_debug_demod      : in  std_logic;
         i_debug_cordic     : in  std_logic;
-        o_output           : out std_logic_vector (18 downto 0);
-	o_output_comparator: out std_logic_vector (1 downto 0)	
+        o_output           : out std_logic_vector (18 downto 0)
+--	o_output_comparator: out std_logic_vector (1 downto 0)	
       );
 end top_num;
 
@@ -66,14 +66,14 @@ end component;
 
 
 --COMPARATOR
-component comparator is 
-port(   i_clk       : in std_logic;
-	i_restn     : in std_logic;
-        i_phase     : in std_logic_vector  (8 downto 0);
-        o_comparator: out std_logic_vector (1 downto 0)	
- ); 
+--component comparator is 
+--port(   i_clk       : in std_logic;
+--	i_restn     : in std_logic;
+--        i_phase     : in std_logic_vector  (8 downto 0);
+--        o_comparator: out std_logic_vector (1 downto 0)	
+-- ); 
 
-end component;
+--end component;
  
 ------------------------ Fin declaration  des composants------------------------------------------
 
@@ -90,7 +90,7 @@ signal in_cordic_Q   	: std_logic_vector(7 downto 0);
 signal out_phi       	: std_logic_vector(8 downto 0);
 signal o_x           	: std_logic_vector(7 downto 0);
 signal o_y              : std_logic_vector(7 downto 0);
-signal o_out_comparator :  std_logic_vector(1 downto 0);
+--signal o_out_comparator :  std_logic_vector(1 downto 0);
 
 
 
@@ -104,11 +104,11 @@ cordic : cordic_top port map (i_CLK, i_RESET_n, in_cordic_I, in_cordic_Q, out_ph
 --Rom_cordic 
 rom: rom_cordic   port map (i_CLK,i_RESET_n,i_debug_cordic,o_x,o_y);
 --Comparator
-comparator_1: comparator port map (i_CLK,i_RESET_n,out_phi,o_out_comparator);
+--comparator_1: comparator port map (i_CLK,i_RESET_n,out_phi,o_out_comparator);
 
 
 
-o_output_comparator<=o_out_comparator;
+--o_output_comparator<=o_out_comparator;
 
 i_cordic_selection:process (i_debug_cordic, out_demod_I, out_demod_Q, o_x, o_y)
 begin 

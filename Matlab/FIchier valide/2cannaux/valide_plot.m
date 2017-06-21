@@ -10,7 +10,7 @@
 
 %% Initialize variables.
 filename1 = './sorties_Q_MOD.dat';
-filename2 = './sorties_comparator.dat';
+%filename2 = './sorties_comparator.dat';
 filename3 = './sorties_cordic.dat';
 filename4 = './sorties_I_MOD.dat';
 filename5 = './modu_out_I.txt';
@@ -30,7 +30,7 @@ formatSpec2 = '%f%f%[^\n\r]';
 formatSpec = '%f%[^\n\r]';
 %% Open the text file.
 fileID1 = fopen(filename1,'r');
-fileID2 = fopen(filename2,'r');
+%fileID2 = fopen(filename2,'r');
 fileID3 = fopen(filename3,'r');
 fileID4 = fopen(filename4,'r');
 fileID5 = fopen(filename5,'r');
@@ -45,7 +45,7 @@ fileID11 = fopen(filename11,'r');
 % code. If an error occurs for a different file, try regenerating the code
 % from the Import Tool.
 dataArray1 = textscan(fileID1, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN, 'ReturnOnError', false);
-dataArray2 = textscan(fileID2, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN, 'ReturnOnError', false);
+%dataArray2 = textscan(fileID2, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN, 'ReturnOnError', false);
 dataArray3 = textscan(fileID3, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN, 'ReturnOnError', false);
 dataArray4 = textscan(fileID4, formatSpec, 'Delimiter', delimiter, 'EmptyValue' ,NaN, 'ReturnOnError', false);
 dataArray5 = textscan(fileID5, formatSpec2, 'Delimiter', delimiter2, 'EmptyValue' ,NaN, 'ReturnOnError', false);
@@ -58,7 +58,7 @@ dataArray11 = textscan(fileID11, formatSpec2, 'Delimiter', delimiter2, 'EmptyVal
 
 %% Close the text file.
 fclose(fileID1);
-fclose(fileID2);
+%fclose(fileID2);
 fclose(fileID3);
 fclose(fileID4);
 fclose(fileID5);
@@ -76,7 +76,7 @@ fclose(fileID11);
 
 %% Allocate imported array to column variable names
 Q_MOD = dataArray1{:, 1};
-Compt_out= dataArray2{:, 1};
+%Compt_out= dataArray2{:, 1};
 CORDIC_out = dataArray3{:, 1};
 I_MOD = dataArray4{:, 1};
 I_MOD_MAT = dataArray5{:,2};
@@ -107,8 +107,25 @@ ylabel('value of I DEMOD')
 grid on 
 
 figure
+plot(time(1:2001),-(I_DEMOD_out(20:2020)),time(1:2001),I_DEMOD_MAT(1:2001))
+title('Verif I DEMOD after correction')
+legend('I DEMOD Design','I DEMOD Matlab')
+xlabel('time') 
+ylabel('value of Q DEMOD') 
+grid on
+
+
+figure
 plot(time(1:2001),Q_DEMOD_out(1:2001),time(1:2001),Q_DEMOD_MAT(1:2001))
 title('Verif Q DEMOD')
+legend('Q DEMOD Design','Q DEMOD Matlab')
+xlabel('time') 
+ylabel('value of Q DEMOD') 
+grid on
+
+figure
+plot(time(1:2001),-(Q_DEMOD_out(20:2020)),time(1:2001),Q_DEMOD_MAT(1:2001))
+title('Verif Q DEMOD after correction')
 legend('Q DEMOD Design','Q DEMOD Matlab')
 xlabel('time') 
 ylabel('value of Q DEMOD') 
@@ -162,3 +179,16 @@ xlabel('time')
 ylabel('value of CORDIC') 
 grid on 
 %plot(time(1:40001),U_CORDIC_MAT(5:40005));
+
+dev = U_CORDIC_MAT(15:40005)-U_CORDIC_out(28:40018);
+devmax= max (abs(dev))
+devmoy= mean(abs(dev))
+%plot(dev,'.')
+figure
+title('derivation en sortie')
+[counts, binValues] = hist(dev);
+normalizedCounts = 100 * counts / sum(counts);
+bar(binValues, normalizedCounts, 'barwidth', 1);
+xlabel('Déviation angulaire (°)');
+ylabel('Occurence normalisée (%)');
+grid on
