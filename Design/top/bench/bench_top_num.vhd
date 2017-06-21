@@ -11,8 +11,9 @@ use ieee.math_real.all;
 use ieee.std_logic_textio.all;
 use std.textio.all;
 
-library lib_VHD_TOP ; --include design top
-
+--library lib_VHD_TOP ; --include design top
+library lib_SYNTH_TOP;
+use lib_SYNTH_TOP.top_num;
 
 
 entity test_top_num is end test_top_num; --/!\ top_num_2.vhd /!\
@@ -28,8 +29,8 @@ component top_num is
 		i_in_demod_Q	: in  std_logic_vector(4 downto 0);
         	i_debug_demod   : in  std_logic;
        		i_debug_cordic  : in  std_logic;
-        	o_output        : out std_logic_vector (18 downto 0);
-		o_output_comparator: out std_logic_vector (1 downto 0)	
+        	o_output        : out std_logic_vector (18 downto 0)
+		--o_output_comparator: out std_logic_vector (1 downto 0)	
 	
       );
 end component;
@@ -99,7 +100,7 @@ signal sig_in_demod_Q		:std_logic_vector(4 downto 0);
 signal sig_debug_demod   	:std_logic;
 signal sig_debug_cordic  	:std_logic;
 signal sig_o_output        	:std_logic_vector (18 downto 0);
-signal sig_o_output_comparator  :std_logic_vector (1 downto 0);	
+--signal sig_o_output_comparator  :std_logic_vector (1 downto 0);	
 
 begin
 -----------------------------------------------------------------------------------------------------------------
@@ -113,14 +114,15 @@ begin
         sig_in_demod_Q,	
         sig_debug_demod,  
         sig_debug_cordic, 
-        sig_o_output,
-	sig_o_output_comparator);
+        sig_o_output
+	--sig_o_output_comparator
+	);
 -----------------------------------------------------------------------------------------------------------------
 -----------------------------------------------------------------------------------------------------------------
 --drive CLK et RESET
 	sig_clk <= not(sig_clk) after  10 ns; --50Mhz
 	sig_resetn <= '1' after 15 ns; --reset
-	sig_debug_demod <= '1'; -- test sortie demod
+	sig_debug_demod <= '0'; -- test sortie demod
 	sig_debug_cordic <= '0';
 
 -----------------------------------------------------------------------------------------------------------------
@@ -193,7 +195,8 @@ begin
 		report "  >>>>>>>>>>> stream DEMOD I nb=" & integer'image(i);
 		i:=i+1;
 		end loop; --while
-		wait;
+		wait for 500 ns;
+		assert false report " FIN DE LA SIMULATION" severity failure;
 	--end if;
   end process LECTURE_I;
 
