@@ -10,7 +10,7 @@ source ../SCRIPTS/constraints.tcl
 
 compile -exact_map -area_effort high -ungroup_all
 
-#write_sdf RESULTS/$DESIGN_NAME.sdf
+write_sdf RESULTS/$DESIGN_NAME.sdf
 #write -format ddc -hierarchy -output RESULTS/$DESIGN_NAME.ddc
 
 #Genere la netlist au format VHDL
